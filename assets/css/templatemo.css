@@ -25,27 +25,41 @@ Table of contents
 16. Extra large devices (large desktops, 1200px and up)
 --------------------------------------------- */
 
+@font-face {
+    font-family: 'EuclidCircularA';
+    src: url('../fonts/EuclidCircularARegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'EuclidCircularA';
+    src: url('../fonts/EuclidCircularABold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
 
 
 
 /* Typography */
 body, ul, li, p, a, label, input, div {
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px !important;
+  font-family: 'EuclidCircularA', sans-serif;
+  font-size: 14px !important;
   font-weight: 300 !important;
 }
 .h1 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'EuclidCircularA', sans-serif;
   font-size: 48px !important;
   font-weight: 200 !important;
 }
 .h2 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'EuclidCircularA', sans-serif;
   font-size: 30px !important;
   font-weight: 300;
 }
 .h3 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'EuclidCircularA', sans-serif;
   font-size: 22px !important;
 }
 /* General */

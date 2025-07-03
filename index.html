@@ -373,11 +373,12 @@
     .swiperslider2{
         width: 300px !important;
         margin-right: 1.25rem !important;
+        border-radius: 15px;
     }
   </style>
 
     <!-- slider 2 -->
-<!--     <section style="padding-top: 100px; padding-bottom: 100px;">
+    <section style="padding-top: 50px; padding-bottom: 20px;">
         <div class="row">
             <div class="col-md-6">
                 <div class="swiper mySwiperKegiatan" style="height: 300px;">
@@ -394,23 +395,7 @@
                     </div>
             </div>
         </div>
-        <div class="col-md-4" style="margin-top: 30px;">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-              </div>
-            </div>
-        </div>
-        <div class="col-md-2">
-        </div>
-    </div>
 
-    </section> -->
-    <!-- End Slider 2 -->
 
       <script>
   var swiper2 = new Swiper(".mySwiperKegiatan", {
@@ -437,6 +422,242 @@
     },
   });
 </script>
+
+<style>
+
+    .scarlett-text 
+    {
+      font-size: 31px;
+      font-weight: bold;
+      line-height: 1.2;
+      color: white;
+      -webkit-text-stroke: 1px #ff5f9d; /* Outline ungu */
+      text-shadow: 2px 0 0 #ff5f9d, 0 0 0 #ff5f9d, 0 0 0 #ff5f9d, 0 1px 0 #ff5f9d, 0 0 0 rgba(136, 30, 157, .5);
+      display: inline-block;
+    }
+    .cardbodyAnimate{
+        background: #fd7fae8f;
+        border-radius: 15px;
+    }
+    .learnmoreAnimate{
+        background: white; padding: 0.5rem 1.5rem 0.5rem 1.5rem; border: solid 1px black;
+    }
+
+  </style>
+
+        <div class="col-md-4">
+            <div class="card" style="width: 300px;
+    height: 300px;">
+              <div class="card-body cardbodyAnimate">
+                <h5 class="scarlett-text">Animate <br/>Series Impact</h5>
+                <!-- <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6> -->
+                <p class="card-text" style="font-size: 14px !important; opacity: 0.8;">Wujudkan Impanmu dengan Animate Series Imapact</p>
+                 <div class="d-flex justify-content-center" style="margin-top: 77px;">
+                    <button href="#" class="btn learnmoreAnimate" style="background: white; padding: 0.5rem 1.5rem 0.5rem 1.5rem; border: solid 1px black;">LEARN MORE</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+
+    </section>
+    <!-- End Slider 2 -->
+
+    <section style="padding-left: 2.5rem;
+        padding-right: 2.5rem; padding-bottom: 3rem; padding-top: 2rem;">
+
+
+<style>
+  .category-tabs {
+    display: flex;
+    gap: 5rem;
+    font-weight: bold !important;
+    font-size: 69px !important;
+    padding: 10px 20px 20px 20px;
+    justify-content: space-between;
+  }
+
+  .category-tabs span {
+    cursor: pointer;
+    color: #cfd2d9;
+  }
+
+  .category-tabs .active {
+    color: #ff5293;
+  }
+
+  .swiper-slide {
+    background: #fff;
+    border-radius: 16px;
+    text-align: center;
+    padding: 15px;
+    height: auto;
+  }
+
+  .product-title {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+
+  .price {
+    font-weight: bold;
+    color: #ff5293;
+  }
+
+  .old-price {
+    text-decoration: line-through;
+    font-size: 13px;
+    color: gray;
+    margin-left: 5px;
+  }
+
+  .btn-cart {
+    background: #ff5293;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+
+  .shop-all-container {
+    text-align: center;
+    margin-top: 35px;
+  }
+
+  .shop-all-btn {
+    border: 1px solid black;
+    background: white;
+    padding: 9px 100px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+  .swiper-backface-hidden .swiper-slide
+ {
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: grid;
+    width: 250px !important;
+ }
+
+ .discount-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ff5293;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 5px;
+  z-index: 10;
+}
+</style>
+
+<h5>BEST SELLER</h5>
+        <!-- Tabs -->
+<div class="category-tabs">
+  <span class="active" data-category="all">ALL</span>
+  <span data-category="face">FACE</span>
+  <span data-category="body">BODY</span>
+  <span data-category="perfume">PERFUME</span>
+  <span data-category="hair">HAIR</span>
+</div>
+
+<!-- Swiper -->
+<div class="swiper mySwiperProduct">
+  <div class="swiper-wrapper" id="product-wrapper">
+    <!-- Slides akan dimuat via JavaScript -->
+  </div>
+</div>
+
+<!-- Shop All -->
+<div class="shop-all-container">
+  <button class="shop-all-btn">SHOP ALL</button>
+</div>
+
+<script>
+  const products = {
+    all: [
+      { img: 'http://localhost/2025/laravel8/Animate_html/img/product/acne.jpg', diskon: '20%', title: 'Parfum 1', price: 'Rp64.500', old: 'Rp75.000' },
+      { img: 'http://localhost/2025/laravel8/Animate_html/img/product/acne.jpg', diskon: '9%', title: 'Face Wash', price: 'Rp60.000', old: 'Rp75.000' },
+      { img: 'http://localhost/2025/laravel8/Animate_html/img/product/acne.jpg', diskon: '15%', title: 'Body Lotion', price: 'Rp65.000', old: 'Rp80.000' },
+      { img: 'http://localhost/2025/laravel8/Animate_html/img/product/acne.jpg', diskon: '50%', title: 'Perfume Red', price: 'Rp45.000', old: 'Rp98.000' },
+      { img: 'http://localhost/2025/laravel8/Animate_html/img/product/acne.jpg', diskon: '40%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' },
+      { img: 'http://localhost/2025/laravel8/Animate_html/img/product/acne.jpg', diskon: '60%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' },
+      { img: 'http://localhost/2025/laravel8/Animate_html/img/product/acne.jpg', diskon: '5%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' },
+      { img: 'http://localhost/2025/laravel8/Animate_html/img/product/acne.jpg', diskon: '40%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' },
+      { img: 'http://localhost/2025/laravel8/Animate_html/img/product/acne.jpg', diskon: '50%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' }
+    ],
+    face: [
+      { img: 'http://localhost/2025/laravel8/Animate_html/img/product/acne.jpg', diskon: '40%', title: 'Face Wash', price: 'Rp60.000', old: 'Rp75.000' },
+    ],
+    body: [
+      { img: 'http://localhost/2025/laravel8/Animate_html/img/product/acne.jpg', diskon: '10%', title: 'Body Lotion', price: 'Rp65.000', old: 'Rp80.000' },
+    ],
+    perfume: [
+      { img: 'http://localhost/2025/laravel8/Animate_html/img/product/acne.jpg', diskon: '65%', title: 'Parfum 1', price: 'Rp64.500', old: 'Rp75.000' },
+      { img: 'http://localhost/2025/laravel8/Animate_html/img/product/acne.jpg', diskon: '20%', title: 'Perfume Red', price: 'Rp45.000', old: 'Rp98.000' }
+    ],
+    hair: [
+      { img: 'http://localhost/2025/laravel8/Animate_html/img/product/acne.jpg', diskon: '10%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' }
+    ]
+  };
+
+  function renderProducts(category) {
+    const wrapper = document.getElementById('product-wrapper');
+    wrapper.innerHTML = '';
+
+    products[category].forEach(p => {
+      const slide = document.createElement('div');
+      slide.className = 'swiper-slide';
+      slide.innerHTML = `
+        <div class="discount-badge">${p.diskon}</div>
+        <img src="${p.img}" style="width:100%; border-radius:12px;">
+        <div class="product-title">${p.title}</div>
+        <div><span class="price">${p.price}</span><span class="old-price">${p.old}</span></div>
+        <button class="btn-cart">+ Keranjang</button>
+      `;
+      wrapper.appendChild(slide);
+    });
+
+    swiper.update(); // refresh slide
+  }
+
+  // Swiper init
+  const swiper = new Swiper('.mySwiperProduct', {
+    slidesPerView: 2,
+    spaceBetween: 20,
+    breakpoints: {
+      768: {
+        slidesPerView: 4
+      },
+      1024: {
+        slidesPerView: 5
+      }
+    }
+  });
+
+  // Load default
+  renderProducts('all');
+
+  // Handle category click
+  document.querySelectorAll('.category-tabs span').forEach(tab => {
+    tab.addEventListener('click', function () {
+      document.querySelectorAll('.category-tabs span').forEach(t => t.classList.remove('active'));
+      this.classList.add('active');
+      const cat = this.dataset.category;
+      renderProducts(cat);
+    });
+  });
+</script>
+    </section>
+
 
     <!-- Start Categories of The Month -->
     <!-- <section class="container py-5">
@@ -602,6 +823,7 @@
                         <li><a class="text-decoration-none" href="#">Beautyverse</a></li>
                         <li><a class="text-decoration-none" href="#">Beauty Insider</a></li>
                         <li><a class="text-decoration-none" href="#">About Us</a></li>
+                        <li><a class="text-decoration-none" href="#">Career</a></li>
                     </ul>
                 </div>
 
