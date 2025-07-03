@@ -20,6 +20,7 @@
 </head>
 
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Start Top Nav -->
     <!-- <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
         <div class="container text-light">
@@ -217,9 +218,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">ABOUT US</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">CAREER</a>
-                    </li>
 
                 </ul>
             </div>
@@ -382,7 +380,7 @@
 <!--     <section style="padding-top: 100px; padding-bottom: 100px;">
         <div class="row">
             <div class="col-md-6">
-                <div class="swiper mySwiper" style="height: 300px;">
+                <div class="swiper mySwiperKegiatan" style="height: 300px;">
                     <div class="swiper-wrapper">
                           <div class="swiper-slide swiperslider2" style="background-image: url('img/product/acne.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center; width: 100px !important;"></div>
                           <div class="swiper-slide swiperslider2" style="background-image: url('img/product/acne.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center; width: 100px !important;"></div>
@@ -415,30 +413,30 @@
     <!-- End Slider 2 -->
 
       <script>
-    var swiper2 = new Swiper2(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        loop: true,
+  var swiper2 = new Swiper(".mySwiperKegiatan", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true, // ✅ letakkan di luar pagination
+    pagination: {
+      el: ".mySwiperKegiatan .swiper-pagination",
+      clickable: true
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
       },
-      breakpoints: {
-        640: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 4,
-          spaceBetween: 40,
-        },
-        1024: {
-          slidesPerView: 5,
-          spaceBetween: 50,
-        },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 40,
       },
-    });
-  </script>
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 50,
+      },
+    },
+  });
+</script>
 
     <!-- Start Categories of The Month -->
     <!-- <section class="container py-5">
@@ -661,7 +659,7 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 
        <script>
   var swiper = new Swiper(".mySwiper", {
