@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Zay Shop eCommerce HTML CSS Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="img/animate_logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="img/animate_logo.png">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <!-- Start Top Nav -->
+    <!-- <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
+        <div class="container text-light">
+            <div class="w-100 d-flex justify-content-between">
+                <div>
+                    <i class="fa fa-envelope mx-2"></i>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:info@company.com">info@company.com</a>
+                    <i class="fa fa-phone mx-2"></i>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="tel:010-020-0340">010-020-0340</a>
+                </div>
+                <div>
+                    <a class="text-light" href="https://fb.com/templatemo" target="_blank" rel="sponsored"><i class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
+                    <a class="text-light" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
+                    <a class="text-light" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
+                    <a class="text-light" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin fa-sm fa-fw"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav> -->
+    <!-- Close Top Nav -->
+
+    <style>
+        .swiper-pagination-bullet-active {
+            opacity: var(--swiper-pagination-bullet-opacity, 1);
+            background: background: #ff5f9d;
+            width: 20px;
+            border-radius: 0px;
+        }
+
+        .swiper-pagination-bullet-active {
+            opacity: var(--swiper-pagination-bullet-opacity, 1);
+            background: #ff5f9d;
+        }
+
+        /*.swiper-pagination-bullet {
+            width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 8px));
+            height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 8px));
+            display: inline-block;
+            border-radius: 0px;
+            background: #fd7fae;
+            opacity: var(--swiper-pagination-bullet-inactive-opacity, .2);
+        }*/
+
+        .swiper-pagination-bullet {
+            border-radius: 0px;
+            width: 50px;
+            height: 5px;
+        }
+    </style>
+
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow" style="position: fixed; width: 100%; z-index: 999; background: white;">
+    <div class="container d-flex justify-content-between align-items-center">
+
+        <a class="navbar-brand text-success logo h1 align-self-center" style="font-size: 28px !important; padding-bottom: 0px !important; " href="index.html">
+            <img class="imgWidth" style="width: 114px;" src="img/animate_logo.png">
+        </a>
+
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="align-self-center collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+            <div class="flex-fill">
+                <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+
+                    <!-- SHOP ALL MEGA MENU -->
+                    <li class="nav-item dropdown position-static" data-bs-auto-close="outside">
+                        <a class="nav-link dropdown-toggle" href="#" id="megaDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            SHOP ALL
+                        </a>
+                        <div class="dropdown-menu w-100 mt-0 border-0 shadow" aria-labelledby="megaDropdown" style="left: 0; right: 0; background-color: #fef7ff;">
+                            <div class="container py-4">
+                                <div class="row">
+                                    <!-- Face -->
+                                    <div class="col-md-2">
+                                        <h6 class="fw-bold">Face</h6>
+                                        <ul class="list-unstyled">
+                                            <li class="dropdown dropend">
+                                                <a href="#" class="dropdown-item dropdown-toggle" id="dropdownFacialWash" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Facial Wash
+                                                </a>
+                                                <ul class="dropdown-menu" aria-labelledby="dropdownFacialWash">
+                                                    <li><a class="dropdown-item" href="#">Brightly Series</a></li>
+                                                    <li><a class="dropdown-item" href="#">Acne Series</a></li>
+                                                    <li><a class="dropdown-item" href="#">Age Delay</a></li>
+                                                </ul>
+                                                </li>
+                                            <li><a class="dropdown-item" href="#">Face Serum</a></li>
+                                            <li><a class="dropdown-item" href="#">Sunscreen</a></li>
+                                            <li><a class="dropdown-item" href="#">Face Toner</a></li>
+                                            <li><a class="dropdown-item" href="#">Exfoliating</a></li>
+                                            <li><a class="dropdown-item" href="#">Face Mask</a></li>
+                                            <li><a class="dropdown-item" href="#">Face Moisturizer</a></li>
+                                            <li><a class="dropdown-item" href="#">Lip Treatment</a></li>
+                                            <li><a class="dropdown-item" href="#">Eye Treatment</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Body -->
+                                    <div class="col-md-2">
+                                        <h6 class="fw-bold">Body</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a class="dropdown-item" href="#">Body Lotion</a></li>
+                                            <li><a class="dropdown-item" href="#">Body Serum</a></li>
+                                            <li><a class="dropdown-item" href="#">Shower Scrub</a></li>
+                                            <li><a class="dropdown-item" href="#">Body Cream</a></li>
+                                            <li><a class="dropdown-item" href="#">Body Scrub</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Parfum -->
+                                    <div class="col-md-2">
+                                        <h6 class="fw-bold">Parfum</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a class="dropdown-item" href="#">Eau de Parfum</a></li>
+                                            <li><a class="dropdown-item" href="#">Extrait de Parfum</a></li>
+                                            <li><a class="dropdown-item" href="#">Shimmer Liquid Body Perfume</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Hair -->
+                                    <div class="col-md-2">
+                                        <h6 class="fw-bold">Hair</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a class="dropdown-item" href="#">Shampoo</a></li>
+                                            <li><a class="dropdown-item" href="#">Conditioner</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Bundling -->
+                                    <div class="col-md-2">
+                                        <h6 class="fw-bold">Bundling</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a class="dropdown-item" href="#">Bundling</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Skin Concern -->
+                                    <div class="col-md-2">
+                                        <h6 class="fw-bold">Skin Concern</h6>
+                                        <ul class="list-unstyled">
+                                            <li><strong>Dull Skin</strong>
+                                                <ul class="list-unstyled ps-3">
+                                                    <li><a class="dropdown-item" href="#">Brightly Series</a></li>
+                                                    <li><a class="dropdown-item" href="#">Facial Wash</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>Acne Prone Skin</strong>
+                                                <ul class="list-unstyled ps-3">
+                                                    <li><a class="dropdown-item" href="#">Acne Series</a></li>
+                                                    <li><a class="dropdown-item" href="#">Facial Wash</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>Anti Aging</strong>
+                                                <ul class="list-unstyled ps-3">
+                                                    <li><a class="dropdown-item" href="#">Age Delay Series</a></li>
+                                                    <li><a class="dropdown-item" href="#">Facial Wash</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>Oily Skin</strong>
+                                                <ul class="list-unstyled ps-3">
+                                                    <li><a class="dropdown-item" href="#">Facial Wash</a></li>
+                                                    <li><a class="dropdown-item" href="#">Face Toner</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Other Menu Items -->
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="about.html">BEAUTYVERSE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">BEAUTY INSIDER</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">CAREER</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">BEAUTYVERSE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">BEAUTY INSIDER</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CAREER</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="navbar align-self-center d-flex">
+                <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
+                        <div class="input-group-text">
+                            <i class="fa fa-fw fa-search"></i>
+                        </div>
+                    </div>
+                </div>
+                <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+                    <i class="fa fa-fw fa-search text-dark mr-2"></i>
+                </a>
+                <!-- <a class="nav-icon position-relative text-decoration-none" href="#">
+                    <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                    <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
+                </a>
+                <a class="nav-icon position-relative text-decoration-none" href="#">
+                    <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                    <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
+                </a> -->
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Cegah semua isi dropdown agar tidak menutup dropdown utama
+    document.querySelectorAll('.dropdown-menu').forEach(function (menu) {
+      menu.addEventListener('click', function (e) {
+        e.stopPropagation();
+      });
+    });
+
+    // Toggle submenu (Facial Wash) secara manual
+    document.querySelectorAll('.dropdown.dropend .dropdown-toggle').forEach(function (toggle) {
+      toggle.addEventListener('click', function (e) {
+        e.preventDefault(); // Hindari reload #
+        e.stopPropagation();
+
+        const submenu = this.nextElementSibling;
+        if (submenu && submenu.classList.contains('dropdown-menu')) {
+          // Tutup dropdown lain jika terbuka
+          document.querySelectorAll('.dropdown-menu.show').forEach(function (openMenu) {
+            if (openMenu !== submenu) {
+              openMenu.classList.remove('show');
+            }
+          });
+
+          submenu.classList.toggle('show');
+        }
+      });
+    });
+  });
+</script>
+
+
+
+    <!-- Close Header -->
+
+    <!-- Modal -->
+    <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="w-100 pt-1 mb-5 text-right">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="" method="get" class="modal-content modal-body border-0 p-0">
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                    <button type="submit" class="input-group-text bg-success text-light">
+                        <i class="fa fa-fw fa-search text-white"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+      <style>
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+  </style>
+
+
+
+    <!-- Start Banner Hero -->
+    <section class="banner">
+    <div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel" style="height: 800px;">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" style="background-image: url('img/back/dummy-1.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center"></div>
+              <div class="swiper-slide" style="background-image: url('img/back/dummy-1.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center"></div>
+              <div class="swiper-slide" style="background-image: url('img/back/dummy-1.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center"></div>
+              <div class="swiper-slide" style="background-image: url('img/back/dummy-1.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center"></div>
+              <div class="swiper-slide" style="background-image: url('img/back/dummy-1.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center"></div>
+              <div class="swiper-slide" style="background-image: url('img/back/dummy-1.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center"></div>
+              <div class="swiper-slide" style="background-image: url('img/back/dummy-1.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center"></div>
+              <div class="swiper-slide" style="background-image: url('img/back/dummy-1.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center"></div>
+              <div class="swiper-slide" style="background-image: url('img/back/dummy-1.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center"></div>
+            </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    </section>
+    <!-- End Banner Hero -->
+
+      <style>
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 20px;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swiperslider2{
+        width: 300px !important;
+        margin-right: 1.25rem !important;
+    }
+  </style>
+
+    <!-- slider 2 -->
+    <section style="padding-top: 100px; padding-bottom: 100px;">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="swiper mySwiper" style="height: 300px;">
+                    <div class="swiper-wrapper">
+                          <div class="swiper-slide swiperslider2" style="background-image: url('img/product/acne.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center; width: 100px !important;"></div>
+                          <div class="swiper-slide swiperslider2" style="background-image: url('img/product/acne.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center; width: 100px !important;"></div>
+                          <div class="swiper-slide swiperslider2" style="background-image: url('img/product/acne.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center; width: 100px !important;"></div>
+                          <div class="swiper-slide swiperslider2" style="background-image: url('img/product/acne.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center; width: 100px !important;"></div>
+                          <div class="swiper-slide swiperslider2" style="background-image: url('img/product/acne.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center; width: 100px !important;"></div>
+                          <div class="swiper-slide swiperslider2" style="background-image: url('img/product/acne.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center; width: 100px !important;"></div>
+                          <div class="swiper-slide swiperslider2" style="background-image: url('img/product/acne.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center; width: 100px !important;"></div>
+                          <div class="swiper-slide swiperslider2" style="background-image: url('img/product/acne.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center; width: 100px !important;"></div>
+                          <div class="swiper-slide swiperslider2" style="background-image: url('img/product/acne.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center; width: 100px !important;"></div>
+                    </div>
+                <!-- <div class="swiper-pagination"></div> -->
+            </div>
+        </div>
+        <div class="col-md-4" style="margin-top: 30px;">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+
+    </section>
+    <!-- End Slider 2 -->
+
+      <script>
+    var swiper2 = new Swiper2(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        loop: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 5,
+          spaceBetween: 50,
+        },
+      },
+    });
+  </script>
+
+    <!-- Start Categories of The Month -->
+    <!-- <section class="container py-5">
+        <div class="row text-center pt-3">
+            <div class="col-lg-6 m-auto">
+                <h1 class="h1">Categories of The Month</h1>
+                <p>
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4 p-5 mt-3">
+                <a href="#"><img src="./assets/img/category_img_01.jpg" class="rounded-circle img-fluid border"></a>
+                <h5 class="text-center mt-3 mb-3">Watches</h5>
+                <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
+            </div>
+            <div class="col-12 col-md-4 p-5 mt-3">
+                <a href="#"><img src="./assets/img/category_img_02.jpg" class="rounded-circle img-fluid border"></a>
+                <h2 class="h5 text-center mt-3 mb-3">Shoes</h2>
+                <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
+            </div>
+            <div class="col-12 col-md-4 p-5 mt-3">
+                <a href="#"><img src="./assets/img/category_img_03.jpg" class="rounded-circle img-fluid border"></a>
+                <h2 class="h5 text-center mt-3 mb-3">Accessories</h2>
+                <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
+            </div>
+        </div>
+    </section> -->
+    <!-- End Categories of The Month -->
+
+
+    <!-- Start Featured Product -->
+    <!-- <section class="bg-light">
+        <div class="container py-5">
+            <div class="row text-center py-3">
+                <div class="col-lg-6 m-auto">
+                    <h1 class="h1">Featured Product</h1>
+                    <p>
+                        Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        Excepteur sint occaecat cupidatat non proident.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card h-100">
+                        <a href="shop-single.html">
+                            <img src="./assets/img/feature_prod_01.jpg" class="card-img-top" alt="...">
+                        </a>
+                        <div class="card-body">
+                            <ul class="list-unstyled d-flex justify-content-between">
+                                <li>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-muted fa fa-star"></i>
+                                    <i class="text-muted fa fa-star"></i>
+                                </li>
+                                <li class="text-muted text-right">$240.00</li>
+                            </ul>
+                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gym Weight</a>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt.
+                            </p>
+                            <p class="text-muted">Reviews (24)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card h-100">
+                        <a href="shop-single.html">
+                            <img src="./assets/img/feature_prod_02.jpg" class="card-img-top" alt="...">
+                        </a>
+                        <div class="card-body">
+                            <ul class="list-unstyled d-flex justify-content-between">
+                                <li>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-muted fa fa-star"></i>
+                                    <i class="text-muted fa fa-star"></i>
+                                </li>
+                                <li class="text-muted text-right">$480.00</li>
+                            </ul>
+                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Cloud Nike Shoes</a>
+                            <p class="card-text">
+                                Aenean gravida dignissim finibus. Nullam ipsum diam, posuere vitae pharetra sed, commodo ullamcorper.
+                            </p>
+                            <p class="text-muted">Reviews (48)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card h-100">
+                        <a href="shop-single.html">
+                            <img src="./assets/img/feature_prod_03.jpg" class="card-img-top" alt="...">
+                        </a>
+                        <div class="card-body">
+                            <ul class="list-unstyled d-flex justify-content-between">
+                                <li>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                </li>
+                                <li class="text-muted text-right">$360.00</li>
+                            </ul>
+                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Summer Addides Shoes</a>
+                            <p class="card-text">
+                                Curabitur ac mi sit amet diam luctus porta. Phasellus pulvinar sagittis diam, et scelerisque ipsum lobortis nec.
+                            </p>
+                            <p class="text-muted">Reviews (74)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- End Featured Product -->
+
+
+    <!-- Start Footer -->
+    <footer class="bg-dark" id="tempaltemo_footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-success border-bottom pb-3 border-light logo"><img width="200" src="img/b_animate_white.png"> </h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <!-- <li>
+                            <i class="fas fa-map-marker-alt fa-fw"></i>
+                            123 Consectetur at ligula 10660
+                        </li>
+                        <li>
+                            <i class="fa fa-phone fa-fw"></i>
+                            <a class="text-decoration-none" href="tel:010-020-0340">010-020-0340</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope fa-fw"></i>
+                            <a class="text-decoration-none" href="mailto:info@company.com">info@company.com</a>
+                        </li> -->
+                    </ul>
+                </div>
+
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">Products</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li><a class="text-decoration-none" href="#">Serum Series</a></li>
+                        <li><a class="text-decoration-none" href="#">Whitening Series</a></li>
+                        <li><a class="text-decoration-none" href="#">Barier Series</a></li>
+                        <li><a class="text-decoration-none" href="#">Acne Series</a></li>
+                        <li><a class="text-decoration-none" href="#">Anti Aging Series</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">Further Info</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li><a class="text-decoration-none" href="#">Home</a></li>
+                        <li><a class="text-decoration-none" href="#">Beautyverse</a></li>
+                        <li><a class="text-decoration-none" href="#">Beauty Insider</a></li>
+                        <li><a class="text-decoration-none" href="#">About Us</a></li>
+                        <li><a class="text-decoration-none" href="#">Career</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="row text-light mb-4">
+                <div class="col-12 mb-3">
+                    <div class="w-100 my-3 border-top border-light"></div>
+                </div>
+                <div class="col-auto me-auto">
+                    <ul class="list-inline text-left footer-icons">
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <div class="col-auto">
+                    <label class="sr-only" for="subscribeEmail">Email address</label>
+                    <div class="input-group mb-2">
+                        <input type="text" class="form-control bg-dark border-light" id="subscribeEmail" placeholder="Email address">
+                        <div class="input-group-text btn-success text-light">Subscribe</div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="w-100 bg-black py-3">
+            <div class="container">
+                <div class="row pt-2">
+                    <div class="col-12">
+                        <p class="text-left text-light">
+                            Copyright &copy; 2025 Animate By Yunna Mercier
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Start Script -->
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+       <script>
+  var swiper = new Swiper(".mySwiper", {
+    speed: 1000, // kecepatan transisi antar slide dalam milidetik (1000ms = 1 detik)
+    loop: true,  // agar slide terus berputar
+    autoplay: {
+      delay: 100000000, // waktu tunggu sebelum slide pindah (3000ms = 3 detik)
+      disableOnInteraction: false, // tetap autoplay meskipun user menggeser manual
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+
+
+    <!-- End Script -->
+</body>
+
+</html>
