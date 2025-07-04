@@ -469,193 +469,201 @@
         padding-right: 2.5rem; padding-bottom: 3rem; padding-top: 2rem;">
 
 
-<style>
-  .category-tabs {
-    display: flex;
-    gap: 5rem;
-    font-weight: bold !important;
-    font-size: 69px !important;
-    padding: 10px 20px 20px 20px;
-    justify-content: space-between;
-  }
+        <style>
+          .category-tabs {
+            display: flex;
+            gap: 5rem;
+            font-weight: bold !important;
+            font-size: 69px !important;
+            padding: 10px 20px 20px 20px;
+            justify-content: space-between;
+          }
 
-  .category-tabs span {
-    cursor: pointer;
-    color: #cfd2d9;
-  }
+          @media (max-width: 768px) {
+              .category-tabs {
+                font-size: 12px !important;
+                gap: 1.2rem;
+                justify-content: flex-start;
+              }
+            }
 
-  .category-tabs .active {
-    color: #ff5293;
-  }
+          .category-tabs span {
+            cursor: pointer;
+            color: #cfd2d9;
+          }
 
-  .swiper-slide {
-    background: #fff;
-    border-radius: 16px;
-    text-align: center;
-    padding: 15px;
-    height: auto;
-  }
+          .category-tabs .active {
+            color: #ff5293;
+          }
 
-  .product-title {
-    font-size: 14px;
-    margin: 10px 0;
-  }
+          .swiper-slide {
+            background: #fff;
+            border-radius: 16px;
+            text-align: center;
+            padding: 15px;
+            height: auto;
+          }
 
-  .price {
-    font-weight: bold;
-    color: #ff5293;
-  }
+          .product-title {
+            font-size: 14px;
+            margin: 10px 0;
+          }
 
-  .old-price {
-    text-decoration: line-through;
-    font-size: 13px;
-    color: gray;
-    margin-left: 5px;
-  }
+          .price {
+            font-weight: bold;
+            color: #ff5293;
+          }
 
-  .btn-cart {
-    background: #ff5293;
-    color: white;
-    border: none;
-    padding: 8px 20px;
-    border-radius: 5px;
-    margin-top: 10px;
-  }
+          .old-price {
+            text-decoration: line-through;
+            font-size: 13px;
+            color: gray;
+            margin-left: 5px;
+          }
 
-  .shop-all-container {
-    text-align: center;
-    margin-top: 35px;
-  }
+          .btn-cart {
+            background: #ff5293;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 5px;
+            margin-top: 10px;
+          }
 
-  .shop-all-btn {
-    border: 1px solid black;
-    background: white;
-    padding: 9px 100px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 3px;
-  }
+          .shop-all-container {
+            text-align: center;
+            margin-top: 35px;
+          }
 
-  .swiper-backface-hidden .swiper-slide
- {
-    transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    display: grid;
-    width: 250px !important;
- }
+          .shop-all-btn {
+            border: 1px solid black;
+            background: white;
+            padding: 9px 100px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 3px;
+          }
 
- .discount-badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: #ff5293;
-  color: white;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 4px 8px;
-  border-radius: 5px;
-  z-index: 10;
-}
-</style>
+          .swiper-backface-hidden .swiper-slide
+         {
+            transform: translateZ(0);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            display: grid;
+            width: 250px !important;
+         }
 
-<h5>BEST SELLER</h5>
-        <!-- Tabs -->
-<div class="category-tabs">
-  <span class="active" data-category="all">ALL</span>
-  <span data-category="face">FACE</span>
-  <span data-category="body">BODY</span>
-  <span data-category="perfume">PERFUME</span>
-  <span data-category="hair">HAIR</span>
-</div>
+         .discount-badge {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          background: #ff5293;
+          color: white;
+          font-size: 12px;
+          font-weight: bold;
+          padding: 4px 8px;
+          border-radius: 5px;
+          z-index: 10;
+        }
+        </style>
 
-<!-- Swiper -->
-<div class="swiper mySwiperProduct">
-  <div class="swiper-wrapper" id="product-wrapper">
-    <!-- Slides akan dimuat via JavaScript -->
-  </div>
-</div>
+        <h5>BEST SELLER</h5>
+                <!-- Tabs -->
+        <div class="category-tabs">
+          <span class="active" data-category="all">ALL</span>
+          <span data-category="face">FACE</span>
+          <span data-category="body">BODY</span>
+          <span data-category="perfume">PERFUME</span>
+          <span data-category="hair">HAIR</span>
+        </div>
 
-<!-- Shop All -->
-<div class="shop-all-container">
-  <button class="shop-all-btn">SHOP ALL</button>
-</div>
+        <!-- Swiper -->
+        <div class="swiper mySwiperProduct">
+          <div class="swiper-wrapper" id="product-wrapper">
+            <!-- Slides akan dimuat via JavaScript -->
+          </div>
+        </div>
 
-<script>
-  const products = {
-    all: [
-      { img: 'http://localhost/2025/laravel8/Animate_html/img/product/acne.jpg', diskon: '20%', title: 'Parfum 1', price: 'Rp64.500', old: 'Rp75.000' },
-      { img: 'http://localhost/2025/laravel8/Animate_html/img/product/acne.jpg', diskon: '9%', title: 'Face Wash', price: 'Rp60.000', old: 'Rp75.000' },
-      { img: 'http://localhost/2025/laravel8/Animate_html/img/product/acne.jpg', diskon: '15%', title: 'Body Lotion', price: 'Rp65.000', old: 'Rp80.000' },
-      { img: 'http://localhost/2025/laravel8/Animate_html/img/product/acne.jpg', diskon: '50%', title: 'Perfume Red', price: 'Rp45.000', old: 'Rp98.000' },
-      { img: 'http://localhost/2025/laravel8/Animate_html/img/product/acne.jpg', diskon: '40%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' },
-      { img: 'http://localhost/2025/laravel8/Animate_html/img/product/acne.jpg', diskon: '60%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' },
-      { img: 'http://localhost/2025/laravel8/Animate_html/img/product/acne.jpg', diskon: '5%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' },
-      { img: 'http://localhost/2025/laravel8/Animate_html/img/product/acne.jpg', diskon: '40%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' },
-      { img: 'http://localhost/2025/laravel8/Animate_html/img/product/acne.jpg', diskon: '50%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' }
-    ],
-    face: [
-      { img: 'http://localhost/2025/laravel8/Animate_html/img/product/acne.jpg', diskon: '40%', title: 'Face Wash', price: 'Rp60.000', old: 'Rp75.000' },
-    ],
-    body: [
-      { img: 'http://localhost/2025/laravel8/Animate_html/img/product/acne.jpg', diskon: '10%', title: 'Body Lotion', price: 'Rp65.000', old: 'Rp80.000' },
-    ],
-    perfume: [
-      { img: 'http://localhost/2025/laravel8/Animate_html/img/product/acne.jpg', diskon: '65%', title: 'Parfum 1', price: 'Rp64.500', old: 'Rp75.000' },
-      { img: 'http://localhost/2025/laravel8/Animate_html/img/product/acne.jpg', diskon: '20%', title: 'Perfume Red', price: 'Rp45.000', old: 'Rp98.000' }
-    ],
-    hair: [
-      { img: 'http://localhost/2025/laravel8/Animate_html/img/product/acne.jpg', diskon: '10%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' }
-    ]
-  };
+        <!-- Shop All -->
+        <div class="shop-all-container">
+          <button class="shop-all-btn">SHOP ALL</button>
+        </div>
 
-  function renderProducts(category) {
-    const wrapper = document.getElementById('product-wrapper');
-    wrapper.innerHTML = '';
+        <script>
+          const products = {
+            all: [
+              { img: 'img/product/acne.jpg', diskon: '20%', title: 'Parfum 1', price: 'Rp64.500', old: 'Rp75.000' },
+              { img: 'img/product/acne.jpg', diskon: '9%', title: 'Face Wash', price: 'Rp60.000', old: 'Rp75.000' },
+              { img: 'img/product/acne.jpg', diskon: '15%', title: 'Body Lotion', price: 'Rp65.000', old: 'Rp80.000' },
+              { img: 'img/product/acne.jpg', diskon: '50%', title: 'Perfume Red', price: 'Rp45.000', old: 'Rp98.000' },
+              { img: 'img/product/acne.jpg', diskon: '40%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' },
+              { img: 'img/product/acne.jpg', diskon: '60%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' },
+              { img: 'img/product/acne.jpg', diskon: '5%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' },
+              { img: 'img/product/acne.jpg', diskon: '40%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' },
+              { img: 'img/product/acne.jpg', diskon: '50%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' }
+            ],
+            face: [
+              { img: 'img/product/acne.jpg', diskon: '40%', title: 'Face Wash', price: 'Rp60.000', old: 'Rp75.000' },
+            ],
+            body: [
+              { img: 'img/product/acne.jpg', diskon: '10%', title: 'Body Lotion', price: 'Rp65.000', old: 'Rp80.000' },
+            ],
+            perfume: [
+              { img: 'img/product/acne.jpg', diskon: '65%', title: 'Parfum 1', price: 'Rp64.500', old: 'Rp75.000' },
+              { img: 'img/product/acne.jpg', diskon: '20%', title: 'Perfume Red', price: 'Rp45.000', old: 'Rp98.000' }
+            ],
+            hair: [
+              { img: 'img/product/acne.jpg', diskon: '10%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' }
+            ]
+          };
 
-    products[category].forEach(p => {
-      const slide = document.createElement('div');
-      slide.className = 'swiper-slide';
-      slide.innerHTML = `
-        <div class="discount-badge">${p.diskon}</div>
-        <img src="${p.img}" style="width:100%; border-radius:12px;">
-        <div class="product-title">${p.title}</div>
-        <div><span class="price">${p.price}</span><span class="old-price">${p.old}</span></div>
-        <button class="btn-cart">+ Keranjang</button>
-      `;
-      wrapper.appendChild(slide);
-    });
+          function renderProducts(category) {
+            const wrapper = document.getElementById('product-wrapper');
+            wrapper.innerHTML = '';
 
-    swiper.update(); // refresh slide
-  }
+            products[category].forEach(p => {
+              const slide = document.createElement('div');
+              slide.className = 'swiper-slide';
+              slide.innerHTML = `
+                <div class="discount-badge">${p.diskon}</div>
+                <img src="${p.img}" style="width:100%; border-radius:12px;">
+                <div class="product-title">${p.title}</div>
+                <div><span class="price">${p.price}</span><span class="old-price">${p.old}</span></div>
+                <button class="btn-cart">+ Keranjang</button>
+              `;
+              wrapper.appendChild(slide);
+            });
 
-  // Swiper init
-  const swiper = new Swiper('.mySwiperProduct', {
-    slidesPerView: 2,
-    spaceBetween: 20,
-    breakpoints: {
-      768: {
-        slidesPerView: 4
-      },
-      1024: {
-        slidesPerView: 5
-      }
-    }
-  });
+            swiper.update(); // refresh slide
+          }
 
-  // Load default
-  renderProducts('all');
+          // Swiper init
+          const swiper = new Swiper('.mySwiperProduct', {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            breakpoints: {
+              768: {
+                slidesPerView: 4
+              },
+              1024: {
+                slidesPerView: 5
+              }
+            }
+          });
 
-  // Handle category click
-  document.querySelectorAll('.category-tabs span').forEach(tab => {
-    tab.addEventListener('click', function () {
-      document.querySelectorAll('.category-tabs span').forEach(t => t.classList.remove('active'));
-      this.classList.add('active');
-      const cat = this.dataset.category;
-      renderProducts(cat);
-    });
-  });
-</script>
+          // Load default
+          renderProducts('all');
+
+          // Handle category click
+          document.querySelectorAll('.category-tabs span').forEach(tab => {
+            tab.addEventListener('click', function () {
+              document.querySelectorAll('.category-tabs span').forEach(t => t.classList.remove('active'));
+              this.classList.add('active');
+              const cat = this.dataset.category;
+              renderProducts(cat);
+            });
+          });
+        </script>
     </section>
 
 
