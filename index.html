@@ -15,7 +15,8 @@
 
     <!-- Load fonts style after rendering the layout styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
-    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/font-awesome/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
@@ -48,6 +49,37 @@
             border-radius: 0px;
             width: 50px;
             height: 5px;
+        }
+
+        .custom-dropdown-vertical .toggle-icon {
+          float: right;
+          transition: transform 0.3s ease;
+        }
+
+        .custom-dropdown-vertical.open .toggle-icon {
+          transform: rotate(180deg);
+        }
+
+        .custom-dropdown-menu {
+          display: none;
+          margin: 0;
+          padding-left: 1rem;
+        }
+
+        .custom-dropdown-vertical.open .custom-dropdown-menu {
+          display: block;
+        }
+
+        /* Optional: spacing between items */
+        .dropdown-item {
+          padding-top: 0.25rem;
+          padding-bottom: 0.25rem;
+        }
+
+        .custom-dropdown-menu {
+          list-style: none; /* HILANGKAN BULLET */
+          padding-left: 1rem; /* jika ingin ada jarak ke kiri */
+          margin: 0;
         }
     </style>
 
@@ -91,16 +123,17 @@
                                     <div class="col-md-2">
                                         <h6 class="fw-bold">Face</h6>
                                         <ul class="list-unstyled">
-                                            <li class="dropdown dropend">
-                                                <a href="#" class="dropdown-item dropdown-toggle" id="dropdownFacialWash" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    Facial Wash
-                                                </a>
-                                                <ul class="dropdown-menu" aria-labelledby="dropdownFacialWash">
-                                                    <li><a class="dropdown-item" href="#">Brightly Series</a></li>
-                                                    <li><a class="dropdown-item" href="#">Acne Series</a></li>
-                                                    <li><a class="dropdown-item" href="#">Age Delay</a></li>
-                                                </ul>
-                                                </li>
+                                          <!-- Facial Wash Toggle -->
+                                          <li class="custom-dropdown-vertical">
+                                              <a href="#" class="custom-dropdown-toggle dropdown-item" id="dropdownFacialWash">
+                                                Facial Wash <span class="toggle-icon">▾</span>
+                                              </a>
+                                              <ul class="custom-dropdown-menu" aria-labelledby="dropdownFacialWash">
+                                                <li><a class="dropdown-item" href="#">Brightly Series</a></li>
+                                                <li><a class="dropdown-item" href="#">Acne Series</a></li>
+                                                <li><a class="dropdown-item" href="#">Age Delay</a></li>
+                                              </ul>
+                                            </li>
                                             <li><a class="dropdown-item" href="#">Face Serum</a></li>
                                             <li><a class="dropdown-item" href="#">Sunscreen</a></li>
                                             <li><a class="dropdown-item" href="#">Face Toner</a></li>
@@ -202,11 +235,7 @@
                                             Program Corporate Social Responsibility (CSR) jangka panjang Scarlett yang didedikasikan untuk memberdayakan perempuan dan meningkatkan kualitas hidup masyarakat
                                         </p>
 
-                                        <a href="#" style="text-decoration : none;">
-                                            <span class="tw-text-base tw-font-bold tw-text-[#C72CFF]" style="font-weight: bold; color: #FA51A0; font-size: 1rem;">Tentang Kita</span>
-
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right tw-size-4 tw-text-[#FA51A0]" style="color: #FA51A0;"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                                        </a>
+                                        
                                     </div>
 
                                     <!-- Parfum -->
@@ -217,14 +246,25 @@
                                             Program yang dikhususkan untuk Sahabat Scarlett untuk menjadi bagian dari Scarlett Beautyverse agar mendapatkan berbagai keuntungan eksklusif yang hanya bisa didapatkan sebagai member
                                         </p>
 
-                                        <a href="#" style="text-decoration : none;">
+                                        <!-- <a href="#" style="text-decoration : none;">
                                         <span class="tw-text-base tw-font-bold tw-text-[#C72CFF]" style="color: #FA51A0;font-weight: bold; font-size: 1rem;">Registrasi Sekarang</span><svg style="color: #FA51A0;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right tw-size-4 tw-text-[#C72CFF]"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                                        </a>
+                                        </a> -->
                                     </div>
 
                                    
 
                                 </div>
+
+                                <div class="row" style="text-align: center;">
+                                    <div class="col-md-12" >
+                                        <a href="tentangkita.html" style="text-decoration : none;">
+                                            <span class="tw-text-base tw-font-bold tw-text-[#C72CFF]" style="font-weight: bold; color: #FA51A0; font-size: 1rem;">Tentang Kita</span>
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right tw-size-4 tw-text-[#FA51A0]" style="color: #FA51A0;"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                                        </a>
+                                    </div>
+                                </div>
+
                                 <hr/>
 
                                 <div class="row" style="margin-top: 50px">
@@ -655,85 +695,7 @@
           <button class="shop-all-btn">SHOP ALL</button>
         </div>
 
-        <script>
-          const products = {
-            all: [
-              { img: 'img/product/acne.jpg', diskon: '20%', title: 'Parfum 1', price: 'Rp64.500', old: 'Rp75.000' },
-              { img: 'img/product/acne.jpg', diskon: '9%', title: 'Face Wash', price: 'Rp60.000', old: 'Rp75.000' },
-              { img: 'img/product/acne.jpg', diskon: '15%', title: 'Body Lotion', price: 'Rp65.000', old: 'Rp80.000' },
-              { img: 'img/product/acne.jpg', diskon: '50%', title: 'Perfume Red', price: 'Rp45.000', old: 'Rp98.000' },
-              { img: 'img/product/acne.jpg', diskon: '40%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' },
-              { img: 'img/product/acne.jpg', diskon: '60%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' },
-              { img: 'img/product/acne.jpg', diskon: '5%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' },
-              { img: 'img/product/acne.jpg', diskon: '40%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' },
-              { img: 'img/product/acne.jpg', diskon: '50%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' }
-            ],
-            face: [
-              { img: 'img/product/acne.jpg', diskon: '40%', title: 'Face Wash', price: 'Rp60.000', old: 'Rp75.000' },
-            ],
-            body: [
-              { img: 'img/product/acne.jpg', diskon: '10%', title: 'Body Lotion', price: 'Rp65.000', old: 'Rp80.000' },
-            ],
-            perfume: [
-              { img: 'img/product/acne.jpg', diskon: '65%', title: 'Parfum 1', price: 'Rp64.500', old: 'Rp75.000' },
-              { img: 'img/product/acne.jpg', diskon: '20%', title: 'Perfume Red', price: 'Rp45.000', old: 'Rp98.000' }
-            ],
-            hair: [
-              { img: 'img/product/acne.jpg', diskon: '10%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' }
-            ]
-          };
-
-          function renderProducts(category) {
-            const wrapper = document.getElementById('product-wrapper');
-            wrapper.innerHTML = '';
-
-            products[category].forEach(p => {
-              const slide = document.createElement('div');
-              slide.className = 'swiper-slide swiperBestSeller';
-              slide.innerHTML = `
-                <div class="discount-badge">${p.diskon}</div>
-                <img src="${p.img}" style="width:100%; border-radius:12px;">
-                <div class="product-title">${p.title}</div>
-                <div><span class="price">${p.price}</span><span class="old-price">${p.old}</span></div>
-                <button class="btn-cart">+ Keranjang</button>
-              `;
-              wrapper.appendChild(slide);
-            });
-
-            swiper.update(); // refresh slide
-          }
-
-          // Swiper init
-          const swiperProduct = new Swiper('.mySwiperProduct', {
-            slidesPerView: 2,
-            spaceBetween: 20,
-            pagination: {
-              el: ".mySwiperKegiatan .swiper-pagination",
-              clickable: true
-            },
-            breakpoints: {
-              768: {
-                slidesPerView: 4
-              },
-              1024: {
-                slidesPerView: 5
-              }
-            }
-          });
-
-          // Load default
-          renderProducts('all');
-
-          // Handle category click
-          document.querySelectorAll('.category-tabs span').forEach(tab => {
-            tab.addEventListener('click', function () {
-              document.querySelectorAll('.category-tabs span').forEach(t => t.classList.remove('active'));
-              this.classList.add('active');
-              const cat = this.dataset.category;
-              renderProducts(cat);
-            });
-          });
-        </script>
+        
     </section>
     <!-- End Section Best Seller -->
 
@@ -1221,13 +1183,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     <!-- Start Footer -->
-    <footer class="bg-dark" id="tempaltemo_footer">
+    <footer class="bg-white" id="tempaltemo_footer">
         <div class="container">
             <div class="row">
 
                 <div class="col-md-4 pt-5">
-                    <h2 class="h2 text-success border-bottom pb-3 border-light logo"><img width="200" src="img/b_animate_white.png"> </h2>
-                    <ul class="list-unstyled text-light footer-link-list">
+                    <h2 class="h2 text-success  pb-3  logo"><img width="200" src="img/b_animate_white.png" style="filter: invert();"> </h2>
+                    <ul class="list-unstyled text-dark footer-link-list">
                         <!-- <li>
                             <i class="fas fa-map-marker-alt fa-fw"></i>
                             123 Consectetur at ligula 10660
@@ -1244,8 +1206,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
 
                 <div class="col-md-4 pt-5">
-                    <h2 class="h2 text-light border-bottom pb-3 border-light">Products</h2>
-                    <ul class="list-unstyled text-light footer-link-list">
+                    <h4 class="h5 text-dark  pb-3 " style="font-weight: bold">Products</h4>
+                    <ul class="list-unstyled text-dark footer-link-list">
                         <li><a class="text-decoration-none" href="#">Serum Series</a></li>
                         <li><a class="text-decoration-none" href="#">Whitening Series</a></li>
                         <li><a class="text-decoration-none" href="#">Barier Series</a></li>
@@ -1255,8 +1217,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
 
                 <div class="col-md-4 pt-5">
-                    <h2 class="h2 text-light border-bottom pb-3 border-light">Further Info</h2>
-                    <ul class="list-unstyled text-light footer-link-list">
+                    <h4 class="h5 text-dark  pb-3 " style="font-weight: bold">Further Info</h4>
+                    <ul class="list-unstyled text-dark footer-link-list">
                         <li><a class="text-decoration-none" href="#">Home</a></li>
                         <li><a class="text-decoration-none" href="#">Beautyverse</a></li>
                         <li><a class="text-decoration-none" href="#">Beauty Insider</a></li>
@@ -1267,41 +1229,50 @@ document.addEventListener("DOMContentLoaded", function () {
 
             </div>
 
-            <div class="row text-light mb-4">
+            <div class="row text-dark mb-4">
                 <div class="col-12 mb-3">
-                    <div class="w-100 my-3 border-top border-light"></div>
+                    <div class="w-100 my-3 border-top "></div>
                 </div>
                 <div class="col-auto me-auto">
                     <ul class="list-inline text-left footer-icons">
-                        <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                        <li class="list-inline-item border  rounded-circle text-center">
+                            <a class="text-dark text-decoration-none" target="_blank" href="http://facebook.com/"><i class="fab fa-tiktok"></i></a>
                         </li>
-                        <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                        <li class="list-inline-item border  rounded-circle text-center">
+                            <a class="text-dark text-decoration-none" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
                         </li>
-                        <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
+                        <li class="list-inline-item border  rounded-circle text-center">
+                            <a class="text-dark text-decoration-none" target="_blank" href="https://twitter.com/"><i><img width="30" style="position: relative; bottom: 3px; opacity: 0.8;" src="img/icon/shopee.png" ></i></a>
                         </li>
-                        <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
+                        <li class="list-inline-item border  rounded-circle text-center">
+                            <a class="text-dark text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i><img width="18" style="position: relative; bottom: 3px;" src="img/icon/tokopedia.png" ></i></a>
                         </li>
+                        <li class="list-inline-item border  rounded-circle text-center">
+                            <a class="text-dark text-decoration-none" target="_blank" href="https://www.instagram.com/"><i class="fab fa-whatsapp fa-lg fa-fw"></i></a>
+                        </li>
+                        <!-- <li class="list-inline-item border  rounded-circle text-center">
+                            <a class="text-dark text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i><img width="25" style="position: relative; bottom: 2px;" src="img/icon/lazada.png" ></i></a>
+                        </li>
+                        <li class="list-inline-item border  rounded-circle text-center">
+                            <a class="text-dark text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i><img width="38" style="position: relative; bottom: 2px;" src="img/icon/akulaku.png" ></i></a>
+                        </li> -->
                     </ul>
                 </div>
                 <!-- <div class="col-auto">
                     <label class="sr-only" for="subscribeEmail">Email address</label>
                     <div class="input-group mb-2">
-                        <input type="text" class="form-control bg-dark border-light" id="subscribeEmail" placeholder="Email address">
+                        <input type="text" class="form-control bg-dark " id="subscribeEmail" placeholder="Email address">
                         <div class="input-group-text btn-success text-light">Subscribe</div>
                     </div>
                 </div> -->
             </div>
         </div>
 
-        <div class="w-100 bg-black py-3">
+        <div class="w-100 bg-white py-3">
             <div class="container">
                 <div class="row pt-2">
                     <div class="col-12">
-                        <p class="text-left text-light">
+                        <p class="text-left text-dark">
                             Copyright &copy; 2025 Animate By Yunna Mercier
                         </p>
                     </div>
@@ -1318,9 +1289,101 @@ document.addEventListener("DOMContentLoaded", function () {
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
-
-
     <!-- End Script -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggles = document.querySelectorAll('.custom-dropdown-toggle');
+
+        toggles.forEach(toggle => {
+          toggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            const parent = this.closest('.custom-dropdown-vertical');
+            parent.classList.toggle('open');
+          });
+        });
+      });
+    </script>
+
+    <script>
+          const products = {
+            all: [
+              { img: 'img/product/acne.jpg', diskon: '20%', title: 'Parfum 1', price: 'Rp64.500', old: 'Rp75.000' },
+              { img: 'img/product/acne.jpg', diskon: '9%', title: 'Face Wash', price: 'Rp60.000', old: 'Rp75.000' },
+              { img: 'img/product/acne.jpg', diskon: '15%', title: 'Body Lotion', price: 'Rp65.000', old: 'Rp80.000' },
+              { img: 'img/product/acne.jpg', diskon: '50%', title: 'Perfume Red', price: 'Rp45.000', old: 'Rp98.000' },
+              { img: 'img/product/acne.jpg', diskon: '40%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' },
+              { img: 'img/product/acne.jpg', diskon: '60%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' },
+              { img: 'img/product/acne.jpg', diskon: '5%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' },
+              { img: 'img/product/acne.jpg', diskon: '40%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' },
+              { img: 'img/product/acne.jpg', diskon: '50%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' }
+            ],
+            face: [
+              { img: 'img/product/acne.jpg', diskon: '40%', title: 'Face Wash', price: 'Rp60.000', old: 'Rp75.000' },
+            ],
+            body: [
+              { img: 'img/product/acne.jpg', diskon: '10%', title: 'Body Lotion', price: 'Rp65.000', old: 'Rp80.000' },
+            ],
+            perfume: [
+              { img: 'img/product/acne.jpg', diskon: '65%', title: 'Parfum 1', price: 'Rp64.500', old: 'Rp75.000' },
+              { img: 'img/product/acne.jpg', diskon: '20%', title: 'Perfume Red', price: 'Rp45.000', old: 'Rp98.000' }
+            ],
+            hair: [
+              { img: 'img/product/acne.jpg', diskon: '10%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' }
+            ]
+          };
+
+          function renderProducts(category) {
+              const wrapper = document.getElementById('product-wrapper');
+              wrapper.innerHTML = '';
+
+              products[category].forEach(p => {
+                const slide = document.createElement('div');
+                slide.className = 'swiper-slide swiperBestSeller';
+                slide.innerHTML = `
+                  <div class="discount-badge">${p.diskon}</div>
+                  <img src="${p.img}" style="width:100%; border-radius:12px;">
+                  <div class="product-title">${p.title}</div>
+                  <div><span class="price">${p.price}</span><span class="old-price">${p.old}</span></div>
+                  <button class="btn-cart">+ Keranjang</button>
+                `;
+                wrapper.appendChild(slide);
+              });
+
+              swiperProduct.update();
+            }
+
+          // Swiper init
+          const swiperProduct = new Swiper('.mySwiperProduct', {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            pagination: {
+              el: ".mySwiperKegiatan .swiper-pagination",
+              clickable: true
+            },
+            breakpoints: {
+              768: {
+                slidesPerView: 4
+              },
+              1024: {
+                slidesPerView: 5
+              }
+            }
+          });
+
+          // Load default
+          renderProducts('all');
+
+          // Handle category click
+          document.querySelectorAll('.category-tabs span').forEach(tab => {
+            tab.addEventListener('click', function () {
+              document.querySelectorAll('.category-tabs span').forEach(t => t.classList.remove('active'));
+              this.classList.add('active');
+              const cat = this.dataset.category;
+              renderProducts(cat);
+            });
+          });
+        </script>
 </body>
 
 </html>
