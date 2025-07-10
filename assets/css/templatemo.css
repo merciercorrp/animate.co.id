@@ -78,7 +78,7 @@ body, ul, li, p, a, label, input, div {
 }
 .pagination .page-link:hover {color: #000;}
 .pagination .page-link:hover, .pagination .page-link.active {
-  background-color: #69bb7e;
+  background-color: #fd7fae;
   color: #fff;
 }
 /* Nav */
@@ -86,7 +86,7 @@ body, ul, li, p, a, label, input, div {
 #templatemo_nav_top * { font-size: .9em !important;}
 #templatemo_main_nav a { color: #212934; font-size: 12px !important;
     font-weight: bold !important;}
-#templatemo_main_nav a:hover { color: #69bb7e;}
+#templatemo_main_nav a:hover { color: black;}
 #templatemo_main_nav .navbar .nav-icon { margin-right: 20px;}
 
 /* Hero Carousel */
@@ -147,12 +147,12 @@ body, ul, li, p, a, label, input, div {
 /* Services */
 .services-icon-wap {transition: .3s;}
 .services-icon-wap:hover, .services-icon-wap:hover i {color: #fff;}
-.services-icon-wap:hover {background: #69bb7e;}
+.services-icon-wap:hover {background: #fd7fae;}
 /* Contact map */
 .leaflet-control a, .leaflet-control { font-size: 10px !important;}
 .form-control { border: 1px solid #e8e8e8;}
 /* Footer */
-#tempaltemo_footer a { color: #dcdde1;}
+#tempaltemo_footer a { color: #000000;}
 #tempaltemo_footer a:hover { color: #68bb7d;}
 #tempaltemo_footer ul.footer-link-list li { padding-top: 10px;}
 #tempaltemo_footer ul.footer-icons li {
