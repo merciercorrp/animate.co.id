@@ -559,7 +559,85 @@
 </section>
 <!-- END Section Sejahtera -->
 
+<style>
+    .mySwiperHighlight {
+  width: 100%;
+  padding: 40px 0;
+}
+
+.mySwiperHighlight .swiper-slide {
+  background-size: cover;
+  background-position: center;
+  width: 300px !important;
+  height: 400px !important;
+  border-radius: 0PX;
+  transition: transform 0.4s ease;
+  margin-right: 20px;
+}
+
+.mySwiperHighlight .swiper-slide-active {
+  transform: scale(1.2);
+  z-index: 10;
+}
+
+</style>
+
+<!-- Section Sahabat -->
+<section style="padding-top: 6rem; padding-bottom: 6rem; background: #ff5f9d26;">
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="container-fluid px-5 ">
+                <div class="swiper mySwiperHighlight">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url('img/back/bazer1.jpg' ); margin-right: 35px;
+    margin-left: 35px;"></div>
+                    <div class="swiper-slide" style="background-image: url('img/back/bazer2.jpg' ); margin-right: 35px;
+    margin-left: 35px;"></div>
+                    <div class="swiper-slide"style="background-image: url('img/back/acara-3.jpg' ); margin-right: 35px;
+    margin-left: 35px;"></div>
+                    <div class="swiper-slide" style="background-image: url('img/back/acara-5.jpg' ); margin-right: 35px;
+    margin-left: 35px;"></div>
+                    <div class="swiper-slide" style="background-image: url('img/back/bazzer3.jpg' ); margin-right: 35px;
+    margin-left: 35px;"></div>
+                    <div class="swiper-slide" style="background-image: url('img/back/bazer3.webp')"></div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 2.5rem;">
+            <div class="col-sm-12 col-sm-12">
+                <div class="container-fluid px-5 ">
+                    <div class="col-12 col-md-12 col-sm-12 m-auto text-center align-items-center">
+                        <h1 style="padding-left: 1.3rem; padding-right: 4rem; font-weight: bold; color: #ff5f9d;">Our Impact</h1>
+                        <br/>
+                        <p class="ourImpact">
+                           Berkat dukungan penuh darimu, Scarlett dapat terus berkomitmen untuk menyebarkan kebaikan. Perjalanan kami masih sangat panjang dan jauh dari kata selesai. Scarlett berharap kita bisa terus bergandeng tangan, menciptakan perubahan yang berarti.<br/><br/>
+                            Terima kasih atas kepercayaanmu, Sahabat Scarlett. Mari kita melangkah lagi, menuju masa depan yang lebih cerah dan penuh harapan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+</section>
+<!-- END Sahabat -->
+
+
+
+
+
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+    const swiperHighlight = new Swiper('.mySwiperHighlight', {
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+      centeredSlides: true,
+      initialSlide: 2, // index slide yang ingin dimulai (misal slide ke-3)
+      // loop: true,
+      grabCursor: true,
+    });
+</script>
 
 <script>
         const swiperOurFocuse = new Swiper('.mySwiperOurFocuse', {
