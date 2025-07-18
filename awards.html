@@ -337,12 +337,24 @@
 </nav>
 
 <style>
+/* Card Style */
+.blog-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 412px;
+  border-radius: 0px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  transition: transform 0.3s ease;
+}
+
 /* Grid layout */
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
-  padding: 20px;
   padding: 10px 285px 20px 285px;
 }
 
@@ -352,8 +364,19 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 24px;
-      padding: 20px;
-      padding: 10px 285px 20px 285px;
+      padding: 10px 175px 20px 175px;
+    }
+
+    .blog-card {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      height: 312px;
+      border-radius: 0px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      transition: transform 0.3s ease;
     }
 }
 
@@ -365,6 +388,18 @@
       gap: 24px;
       padding: 20px;
       padding: 10px 285px 20px 285px;
+    }
+
+    .blog-card {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      height: 412px;
+      border-radius: 0px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      transition: transform 0.3s ease;
     }
 }
 
@@ -378,20 +413,20 @@
       padding: 20px;
       padding: 10px 0px 20px 0px;
     }
+
+    .blog-card {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      height: 412px;
+      border-radius: 0px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      transition: transform 0.3s ease;
+    }
 }
 
-/* Card Style */
-.blog-card {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  height: 412px;
-  border-radius: 0px;
-  overflow: hidden;
-  display: flex;
-  align-items: flex-end;
-  transition: transform 0.3s ease;
-}
 
 .blog-card:hover {
   transform: scale(1.03);
