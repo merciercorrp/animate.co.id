@@ -476,7 +476,7 @@
             <div class="card" style="width: 300px;
     height: 300px;">
               <div class="card-body cardbodyAnimate">
-                <h5 class="Animate-text">Animate <br/>Best Seller</h5>
+                <h5 class="Animate-text">Animate <br/>Bundling</h5>
                 <!-- <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6> -->
                 <p class="card-text" style="font-size: 14px !important; opacity: 0.8;     color: white;"> Jawaranya Skincare Paketan Hidupkan Cantikmu.</p>
                  <div class="d-flex justify-content-center" style="margin-top: 77px;">
@@ -1230,37 +1230,26 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="w-100 my-3 border-top "></div>
                 </div>
                 <div class="col-auto me-auto">
+                </div>
+                <div class="col-auto">
                     <ul class="list-inline text-left footer-icons">
                         <li class="list-inline-item border  rounded-circle text-center">
-                            <a class="text-dark text-decoration-none" target="_blank" href="http://facebook.com/"><i class="fab fa-tiktok"></i></a>
+                            <a class="text-dark text-decoration-none" target="_blank" href="http://tiktok.com/@animateofficiall.id"><i class="fab fa-tiktok"></i></a>
                         </li>
                         <li class="list-inline-item border  rounded-circle text-center">
-                            <a class="text-dark text-decoration-none" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                            <a class="text-dark text-decoration-none" target="_blank" href="https://shopee.co.id/animateofficial.id"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
                         </li>
                         <li class="list-inline-item border  rounded-circle text-center">
                             <a class="text-dark text-decoration-none" target="_blank" href="https://twitter.com/"><i><img width="30" style="position: relative; bottom: 3px; opacity: 0.8;" src="img/icon/shopee.png" ></i></a>
                         </li>
                         <li class="list-inline-item border  rounded-circle text-center">
-                            <a class="text-dark text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i><img width="18" style="position: relative; bottom: 3px;" src="img/icon/tokopedia.png" ></i></a>
+                            <a class="text-dark text-decoration-none" target="_blank" href="http://tokopedia.com/animateofficial/"><i><img width="18" style="position: relative; bottom: 3px;" src="img/icon/tokopedia.png" ></i></a>
                         </li>
                         <li class="list-inline-item border  rounded-circle text-center">
-                            <a class="text-dark text-decoration-none" target="_blank" href="https://www.instagram.com/"><i class="fab fa-whatsaqpp fa-lg fa-fw"></i></a>
+                            <a class="text-dark text-decoration-none" target="_blank" href="https://api.whatsapp.com/message/RXKG4ID3HL3YH1?autoload=1&app_absent=0"><i class="fab fa-whatsapp fa-lg fa-fw"></i></a>
                         </li>
-                        <!-- <li class="list-inline-item border  rounded-circle text-center">
-                            <a class="text-dark text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i><img width="25" style="position: relative; bottom: 2px;" src="img/icon/lazada.png" ></i></a>
-                        </li>
-                        <li class="list-inline-item border  rounded-circle text-center">
-                            <a class="text-dark text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i><img width="38" style="position: relative; bottom: 2px;" src="img/icon/akulaku.png" ></i></a>
-                        </li> -->
                     </ul>
                 </div>
-                <!-- <div class="col-auto">
-                    <label class="sr-only" for="subscribeEmail">Email address</label>
-                    <div class="input-group mb-2">
-                        <input type="text" class="form-control bg-dark " id="subscribeEmail" placeholder="Email address">
-                        <div class="input-group-text btn-success text-light">Subscribe</div>
-                    </div>
-                </div> -->
             </div>
         </div>
 
@@ -1300,6 +1289,31 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       });
     </script>
+
+    <style>.circle-button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.circle-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ff66b2; /* pink */
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.circle-btn:hover {
+  background-color: #e055a2;
+}
+</style>
 
     <script>
           const products = {
@@ -1341,7 +1355,10 @@ document.addEventListener("DOMContentLoaded", function () {
                   <img src="${p.img}" style="width:100%; border-radius:12px;">
                   <div class="product-title">${p.title}</div>
                   <div><span class="price">${p.price}</span><span class="old-price">${p.old}</span></div>
-                  <button class="btn-cart">+ Keranjang</button>
+                  <div class="circle-button-group">
+                      <button class="circle-btn love-btn">❤️</button>
+                      <button class="circle-btn cart-btn">🛒</button>
+                    </div>
                 `;
                 wrapper.appendChild(slide);
               });
