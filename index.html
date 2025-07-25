@@ -334,7 +334,7 @@
       align-items: center;
     }
 
-    .swiper-slide img {
+    .swiperSlider img {
       display: block;
       width: 100%;
       height: 100%;
@@ -392,7 +392,7 @@
       align-items: center;
     }
 
-    .swiper-slide img {
+    .swiperslider2 img {
       display: block;
       width: 20px;
       height: 100%;
@@ -1290,29 +1290,86 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     </script>
 
-    <style>.circle-button-group {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
-}
+<style>
+  .circle-button-group {
+    display: flex;
+    justify-content: center; /* Pusatkan secara horizontal */
+    gap: 10px;               /* Jarak antar tombol */
+    margin-top: 10px;        /* Jarak dari elemen atasnya */
+    flex-wrap: wrap;
+  }
 
-.circle-btn {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  border: none;
-  background-color: #ff66b2; /* pink */
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
+  .circle-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    transition: background-color 0.3s ease;
+  }
 
-.circle-btn:hover {
-  background-color: #e055a2;
-}
+  .circle-btn .imgShopee {
+    width: 70%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .circle-btn .imgTokopedia {
+    width: 60%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .circle-btn {
+      width: 40px;
+      height: 40px;
+    }
+
+    .circle-btn .imgShopee {
+        width: 70%;
+        height: auto;
+        object-fit: contain;
+      }
+
+    .circle-btn .imgTokopedia {
+        width: 60%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .circle-btn img {
+      width: 55%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .circle-btn {
+      width: 36px;
+      height: 36px;
+    }
+
+    .circle-btn .imgShopee {
+        width: 70%;
+        height: auto;
+        object-fit: contain;
+      }
+
+    .circle-btn .imgTokopedia {
+        width: 60%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .circle-btn img {
+      width: 50%;
+    }
+  }
 </style>
 
     <script>
@@ -1356,9 +1413,13 @@ document.addEventListener("DOMContentLoaded", function () {
                   <div class="product-title">${p.title}</div>
                   <div><span class="price">${p.price}</span><span class="old-price">${p.old}</span></div>
                   <div class="circle-button-group">
-                      <button class="circle-btn love-btn">❤️</button>
-                      <button class="circle-btn cart-btn">🛒</button>
-                    </div>
+                      <button class="circle-btn love-btn" style="background: #ea501f">
+                      <img class="imgShopee" src="img/market/shopee.png" alt="shopee">
+                    </button>
+                    <button class="circle-btn cart-btn" style="background: #4e9c4d">
+                      <img class="imgTokopedia" src="img/market/tokopedia.png" alt="tokopedia">
+                    </button>
+                   </div>
                 `;
                 wrapper.appendChild(slide);
               });
