@@ -36,15 +36,6 @@
             background: #ff5f9d;
         }
 
-        /*.swiper-pagination-bullet {
-            width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 8px));
-            height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 8px));
-            display: inline-block;
-            border-radius: 0px;
-            background: #fd7fae;
-            opacity: var(--swiper-pagination-bullet-inactive-opacity, .2);
-        }*/
-
         .swiper-pagination-bullet {
             border-radius: 0px;
             width: 50px;
@@ -98,6 +89,12 @@
             }
         }
 
+        .nav-item.dropdown .dropdown-toggle {
+            padding-top: 0.6rem !important;
+            padding-bottom: 0.6rem !important;
+            font-size: 0.7rem; /* kecilkan panah */
+        }
+
     </style>
 
 
@@ -127,103 +124,71 @@
 
                     <!-- SHOP ALL MEGA MENU -->
                     <li class="nav-item dropdown position-static" data-bs-auto-close="outside">
-                        <a class="nav-link dropdown-toggle" href="#" id="megaDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                            SHOP
-                        </a>
-                        <div class="dropdown-menu w-100 mt-0 border-0 shadow" aria-labelledby="megaDropdown" style="left: 0; right: 0; background-color: #fef7ff;">
-                            <div class="container py-4">
-                                <div class="row">
-                                    <!-- Face -->
-                                    <!-- <div class="col-md-2">
-                                        <h6 class="fw-bold">Face</h6>
-                                        <ul class="list-unstyled">
-                                          <li class="custom-dropdown-vertical">
-                                              <a href="#" class="custom-dropdown-toggle dropdown-item" id="dropdownFacialWash">
-                                                Facial Wash <span class="toggle-icon">▾</span>
-                                              </a>
-                                              <ul class="custom-dropdown-menu" aria-labelledby="dropdownFacialWash">
-                                                <li><a class="dropdown-item" href="#">Brightly Series</a></li>
+                         <div class="d-flex align-items-center">
+                            <a href="shopall.html" class="nav-link pe-1" style="padding-right: 0px !important;">
+                                SHOP
+                            </a>
+                            <a class="nav-link dropdown-toggle ps-1" href="#" id="megaDropdownToggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            </a>
+
+                            <div class="dropdown-menu w-100 mt-0 border-0 shadow" aria-labelledby="megaDropdown" style="left: 0; right: 0; background-color: #fef7ff;">
+                                <div class="container py-4">
+                                    <div class="row">
+                                       
+                                        <div class="col-md-2">
+                                            <h6 class="fw-bold">Face</h6>
+                                            <ul class="list-unstyled">
+                                                <li><a class="dropdown-item" href="#">Serum Series</a></li>
+                                                <li><a class="dropdown-item" href="#">Whitening Series</a></li>
+                                                <li><a class="dropdown-item" href="#">Barrier Series</a></li>
                                                 <li><a class="dropdown-item" href="#">Acne Series</a></li>
-                                                <li><a class="dropdown-item" href="#">Age Delay</a></li>
-                                              </ul>
-                                            </li>
-                                            <li><a class="dropdown-item" href="#">Face Serum</a></li>
-                                            <li><a class="dropdown-item" href="#">Sunscreen</a></li>
-                                            <li><a class="dropdown-item" href="#">Face Toner</a></li>
-                                            <li><a class="dropdown-item" href="#">Exfoliating</a></li>
-                                            <li><a class="dropdown-item" href="#">Face Mask</a></li>
-                                            <li><a class="dropdown-item" href="#">Face Moisturizer</a></li>
-                                            <li><a class="dropdown-item" href="#">Lip Treatment</a></li>
-                                            <li><a class="dropdown-item" href="#">Eye Treatment</a></li>
-                                        </ul>
-                                    </div> -->
+                                                <li><a class="dropdown-item" href="#">Anti Aging Series</a></li>
+                                                <li><a class="dropdown-item" href="#">Dark Spot Series</a></li>
+                                                <li><a class="dropdown-item" href="#">Microbiosme Series</a></li>
+                                            </ul>
+                                        </div>
 
-                                    <div class="col-md-2">
-                                        <h6 class="fw-bold">Face</h6>
-                                        <ul class="list-unstyled">
-                                          <!-- <li class="custom-dropdown-vertical">
-                                              <a href="#" class="custom-dropdown-toggle dropdown-item" id="dropdownFacialWash">
-                                                Facial Wash <span class="toggle-icon">▾</span>
-                                              </a>
-                                              <ul class="custom-dropdown-menu" aria-labelledby="dropdownFacialWash">
-                                                <li><a class="dropdown-item" href="#">Brightly Series</a></li>
-                                                <li><a class="dropdown-item" href="#">Acne Series</a></li>
-                                                <li><a class="dropdown-item" href="#">Age Delay</a></li>
-                                              </ul>
-                                            </li> -->
-                                            <li><a class="dropdown-item" href="#">Serum Series</a></li>
-                                            <li><a class="dropdown-item" href="#">Whitening Series</a></li>
-                                            <li><a class="dropdown-item" href="#">Barrier Series</a></li>
-                                            <li><a class="dropdown-item" href="#">Acne Series</a></li>
-                                            <li><a class="dropdown-item" href="#">Anti Aging Series</a></li>
-                                            <li><a class="dropdown-item" href="#">Dark Spot Series</a></li>
-                                            <li><a class="dropdown-item" href="#">Microbiosme Series</a></li>
-                                        </ul>
+                                        <!-- Body -->
+                                        <div class="col-md-2">
+                                            <h6 class="fw-bold">Lip</h6>
+                                            <ul class="list-unstyled">
+                                                <li><a class="dropdown-item" href="#">Lip Series</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Parfum -->
+                                        <div class="col-md-2">
+                                            <h6 class="fw-bold">Body</h6>
+                                            <ul class="list-unstyled">
+                                                <li><a class="dropdown-item" href="#">Body Care</a></li>
+                                                <li><a class="dropdown-item" href="#">Moisturizer</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Bundling -->
+                                        <div class="col-md-2">
+                                            <h6 class="fw-bold">Bundling</h6>
+                                            <ul class="list-unstyled">
+                                                <li><a class="dropdown-item" href="#">Bundling</a></li>
+                                                <li><a class="dropdown-item" href="#">5 IN 1 Series</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="col-md-2">
+                                            <h6 class="fw-bold">New Product</h6>
+                                            <ul class="list-unstyled">
+                                                <li><a class="dropdown-item" href="#">New Product</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Hair -->
+                                        <div class="col-md-2">
+                                            <h6 class="fw-bold">Best Seller</h6>
+                                            <ul class="list-unstyled">
+                                                <li><a class="dropdown-item" href="#">Best Seller</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-
-                                    <!-- Body -->
-                                    <div class="col-md-2">
-                                        <h6 class="fw-bold">Lip</h6>
-                                        <ul class="list-unstyled">
-                                            <li><a class="dropdown-item" href="#">Lip Series</a></li>
-                                        </ul>
-                                    </div>
-
-                                    <!-- Parfum -->
-                                    <div class="col-md-2">
-                                        <h6 class="fw-bold">Body</h6>
-                                        <ul class="list-unstyled">
-                                            <li><a class="dropdown-item" href="#">Body Care</a></li>
-                                            <li><a class="dropdown-item" href="#">Moisturizer</a></li>
-                                        </ul>
-                                    </div>
-
-                                    <!-- Bundling -->
-                                    <div class="col-md-2">
-                                        <h6 class="fw-bold">Bundling</h6>
-                                        <ul class="list-unstyled">
-                                            <li><a class="dropdown-item" href="#">Bundling</a></li>
-                                            <li><a class="dropdown-item" href="#">5 IN 1 Series</a></li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="col-md-2">
-                                        <h6 class="fw-bold">New Product</h6>
-                                        <ul class="list-unstyled">
-                                            <li><a class="dropdown-item" href="#">New Product</a></li>
-                                        </ul>
-                                    </div>
-
-                                    <!-- Hair -->
-                                    <div class="col-md-2">
-                                        <h6 class="fw-bold">Best Seller</h6>
-                                        <ul class="list-unstyled">
-                                            <li><a class="dropdown-item" href="#">Best Seller</a></li>
-                                        </ul>
-                                    </div>
-
-                                    
-
                                 </div>
                             </div>
                         </div>
@@ -479,9 +444,9 @@
                 <h5 class="Animate-text">Animate <br/>Bundling</h5>
                 <!-- <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6> -->
                 <p class="card-text" style="font-size: 14px !important; opacity: 0.8;     color: white;"> Jawaranya Skincare Paketan Hidupkan Cantikmu.</p>
-                 <div class="d-flex justify-content-center" style="margin-top: 77px;">
+                 <!-- <div class="d-flex justify-content-center" style="margin-top: 77px;">
                     <button href="#" class="btn learnmoreAnimate" style="background: white; padding: 0.5rem 1.5rem 0.5rem 1.5rem; border: solid 1px black;">LEARN MORE</button>
-                </div>
+                </div> -->
               </div>
             </div>
         </div>
@@ -631,7 +596,9 @@
 
         <!-- Shop All -->
         <div class="shop-all-container">
-          <button class="shop-all-btn">SHOP ALL</button>
+            <form action="shopall.html">
+                <button class="shop-all-btn">SHOP ALL</button>
+            </form>
         </div>
 
         
@@ -703,7 +670,7 @@
   }*/
 
   .mySwiperNews{
-    height: 800px;
+    height: 600px;
   }
 
   .swiper-pagination {
@@ -742,7 +709,7 @@
   }*/
 
   .sectionNews{
-    padding: 0rem 17.2rem 0rem 17.2rem;
+    padding: 0rem 6.2rem 0rem 6.2rem;
   }
 
   @media (max-width: 768px) {
@@ -788,7 +755,7 @@
                     <h4>EDUCATION UPDATE</h4>
                     <h2><b>Rahasia Kulit Cantik: Manfaat Animate Body Lotion untuk Mencerahkan Kulit</b></h2>
                     <p>Letak geografis Indonesia membuat negara ini dikenal sebagai negara tropis dengan cuaca yang panas. Tentu saja dengan cuaca yang panas mempengaruhi kondisi kulit penduduknya...</p>
-                    <a href="#" class="read-more">READ MORE</a>
+                    <a href="education_detail.html" target="_blank" class="read-more">READ MORE</a>
                   </div>
                 </div>
             </div>
@@ -808,7 +775,7 @@
                     <h4>EDUCATION UPDATE</h4>
                     <h2><b>Rahasia Kulit Cantik: Manfaat Animate Body Lotion untuk Mencerahkan Kulit</b></h2>
                     <p>Letak geografis Indonesia membuat negara ini dikenal sebagai negara tropis dengan cuaca yang panas. Tentu saja dengan cuaca yang panas mempengaruhi kondisi kulit penduduknya...</p>
-                    <a href="#" class="read-more">READ MORE</a>
+                    <a href="education_detail.html" target="_blank" class="read-more">READ MORE</a>
                   </div>
                 </div>
             </div>
@@ -828,7 +795,7 @@
                     <h4>EDUCATION UPDATE</h4>
                     <h2><b>Rahasia Kulit Cantik: Manfaat Animate Body Lotion untuk Mencerahkan Kulit</b></h2>
                     <p>Letak geografis Indonesia membuat negara ini dikenal sebagai negara tropis dengan cuaca yang panas. Tentu saja dengan cuaca yang panas mempengaruhi kondisi kulit penduduknya...</p>
-                    <a href="#" class="read-more">READ MORE</a>
+                    <a href="education_detail.html" target="_blank" class="read-more">READ MORE</a>
                   </div>
                 </div>
             </div>
@@ -848,7 +815,7 @@
                     <h4>EDUCATION UPDATE</h4>
                     <h2><b>Rahasia Kulit Cantik: Manfaat Animate Body Lotion untuk Mencerahkan Kulit</b></h2>
                     <p>Letak geografis Indonesia membuat negara ini dikenal sebagai negara tropis dengan cuaca yang panas. Tentu saja dengan cuaca yang panas mempengaruhi kondisi kulit penduduknya...</p>
-                    <a href="#" class="read-more">READ MORE</a>
+                    <a href="education_detail.html" target="_blank" class="read-more">READ MORE</a>
                   </div>
                 </div>
             </div>
@@ -868,7 +835,7 @@
                     <h4>EDUCATION UPDATE</h4>
                     <h2><b>Rahasia Kulit Cantik: Manfaat Animate Body Lotion untuk Mencerahkan Kulit</b></h2>
                     <p>Letak geografis Indonesia membuat negara ini dikenal sebagai negara tropis dengan cuaca yang panas. Tentu saja dengan cuaca yang panas mempengaruhi kondisi kulit penduduknya...</p>
-                    <a href="#" class="read-more">READ MORE</a>
+                    <a href="education_detail.html" target="_blank" class="read-more">READ MORE</a>
                   </div>
                 </div>
             </div>
@@ -888,7 +855,7 @@
                     <h4>EDUCATION UPDATE</h4>
                     <h2><b>Rahasia Kulit Cantik: Manfaat Animate Body Lotion untuk Mencerahkan Kulit</b></h2>
                     <p>Letak geografis Indonesia membuat negara ini dikenal sebagai negara tropis dengan cuaca yang panas. Tentu saja dengan cuaca yang panas mempengaruhi kondisi kulit penduduknya...</p>
-                    <a href="#" class="read-more">READ MORE</a>
+                    <a href="education_detail.html" target="_blank" class="read-more">READ MORE</a>
                   </div>
                 </div>
             </div>
@@ -1014,18 +981,42 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="swiper swiperSahabatWrapper mySwiperSahabat">
           <div class="swiper-wrapper">
             <!-- SLIDES -->
-            <div class="swiper-slide" style="background-image: url('img/sahabat/mnndd_.jpg');"></div>
-            <div class="swiper-slide" style="background-image: url('img/sahabat/Nanadmardiiii.jpg');"></div>
-            <div class="swiper-slide" style="background-image: url('img/sahabat/Naylaaribbiell_.jpg');"></div>
-            <div class="swiper-slide" style="background-image: url('img/sahabat/Nuruladds.jpg');"></div>
-            <div class="swiper-slide" style="background-image: url('img/sahabat/Rahmazrh.jpg');"></div>
-            <div class="swiper-slide" style="background-image: url('img/sahabat/Tikaatikahh.jpg');"></div>
-            <div class="swiper-slide" style="background-image: url('img/sahabat/mnndd_.jpg');"></div>
-            <div class="swiper-slide" style="background-image: url('img/sahabat/Nanadmardiiii.jpg');"></div>
-            <div class="swiper-slide" style="background-image: url('img/sahabat/Naylaaribbiell_.jpg');"></div>
-            <div class="swiper-slide" style="background-image: url('img/sahabat/Nuruladds.jpg');"></div>
-            <div class="swiper-slide" style="background-image: url('img/sahabat/Rahmazrh.jpg');"></div>
-            <div class="swiper-slide" style="background-image: url('img/sahabat/Tikaatikahh.jpg');"></div>
+            <div class="swiper-slide" style="background-image: url('img/sahabat/mnndd_.jpg');">
+                <a href="https://www.instagram.com/reel/DL4Sq0opcqJ/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+            </div>
+            <div class="swiper-slide" style="background-image: url('img/sahabat/Nanadmardiiii.jpg');">
+                <a href="https://www.instagram.com/reel/DKWH4tNJu44/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+            </div>
+            <div class="swiper-slide" style="background-image: url('img/sahabat/Naylaaribbiell_.jpg');">
+                <a href="https://www.instagram.com/reel/DLEQauLJMK7/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+            </div>
+            <div class="swiper-slide" style="background-image: url('img/sahabat/Nuruladds.jpg');">
+                <a href="https://www.instagram.com/reel/DMJ_lM5pHkA/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+            </div>
+            <div class="swiper-slide" style="background-image: url('img/sahabat/Rahmazrh.jpg');">
+                <a href="https://www.instagram.com/reel/DL4Sq0opcqJ/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+            </div>
+            <div class="swiper-slide" style="background-image: url('img/sahabat/Tikaatikahh.jpg');">
+                <a href="https://www.instagram.com/reel/DL9l1hiSTkJ/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+            </div>
+            <div class="swiper-slide" style="background-image: url('img/sahabat/mnndd_.jpg');">
+                <a href="https://www.instagram.com/reel/DL4Sq0opcqJ/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+            </div>
+            <div class="swiper-slide" style="background-image: url('img/sahabat/Nanadmardiiii.jpg');">
+                <a href="https://www.instagram.com/reel/DKWH4tNJu44/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+            </div>
+            <div class="swiper-slide" style="background-image: url('img/sahabat/Naylaaribbiell_.jpg');">
+                <a href="https://www.instagram.com/reel/DLEQauLJMK7/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+            </div>
+            <div class="swiper-slide" style="background-image: url('img/sahabat/Nuruladds.jpg');">
+                <a href="https://www.instagram.com/reel/DMJ_lM5pHkA/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+            </div>
+            <div class="swiper-slide" style="background-image: url('img/sahabat/Rahmazrh.jpg');">
+                <a href="https://www.instagram.com/reel/DL4Sq0opcqJ/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+            </div>
+            <div class="swiper-slide" style="background-image: url('img/sahabat/Tikaatikahh.jpg');">
+                <a href="https://www.instagram.com/reel/DL9l1hiSTkJ/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+            </div>
           </div>
         </div>
       </div>
