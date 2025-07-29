@@ -27,14 +27,14 @@ Table of contents
 
 @font-face {
     font-family: 'EuclidCircularA';
-    src: url('../fonts/EuclidCircularARegular.ttf') format('truetype');
+    src: url('../../fonts/EuclidCircularARegular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'EuclidCircularA';
-    src: url('../fonts/EuclidCircularABold.ttf') format('truetype');
+    src: url('../../fonts/EuclidCircularABold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }

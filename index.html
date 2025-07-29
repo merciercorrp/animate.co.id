@@ -327,10 +327,10 @@
 
     <script>
       var swiperSlider = new Swiper(".mySwiperSlider", {
-        speed: 1000, // kecepatan transisi antar slide dalam milidetik (1000ms = 1 detik)
+        speed: 2500, // kecepatan transisi antar slide dalam milidetik (1000ms = 1 detik)
         loop: true,  // agar slide terus berputar
         autoplay: {
-          delay: 100000000, // waktu tunggu sebelum slide pindah (3000ms = 3 detik)
+          delay: 2300, // waktu tunggu sebelum slide pindah (3000ms = 3 detik)
           disableOnInteraction: false, // tetap autoplay meskipun user menggeser manual
         },
         pagination: {
@@ -372,7 +372,7 @@
   </style>
 
     <!-- Section Impact -->
-    <section style="padding-top: 50px; padding-bottom: 20px;">
+    <section style="padding-top: 3rem;">
         <div class="row">
             <div class="col-md-6">
                 <div class="swiper mySwiperKegiatan" style="height: 300px;">
@@ -443,7 +443,7 @@
               <div class="card-body cardbodyAnimate">
                 <h5 class="Animate-text">Animate <br/>Bundling</h5>
                 <!-- <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6> -->
-                <p class="card-text" style="font-size: 14px !important; opacity: 0.8;     color: white;"> Jawaranya Skincare Paketan Hidupkan Cantikmu.</p>
+                <h3 class="card-text" style="font-size: 14px !important; opacity: 0.8;     color: white;"> Jawaranya Skincare Paketan Hidupkan Cantikmu.</h3>
                  <!-- <div class="d-flex justify-content-center" style="margin-top: 77px;">
                     <button href="#" class="btn learnmoreAnimate" style="background: white; padding: 0.5rem 1.5rem 0.5rem 1.5rem; border: solid 1px black;">LEARN MORE</button>
                 </div> -->
@@ -458,7 +458,7 @@
     <!-- End Section Impact -->
 
     <!-- Section Best Seller -->
-    <section style="padding-left: 2.5rem; padding-right: 2.5rem; padding-bottom: 0rem; padding-top: 2rem;">
+    <section style="padding-left: 2.5rem; padding-right: 2.5rem; padding-bottom: 0rem; padding-top: 3rem;">
 
 
         <style>
@@ -524,14 +524,15 @@
 
           .shop-all-container {
             text-align: center;
-            margin-top: 35px;
+            margin-top: 3rem;
+            margin-bottom: 2rem;
           }
 
           .shop-all-btn {
-            border: 1px solid black;
+            border: 2px solid black;
             background: white;
-            padding: 9px 100px;
-            font-weight: bold;
+            padding: 0.6rem 2rem;
+            font-weight: bold !important;
             cursor: pointer;
             border-radius: 3px;
           }
@@ -612,7 +613,7 @@
     align-items: center;
     gap: 2rem;
     background: white;
-    padding: 2rem;
+    padding: 0rem;
     border-radius: 16px;
   }
 
@@ -620,7 +621,6 @@
     width: 100%;
     border-radius: 12px;
     overflow: hidden;
-    padding: 10px 0px 0px 99px;
   }
 
   .news-slide .news-image img {
@@ -656,12 +656,12 @@
   }
 
   .news-slide .news-content .read-more {
-    padding: 0.6rem 1.2rem;
-    border: 2px solid #ff5293;
-    color: #ff5293;
-    border-radius: 8px;
+        padding: 0.6rem 1.2rem;
+    border: 2px solid #282828;
+    color: black;
+    border-radius: 1px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: bold !important;
     font-size: 0.85rem;
   }
 
@@ -728,8 +728,40 @@
 
   @media (min-width: 1200px) {
     .sectionNews{
-        padding: 0rem 17.2rem 0rem 8.2rem;
+        padding: 0rem 8.2rem 0rem 8.2rem;
     }
+
+    .news-slide .news-content {
+        flex: 1;
+        color: #6e3fa0;
+        text-align: left;
+        padding: 24px 99px 10px 10px;
+      }
+
+      .news-slide .news-content p {
+        font-size: 0.95rem;
+        color: #555;
+        margin-bottom: 2.7rem;
+      }
+  }
+
+  @media (min-width: 1400px) {
+    .sectionNews{
+        padding: 0rem 8.2rem 0rem 8.2rem;
+    }
+
+    .news-slide .news-content {
+        flex: 1;
+        color: #6e3fa0;
+        text-align: left;
+        padding: 122px 100px 10px 10px;
+      }
+
+      .news-slide .news-content p {
+        font-size: 0.95rem;
+        color: #555;
+        margin-bottom: 2.7rem;
+      }
   }
 
   
@@ -943,8 +975,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   .sectionSahabat{
-    padding-top: 0px;
-    padding-bottom: 50px;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
     padding-left: 150px;
     padding-right: 200px;
    }
@@ -1067,7 +1099,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     </style>
 
-    <section style="padding-top: 0px; padding-bottom: 20px; padding-left: 0px; padding-right: 0px;">
+    <section style="padding-top: 0px; padding-bottom: 3rem; padding-left: 0px; padding-right: 0px;">
         <div class="row">
             <div class="row">
                 <div class="col-sm-12">
@@ -1173,7 +1205,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="container">
             <div class="row">
 
-                <div class="col-md-4 pt-5">
+                <div class="col-md-3 pt-5">
                     <h2 class="h2 text-success  pb-3  logo"><img width="200" src="img/b_animate_white.png" style="filter: invert();"> </h2>
                     <ul class="list-unstyled text-dark footer-link-list">
                         <!-- <li>
@@ -1191,7 +1223,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </ul>
                 </div>
 
-                <div class="col-md-4 pt-5">
+                <div class="col-md-3 pt-5">
                     <h4 class="h5 text-dark  pb-3 " style="font-weight: bold">Products</h4>
                     <ul class="list-unstyled text-dark footer-link-list">
                         <li><a class="text-decoration-none" href="#">Serum Series</a></li>
@@ -1204,13 +1236,24 @@ document.addEventListener("DOMContentLoaded", function () {
                     </ul>
                 </div>
 
-                 <div class="col-md-4 pt-5">
+                 <div class="col-md-3 pt-5">
                     <h4 class="h5 text-dark  pb-3 " style="font-weight: bold">Further Info</h4>
                     <ul class="list-unstyled text-dark footer-link-list">
                         <li><a class="text-decoration-none" href="#">Home</a></li>
                         <li><a class="text-decoration-none" href="#">Education</a></li>
                         <li><a class="text-decoration-none" href="#">Awards</a></li>
                         <li><a class="text-decoration-none" href="#">About Us</a></li>
+                    </ul>
+                </div>  
+
+                <div class="col-md-3 pt-5">
+                    <h4 class="h5 text-dark  pb-3 " style="font-weight: bold">Address</h4>
+                    <ul class="list-unstyled text-dark footer-link-list">
+                        <li><a class="text-decoration-none" href="#">Rukan Theme Park<br/>
+Jl. Pantai Indah Kapuk No. 77, Blok E<br/>
+Pantai Indah Kapuk, Penjaringan<br/>
+Jakarta Utara, DKI Jakarta 14460<br/>
+Indonesia</a></li>
                     </ul>
                 </div>  
 
