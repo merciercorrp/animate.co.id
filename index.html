@@ -73,11 +73,10 @@
           margin: 0;
         }
 
-        .logobyAnimate {
-            font-size: 28px !important;
-            padding-bottom: 0px !important;
-            position: absolute;
-            left: 2%;
+        .navAnimate{
+            padding-bottom: 10px;
+            padding-top: 10px;
+            padding-left: 0px;
         }
 
         @media only screen and (max-width: 600px) {
@@ -86,6 +85,13 @@
                 padding-bottom: 0px !important;
                 position: absolute;
                 left: 36%;
+            }
+
+            .navAnimate{
+                padding-bottom: 10px;
+                padding-top: 10px;
+                padding-left: 31px;
+                padding-right: 20px;
             }
         }
 
@@ -100,15 +106,13 @@
 
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-light shadow" style="position: fixed; width: 100%; z-index: 999; background: white;">
+        
+        <div class="container d-flex justify-content-between align-items-center navAnimate">
         <div class=" d-flex align-items-left">
             <a class="navbar-brand text-success logo h1 align-self-center logobyAnimate"  href="index.html">
-            <img class="imgWidth" style="width: 128px;" src="img/b_animate.png">
-        </a>
+                <img class="imgWidth" style="width: 128px;" src="img/b_animate.png">
+            </a>
         </div>
-        <div class="container d-flex justify-content-between align-items-center" style="
-        padding-bottom: 10px;
-        padding-top: 10px;
-    ">
     <!-- 
         <a class="navbar-brand text-success logo h1 align-self-center" style="font-size: 28px !important; padding-bottom: 0px !important; " href="index.html">
             <img class="imgWidth" style="width: 114px;" src="img/b_animate.png">
@@ -206,7 +210,7 @@
                 </ul>
             </div>
             <div class="navbar align-self-center d-flex">
-                <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                <div class="d-lg-none flex-sm-fill mt-3 mb-3 col-11 px-5 col-sm-auto pr-3">
                     <div class="input-group">
                         <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
                         <div class="input-group-text">
@@ -369,6 +373,12 @@
         margin-right: 1.25rem !important;
         border-radius: 15px;
     }
+
+    /* Buat animasi gerak lebih halus dan terus berjalan */
+    .mySwiperKegiatan .swiper-wrapper {
+      transition-timing-function: linear !important;
+    }
+
   </style>
 
     <!-- Section Impact -->
@@ -377,28 +387,31 @@
             <div class="col-md-6">
                 <div class="swiper mySwiperKegiatan" style="height: 300px;">
                     <div class="swiper-wrapper">
-                          <div class="swiper-slide swiperslider2" style="background-image: url('img/bestseller/bs-1.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; width: 100px !important;"></div>
-                          <div class="swiper-slide swiperslider2" style="background-image: url('img/bestseller/bs-2.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; width: 100px !important;"></div>
-                          <div class="swiper-slide swiperslider2" style="background-image: url('img/bestseller/bs-3.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; width: 100px !important;"></div>
-                          <div class="swiper-slide swiperslider2" style="background-image: url('img/bestseller/bs-4.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; width: 100px !important;"></div>
-                          <div class="swiper-slide swiperslider2" style="background-image: url('img/bestseller/bs-5.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; width: 100px !important;"></div>
-                          <div class="swiper-slide swiperslider2" style="background-image: url('img/bestseller/bs-6.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; width: 100px !important;"></div>
-                          <div class="swiper-slide swiperslider2" style="background-image: url('img/bestseller/bs-7.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; width: 100px !important;"></div>
-                         
+                          <div class="swiper-slide swiperslider2" style="background-image: url('img/bestseller/bs-1.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; min-width: 100px;"></div>
+                          <div class="swiper-slide swiperslider2" style="background-image: url('img/bestseller/bs-2.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; min-width: 100px;"></div>
+                          <div class="swiper-slide swiperslider2" style="background-image: url('img/bestseller/bs-3.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; min-width: 100px;"></div>
+                          <div class="swiper-slide swiperslider2" style="background-image: url('img/bestseller/bs-4.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; min-width: 100px;"></div>
+                          <div class="swiper-slide swiperslider2" style="background-image: url('img/bestseller/bs-5.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; min-width: 100px;"></div>
+                          <div class="swiper-slide swiperslider2" style="background-image: url('img/bestseller/bs-6.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; min-width: 100px;"></div>
+                          <div class="swiper-slide swiperslider2" style="background-image: url('img/bestseller/bs-7.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; min-width: 100px;"></div>
+
+                        </div>
                     </div>
                 </div>
-            </div>
 
 
-<script>
+                <script>
   var swiper2 = new Swiper(".mySwiperKegiatan", {
+    loop: true, 
     slidesPerView: 1,
     spaceBetween: 10,
-    loop: true, // ✅ letakkan di luar pagination
-    pagination: {
-      el: ".mySwiperKegiatan .swiper-pagination",
-      clickable: true
+    autoplay: {
+      delay: 5, 
+      disableOnInteraction: false, 
     },
+    speed: 6000, 
+    grabCursor: true,
+    allowTouchMove: false, 
     breakpoints: {
       640: {
         slidesPerView: 2,
@@ -416,30 +429,29 @@
   });
 </script>
 
-<style>
-    .Animate-text 
-    {
-        font-size: 31px;
-        font-weight: bold;
-        line-height: 1.2;
-        color: white;
-        -webkit-text-stroke: 1px #fe2f9b;
-        text-shadow: 2px 0 0 #f5b9d8, 0 0 0 #f989c4, 0 0 0 #fe2f9b, 0 1px 0 #fe2f9b, 0 0 0 rgba(136, 30, 157, .5);
-        display: inline-block;
-    }
-    .cardbodyAnimate{
-        background: #fe2e9cd4;
-        border-radius: 15px;
-    }
-    .learnmoreAnimate{
-        background: white; padding: 0.5rem 1.5rem 0.5rem 1.5rem; border: solid 1px black;
-    }
+                <style>
+                    .Animate-text 
+                    {
+                        font-size: 31px;
+                        font-weight: bold;
+                        line-height: 1.2;
+                        color: white;
+                        -webkit-text-stroke: 1px #fe2f9b;
+                        text-shadow: 2px 0 0 #f5b9d8, 0 0 0 #f989c4, 0 0 0 #fe2f9b, 0 1px 0 #fe2f9b, 0 0 0 rgba(136, 30, 157, .5);
+                        display: inline-block;
+                    }
+                    .cardbodyAnimate{
+                        background: #fe2e9cd4;
+                        border-radius: 15px;
+                    }
+                    .learnmoreAnimate{
+                        background: white; padding: 0.5rem 1.5rem 0.5rem 1.5rem; border: solid 1px black;
+                    }
 
-  </style>
+                  </style>
 
         <div class="col-md-4">
-            <div class="card" style="width: 300px;
-    height: 300px;">
+            <div class="card" style="width: 300px; height: 300px;">
               <div class="card-body cardbodyAnimate">
                 <h5 class="Animate-text">Animate <br/>Bundling</h5>
                 <!-- <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6> -->
@@ -774,7 +786,7 @@
     <div class="swiper-wrapper">
 
       <!-- Slide 1 -->
-    <div class="swiper-slide">
+    <div class="swiper-slide swiperslideEdu">
         <div class="news-slide">
             <div class="row">
                 <div class="col-sm-6">
@@ -794,7 +806,7 @@
         </div>
     </div>
 
-    <div class="swiper-slide">
+    <div class="swiper-slide swiperslideEdu">
         <div class="news-slide">
             <div class="row">
                 <div class="col-sm-6">
@@ -814,7 +826,7 @@
         </div>
     </div>
 
-    <div class="swiper-slide">
+    <div class="swiper-slide swiperslideEdu">
         <div class="news-slide">
             <div class="row">
                 <div class="col-sm-6">
@@ -926,6 +938,200 @@ document.addEventListener("DOMContentLoaded", function () {
   </script>
 
   </section>
+
+  <style>
+.mySwiper-testimoni {
+  padding: 30px 0;
+}
+
+.mySwiper-testimoni .testimonial-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  height: auto;
+      display: block !important;
+}
+
+.mySwiper-testimoni .testimonial-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.mySwiper-testimoni h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.mySwiper-testimoni .position {
+  font-size: 0.875rem;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.mySwiper-testimoni .quote {
+  font-style: italic;
+  color: #9b59b6;
+  font-size: 0.95rem;
+}
+
+/* Custom Swiper Arrows */
+.mySwiper-testimoni .swiper-button-next,
+.mySwiper-testimoni .swiper-button-prev {
+  color: #ec87c0; /* warna pink */
+  background-color: #ff5f9d; /* pink transparan */
+  border-radius: 50%;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.mySwiper-testimoni .swiper-button-next:hover,
+.mySwiper-testimoni .swiper-button-prev:hover {
+  background-color: #ff4f93; /* pink gelap */
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Hilangkan default icon backgroud (jika masih muncul) */
+.mySwiper-testimoni .swiper-button-next::after,
+.mySwiper-testimoni .swiper-button-prev::after {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+</style>
+
+<!-- Section: Greetings from BOD -->
+<section class="bod-section py-5">
+  <div class="container">
+    <h3 class="fw-bold text-center mb-4">Testimonial</h3>
+
+    <div class="swiper mySwiper-testimoni">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide testimonial-card">
+          <img src="img/back/model.webp" class="testimonial-avatar" />
+          <h4>Randy Saputra</h4>
+          <p class="position">Direktur</p>
+          <p class="quote">“Dengan memberikan inovasi dan produk berkualitas, Animate dipandang sebagai salah satu brand terkuat di tengah ketatnya kompetisi industri local beauty.”</p>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide testimonial-card">
+          <img src="img/back/model.webp" class="testimonial-avatar" />
+          <h4>Ferry Arief Sunandar</h4>
+          <p class="position">Chief, Financial Officer</p>
+          <p class="quote">“Animate punya misi untuk membantu meningkatkan ekonomi di Indonesia, salah satunya dengan mengadakan program Reseller yang sangat impactful.”</p>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide testimonial-card">
+          <img src="img/back/model.webp" class="testimonial-avatar" />
+          <h4>Ferry Arief Sunandar</h4>
+          <p class="position">Chief, Financial Officer</p>
+          <p class="quote">“Animate punya misi untuk membantu meningkatkan ekonomi di Indonesia, salah satunya dengan mengadakan program Reseller yang sangat impactful.”</p>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide testimonial-card">
+          <img src="img/back/model.webp" class="testimonial-avatar" />
+          <h4>Ferry Arief Sunandar</h4>
+          <p class="position">Chief, Financial Officer</p>
+          <p class="quote">“Animate punya misi untuk membantu meningkatkan ekonomi di Indonesia, salah satunya dengan mengadakan program Reseller yang sangat impactful.”</p>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide testimonial-card">
+          <img src="img/back/model.webp" class="testimonial-avatar" />
+          <h4>Ferry Arief Sunandar</h4>
+          <p class="position">Chief, Financial Officer</p>
+          <p class="quote">“Animate punya misi untuk membantu meningkatkan ekonomi di Indonesia, salah satunya dengan mengadakan program Reseller yang sangat impactful.”</p>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide testimonial-card">
+          <img src="img/back/model.webp" class="testimonial-avatar" />
+          <h4>Ferry Arief Sunandar</h4>
+          <p class="position">Chief, Financial Officer</p>
+          <p class="quote">“Animate punya misi untuk membantu meningkatkan ekonomi di Indonesia, salah satunya dengan mengadakan program Reseller yang sangat impactful.”</p>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide testimonial-card">
+          <img src="img/back/model.webp" class="testimonial-avatar" />
+          <h4>Ferry Arief Sunandar</h4>
+          <p class="position">Chief, Financial Officer</p>
+          <p class="quote">“Animate punya misi untuk membantu meningkatkan ekonomi di Indonesia, salah satunya dengan mengadakan program Reseller yang sangat impactful.”</p>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide testimonial-card">
+          <img src="img/back/model.webp" class="testimonial-avatar" />
+          <h4>Ferry Arief Sunandar</h4>
+          <p class="position">Chief, Financial Officer</p>
+          <p class="quote">“Animate punya misi untuk membantu meningkatkan ekonomi di Indonesia, salah satunya dengan mengadakan program Reseller yang sangat impactful.”</p>
+        </div>
+
+        <!-- Tambah slide lainnya jika ada -->
+      </div>
+
+      <!-- Navigasi -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  var swiperTestimoni = new Swiper(".mySwiper-testimoni", {
+  loop: true, // penting agar tak terbatas
+  slidesPerView: 5,
+  spaceBetween: 20,
+  autoplay: {
+    delay: 0, // tanpa jeda
+    disableOnInteraction: false, // tetap jalan meskipun user interaksi
+    reverseDirection: true
+  },
+  speed: 10000, // semakin kecil semakin cepat (ms)
+  grabCursor: true,
+  allowTouchMove: false, // tidak bisa swipe manual (opsional)
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    640: {
+      slidesPerView: 1.5,
+    },
+    768: {
+      slidesPerView: 2.5,
+    },
+    1024: {
+      slidesPerView: 3.5,
+    },
+    1280: {
+      slidesPerView: 4,
+    }
+  }
+});
+</script>
 
   <!-- Section Sahabat -->
     <style>
@@ -1055,24 +1261,20 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
 </section>
 
-    <script>
-        const swiperSahabat = new Swiper('.mySwiperSahabat', {
-            slidesPerView: 2,
-            spaceBetween: 20,
-            pagination: {
-              el: ".mySwiperSahabat .swiper-pagination",
-              clickable: true
-            },
-            breakpoints: {
-              768: {
-                slidesPerView: 4
-              },
-              1024: {
-                slidesPerView: 6
-              }
-            }
-          });
-    </script>
+<script>
+const swiperSahabat = new Swiper('.mySwiperSahabat', {
+  loop: true,
+  slidesPerView: 'auto',
+  spaceBetween: 20,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+  speed: 4000,
+  allowTouchMove: false,
+  grabCursor: true
+});
+</script>
 
     <!-- END Section Sahabat -->
 
