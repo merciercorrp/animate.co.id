@@ -206,6 +206,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="aboutus.html">ABOUT US</a>
                     </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="affiliate.html">AFFILIATE</a>
+                    </li> -->
 
                 </ul>
             </div>
@@ -401,33 +404,33 @@
 
 
                 <script>
-  var swiper2 = new Swiper(".mySwiperKegiatan", {
-    loop: true, 
-    slidesPerView: 1,
-    spaceBetween: 10,
-    autoplay: {
-      delay: 5, 
-      disableOnInteraction: false, 
-    },
-    speed: 6000, 
-    grabCursor: true,
-    allowTouchMove: false, 
-    breakpoints: {
-      640: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 4,
-        spaceBetween: 40,
-      },
-      1024: {
-        slidesPerView: 5,
-        spaceBetween: 50,
-      },
-    },
-  });
-</script>
+                  var swiper2 = new Swiper(".mySwiperKegiatan", {
+                    loop: true, 
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                    autoplay: {
+                      delay: 5, 
+                      disableOnInteraction: false, 
+                    },
+                    speed: 6000, 
+                    grabCursor: true,
+                    allowTouchMove: false, 
+                    breakpoints: {
+                      640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                      },
+                      768: {
+                        slidesPerView: 4,
+                        spaceBetween: 40,
+                      },
+                      1024: {
+                        slidesPerView: 5,
+                        spaceBetween: 50,
+                      },
+                    },
+                  });
+                </script>
 
                 <style>
                     .Animate-text 
@@ -1087,8 +1090,8 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
 
       <!-- Navigasi -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+      <!-- <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div> -->
     </div>
   </div>
 </section>
@@ -1378,25 +1381,87 @@ const swiperSahabat = new Swiper('.mySwiperSahabat', {
 <!-- END Section Sahabat -->
 
     <!-- Section Level Up -->
+<section class="pt-3">
 
-<marquee direction="left" scrollamount="10" loop="infinite" behavior="scroll" style="font-size: 100px; opacity: 0.4; white-space: nowrap; width: 100%; display: block;     margin-bottom: 3rem;">
-      Hidupkan Cantikmu 
-      <span style="color: deeppink; font-weight: bold;">
-        <img class="img-fluid" src="img/logo/logo-bulet.jpg" width="50">
-      </span> 
-      Hidupkan Cantikmu 
-      <span style="color: deeppink; font-weight: bold;">
-        <img class="img-fluid" src="img/logo/logo-bulet.jpg" width="50">
-      </span> 
-      Hidupkan Cantikmu 
-      <span style="color: deeppink; font-weight: bold;">
-        <img class="img-fluid" src="img/logo/logo-bulet.jpg" width="50">
-      </span> 
-      Hidupkan Cantikmu 
-      <span style="color: deeppink; font-weight: bold;">
-        <img class="img-fluid" src="img/logo/logo-bulet.jpg" width="50">
-      </span>
-</marquee>
+<style>
+  .marquee-wrapper {
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 30s linear infinite;
+  }
+
+  .marquee-content {
+    display: flex;
+  }
+
+  .marquee-item {
+    flex-shrink: 0;
+    margin-right: 5vw; /* responsive gap */
+  }
+
+  .marquee-item img {
+    width: clamp(80px, 10vw, 150px);
+    height: auto;
+    display: block;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .marquee-wrapper:hover .marquee-track {
+    animation-play-state: paused;
+  }
+
+  @media only screen and (max-width: 600px) {
+
+      .marquee-item img {
+        width: clamp(172px, 10vw, 150px);
+        height: auto;
+        display: block;
+      }
+}
+</style>
+
+<div class="marquee-wrapper">
+  <div class="marquee-track">
+    <!-- content duplicated twice for seamless infinite scroll -->
+    <div class="marquee-content">
+      <span class="marquee-item"><img src="img/setifikat/sign-01.png" alt=""></span>
+      <span class="marquee-item"><img src="img/setifikat/sign-04.png" alt=""></span>
+      <span class="marquee-item"><img src="img/setifikat/sign-02.png" alt=""></span>
+      <span class="marquee-item"><img src="img/setifikat/sign-03.png" alt=""></span>    
+      <span class="marquee-item"><img src="img/setifikat/sign-01.png" alt=""></span>
+      <span class="marquee-item"><img src="img/setifikat/sign-04.png" alt=""></span>
+      <span class="marquee-item"><img src="img/setifikat/sign-02.png" alt=""></span>
+      <span class="marquee-item"><img src="img/setifikat/sign-03.png" alt=""></span>
+    </div>
+    <div class="marquee-content">
+      <!-- identical copy for looping effect -->
+      <span class="marquee-item"><img src="img/setifikat/sign-01.png" alt=""></span>
+      <span class="marquee-item"><img src="img/setifikat/sign-04.png" alt=""></span>
+      <span class="marquee-item"><img src="img/setifikat/sign-02.png" alt=""></span>
+      <span class="marquee-item"><img src="img/setifikat/sign-03.png" alt=""></span>
+      <span class="marquee-item"><img src="img/setifikat/sign-02.png" alt=""></span>
+      <span class="marquee-item"><img src="img/setifikat/sign-03.png" alt=""></span>
+      <span class="marquee-item"><img src="img/setifikat/sign-01.png" alt=""></span>
+      <span class="marquee-item"><img src="img/setifikat/sign-04.png" alt=""></span>
+    </div>
+  </div>
+</div>
+</section>
 
     <!-- END Section Level Up -->
 
