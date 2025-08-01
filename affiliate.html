@@ -36,6 +36,15 @@
             background: #ff5f9d;
         }
 
+        /*.swiper-pagination-bullet {
+            width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 8px));
+            height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 8px));
+            display: inline-block;
+            border-radius: 0px;
+            background: #fd7fae;
+            opacity: var(--swiper-pagination-bullet-inactive-opacity, .2);
+        }*/
+
         .swiper-pagination-bullet {
             border-radius: 0px;
             width: 50px;
@@ -105,7 +114,8 @@
 
 
     <!-- Header -->
-        <nav class="navbar navbar-expand-lg navbar-light shadow" style="position: fixed; width: 100%; z-index: 999; background: white;">
+    <nav class="navbar navbar-expand-lg navbar-light shadow" style="position: fixed; width: 100%; z-index: 999; background: white; padding-top: .1rem !important;
+    padding-bottom: .1rem !important;">
         
         <div class="container d-flex justify-content-between align-items-center navAnimate">
         <div class=" d-flex align-items-left">
@@ -237,6 +247,41 @@
     </div>
 </nav>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Cegah semua isi dropdown agar tidak menutup dropdown utama
+    document.querySelectorAll('.dropdown-menu').forEach(function (menu) {
+      menu.addEventListener('click', function (e) {
+        e.stopPropagation();
+      });
+    });
+
+    // Toggle submenu (Facial Wash) secara manual
+    document.querySelectorAll('.dropdown.dropend .dropdown-toggle').forEach(function (toggle) {
+      toggle.addEventListener('click', function (e) {
+        e.preventDefault(); // Hindari reload #
+        e.stopPropagation();
+
+        const submenu = this.nextElementSibling;
+        if (submenu && submenu.classList.contains('dropdown-menu')) {
+          // Tutup dropdown lain jika terbuka
+          document.querySelectorAll('.dropdown-menu.show').forEach(function (openMenu) {
+            if (openMenu !== submenu) {
+              openMenu.classList.remove('show');
+            }
+          });
+
+          submenu.classList.toggle('show');
+        }
+      });
+    });
+  });
+</script>
+
+
+
+    <!-- Close Header -->
+
     <!-- Modal -->
     <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
@@ -254,360 +299,298 @@
         </div>
     </div>
 
+      <style>
 
-
-    <!-- Start Content -->
-    <div class="container py-5" >
-        <div class="row" style="margin-top: 80px;">
-
-            <div class="col-lg-3">
-                
-
-                <h1 class="h2 pb-4">Rokomendasi Produk</h1>
-                <ul class="list-unstyled templatemo-accordion">
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                            Jerawat
-                            <i class="fa fa-fw fa-chevron-circle-down mt-1"></i>
-                        </a>
-                        <ul class="collapse show list-unstyled pl-3">
-                            <li><a class="text-decoration-none" href="#">Men</a></li>
-                            <li><a class="text-decoration-none" href="#">Women</a></li>
-                        </ul>
-                    </li>
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                            Berminyak
-                            <i class="pull-right fa fa-fw fa-chevron-circle-down mt-1"></i>
-                        </a>
-                        <ul id="collapseTwo" class="collapse list-unstyled pl-3">
-                            <li><a class="text-decoration-none" href="#">Dark Spot Serieso</li>
-                        </ul>
-
-                    </li>
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                            Kering
-                            <i class="pull-right fa fa-fw fa-chevron-circle-down mt-1"></i>
-                        </a>
-                        <ul id="collapseThree" class="collapse list-unstyled pl-3">
-                            <li><a class="text-decoration-none" href="#">Bag</a></li>
-                            <li><a class="text-decoration-none" href="#">Sweather</a></li>
-                            <li><a class="text-decoration-none" href="#">Sunglass</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-lg-9">
-                <div class="row">
-                    <div class="col-md-6">
-                        <ul class="list-inline shop-top-menu pb-3 pt-1">
-                            <li class="list-inline-item">
-                                <a class="h3 text-dark text-decoration-none mr-3" href="#">All</a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="h3 text-dark text-decoration-none mr-3" href="#">Men's</a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="h3 text-dark text-decoration-none" href="#">Women's</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6 pb-4">
-                        <div class="d-flex">
-                            <select class="form-control">
-                                <option>Featured</option>
-                                <option>A to Z</option>
-                                <option>Item</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                  <style>
-    /* ===== CSS Khusus Kartu Produk ===== */
-    .product-card {
-      border: 1px solid #eee;
-      border-radius: 10px;
-      padding: 15px;
-      text-align: center;
-      position: relative;
-      background: #fff;
-      transition: box-shadow 0.3s ease;
+    .swiper {
+      width: 100%;
       height: 100%;
     }
 
-    .product-card:hover {
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    }
-
-    .discount-badge {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      background-color: #ff4d88;
-      color: white;
-      font-size: 14px;
-      padding: 4px 10px;
-      border-radius: 6px;
-    }
-
-    .product-title {
-      font-weight: 600;
-      margin-top: 10px;
-    }
-
-    .price {
-      color: #f14d54;
-      font-weight: bold;
+    .swiper-slide {
+      text-align: center;
       font-size: 18px;
+      background: #444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    .old-price {
-      text-decoration: line-through;
-      color: gray;
-      font-size: 14px;
-      margin-left: 8px;
+    .swiperSlider img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    .marketplace-icons img {
-      width: 30px;
-      margin: 5px;
-    }
 
-    .product-image {
-      max-height: 220px;
-      object-fit: contain;
-    }
   </style>
 
-  <style>
-  .circle-button-group {
-    display: flex;
-    justify-content: center; /* Pusatkan secara horizontal */
-    gap: 10px;               /* Jarak antar tombol */
-    margin-top: 10px;        /* Jarak dari elemen atasnya */
-    flex-wrap: wrap;
+
+
+    <!-- Start Banner Hero -->
+    <section class="banner">
+    <div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel" style="height: 720px;">
+        <div class="swiper mySwiperSlider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide swiperSlider" style="background-image: url('img/back/BANNER-cushion.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center"></div>
+              <div class="swiper-slide swiperSlider" style="background-image: url('img/back/BANNER-LIP-TINT.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center"></div>
+              
+            </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    </section>
+
+    <script>
+      var swiperSlider = new Swiper(".mySwiperSlider", {
+        speed: 2500, // kecepatan transisi antar slide dalam milidetik (1000ms = 1 detik)
+        loop: true,  // agar slide terus berputar
+        autoplay: {
+          delay: 2300, // waktu tunggu sebelum slide pindah (3000ms = 3 detik)
+          disableOnInteraction: false, // tetap autoplay meskipun user menggeser manual
+        },
+        pagination: {
+          el: ".mySwiperSlider .swiper-pagination",
+          clickable: true,
+        },
+     
+      });
+</script>
+    <!-- End Banner Hero -->
+
+    <style>
+          .btn-affiliator {
+            font-size: 1.2rem !important;
+            font-weight: bold !important;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            text-transform: uppercase;
+            background-color: #fa4ea4 !important;
+            border-color: #efd5c6 !important;
+            color: white;
+          }
+
+          .btn-affiliator:hover {
+            background-color: white !important;
+            border-color: #fa4ea4 !important;
+            color: black;
+          }
+
+          @media (max-width: 576px) {
+            .btn-affiliator {
+              font-size: 1rem;
+              padding: 0.6rem 1rem;
+            }
+          }
+        </style>
+
+      <div class="d-flex justify-content-center align-items-center pt-5 pb-5">
+          <a href="https://wa.me/6281234567890" target="_blank" class="btn btn-affiliator">
+            <i class="fab fa-whatsapp me-2"></i> JOIN US AFFILIATOR
+          </a>
+      </div>
+
+    
+
+    <style>
+  .swiperSahabatWrapper {
+    height: 312px;
   }
 
-  .circle-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
-    background-color: #f3f3f3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    transition: background-color 0.3s ease;
+  .swiperSahabatWrapper .swiper-slide {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    width: 210px !important;
+    height: 100%;
+    position: relative;
   }
 
-  .circle-btn .imgShopee {
-    width: 73%;
-    height: auto;
-    object-fit: contain;
+  .swiperSahabatWrapper .swiper-slide::after {
+    content: "";
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    width: 16px;
+    height: 16px;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/75/Black_Play_Button.png"); /* ikon play */
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
-  .circle-btn .imgTokopedia {
-    width: 60%;
-    height: auto;
-    object-fit: contain;
+  .sahabat-title {
+    font-weight: bold !important;
+    font-size: 36px !important;
+    margin-bottom: 10px !important;
+    letter-spacing: 3px;
+    padding-bottom: 10px;
   }
 
-  /* Responsive */
-  @media (max-width: 768px) {
-    .circle-btn {
-      width: 40px;
-      height: 40px;
-    }
-
-    .circle-btn .imgShopee {
-        width: 70%;
-        height: auto;
-        object-fit: contain;
-      }
-
-    .circle-btn .imgTokopedia {
-        width: 60%;
-        height: auto;
-        object-fit: contain;
-    }
-
-    .circle-btn img {
-      width: 55%;
-    }
+  .sahabat-title span {
+    color: #ec4899;
   }
 
-  @media (max-width: 480px) {
-    .circle-btn {
-      width: 36px;
-      height: 36px;
-    }
-
-    .circle-btn .imgShopee {
-        width: 70%;
-        height: auto;
-        object-fit: contain;
-      }
-
-    .circle-btn .imgTokopedia {
-        width: 60%;
-        height: auto;
-        object-fit: contain;
-    }
-
-    .circle-btn img {
-      width: 50%;
-    }
+  .sahabat-desc {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 20px;
+    text-align: right !important;
   }
+
+  .sectionSahabat{
+    padding-top: 0rem;
+    padding-bottom: 3rem;
+    padding-left: 150px;
+    padding-right: 150px;
+   }
+
+        @media only screen and (max-width: 600px) {
+            .sectionSahabat {
+                padding-top: 0px;
+                padding-bottom: 50px;
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+        }
 </style>
 
-<div class="row"><!-- ===== SECTION: Produk Animate ===== -->
-<section id="produk-animate">
-  <div class="container">
-    
-    <div class="row g-4">
-      <!-- Ulangi 12 produk total (3 baris × 4 kolom) -->
-
-      <!-- ===== PRODUK 1 ===== -->
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="product-card">
-          <div class="discount-badge">20%</div>
-          <img src="img/bestseller/bs-4.webp" alt="Parfum 1" class="img-fluid product-image">
-          <div class="product-title">Parfum 1</div>
-          <div>
-            <span class="price">Rp64.500</span>
-            <span class="old-price">Rp75.000</span>
-          </div>
-          <div class="circle-button-group">
-                      <button class="circle-btn love-btn" style="background: #ea501f">
-                      <img class="imgShopee" src="img/market/shopee.png" alt="shopee">
-                    </button>
-                    <button class="circle-btn cart-btn" style="background: #4e9c4d">
-                      <img class="imgTokopedia" src="img/market/tokopedia.png" alt="tokopedia">
-                    </button>
-                   </div>
-        </div>
-      </div>
-
-      <!-- ===== PRODUK 2–12 ===== -->
-      <!-- Salin struktur di atas dan ubah judul, harga, dan diskon sesuai kebutuhan -->
-      <!-- PRODUK 2 -->
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="product-card">
-          <div class="discount-badge">9%</div>
-          <img src="img/bestseller/bs-4.webp" alt="Face Wash" class="img-fluid product-image">
-          <div class="product-title">Face Wash</div>
-          <div>
-            <span class="price">Rp60.000</span>
-            <span class="old-price">Rp75.000</span>
-          </div>
-          <div class="circle-button-group">
-                      <button class="circle-btn love-btn" style="background: #ea501f">
-                      <img class="imgShopee" src="img/market/shopee.png" alt="shopee">
-                    </button>
-                    <button class="circle-btn cart-btn" style="background: #4e9c4d">
-                      <img class="imgTokopedia" src="img/market/tokopedia.png" alt="tokopedia">
-                    </button>
-                   </div>
-        </div>
-      </div>
-
-      <!-- PRODUK 3 -->
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="product-card">
-          <div class="discount-badge">15%</div>
-          <img src="img/bestseller/bs-4.webp" alt="Body Lotion" class="img-fluid product-image">
-          <div class="product-title">Body Lotion</div>
-          <div>
-            <span class="price">Rp65.000</span>
-            <span class="old-price">Rp80.000</span>
-          </div>
-          <div class="circle-button-group">
-                      <button class="circle-btn love-btn" style="background: #ea501f">
-                      <img class="imgShopee" src="img/market/shopee.png" alt="shopee">
-                    </button>
-                    <button class="circle-btn cart-btn" style="background: #4e9c4d">
-                      <img class="imgTokopedia" src="img/market/tokopedia.png" alt="tokopedia">
-                    </button>
-                   </div>
-        </div>
-      </div>
-
-      <!-- PRODUK 4 -->
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="product-card">
-          <div class="discount-badge">50%</div>
-          <img src="img/bestseller/bs-4.webp" alt="Perfume Red" class="img-fluid product-image">
-          <div class="product-title">Perfume Red</div>
-          <div>
-            <span class="price">Rp45.000</span>
-            <span class="old-price">Rp90.000</span>
-          </div>
-          <div class="circle-button-group">
-                      <button class="circle-btn love-btn" style="background: #ea501f">
-                      <img class="imgShopee" src="img/market/shopee.png" alt="shopee">
-                    </button>
-                    <button class="circle-btn cart-btn" style="background: #4e9c4d">
-                      <img class="imgTokopedia" src="img/market/tokopedia.png" alt="tokopedia">
-                    </button>
-                   </div>
-        </div>
-      </div>
-
-      <!-- PRODUK 5–12 (SALIN & MODIFIKASI) -->
-      <!-- PRODUK 5 -->
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="product-card">
-          <div class="discount-badge">30%</div>
-          <img src="img/bestseller/bs-4.webp" alt="Serum Bright" class="img-fluid product-image">
-          <div class="product-title">Serum Bright</div>
-          <div>
-            <span class="price">Rp70.000</span>
-            <span class="old-price">Rp100.000</span>
-          </div>
-          <div class="circle-button-group">
-                      <button class="circle-btn love-btn" style="background: #ea501f">
-                      <img class="imgShopee" src="img/market/shopee.png" alt="shopee">
-                    </button>
-                    <button class="circle-btn cart-btn" style="background: #4e9c4d">
-                      <img class="imgTokopedia" src="img/market/tokopedia.png" alt="tokopedia">
-                    </button>
-                   </div>
-        </div>
-      </div>
-
-      <!-- Tambahkan hingga produk ke-12 sesuai kebutuhan -->
-      <!-- Anda cukup menyalin 1 blok produk dan mengganti isi masing-masing -->
-
-    </div>
-  </div>
-</section>
-<!-- ===== END SECTION ===== -->
-                </div>
-                <div div="row">
-                    <ul class="pagination pagination-lg justify-content-end">
-                        <li class="page-item disabled">
-                            <a class="page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0" href="#" tabindex="-1">1</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link rounded-0 mr-3 shadow-sm border-top-0 border-left-0 text-dark" href="#">2</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link rounded-0 shadow-sm border-top-0 border-left-0 text-dark" href="#">3</a>
-                        </li>
-                    </ul>
-                </div>
+<section class="sectionSahabat">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="swiper swiperSahabatWrapper mySwiperSahabat">
+          <div class="swiper-wrapper">
+            <!-- SLIDES -->
+            <div class="swiper-slide" style="background-image: url('img/sahabat/mnndd_.jpg');">
+                <a href="https://www.instagram.com/reel/DL4Sq0opcqJ/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
             </div>
-
+            <div class="swiper-slide" style="background-image: url('img/sahabat/Nanadmardiiii.jpg');">
+                <a href="https://www.instagram.com/reel/DKWH4tNJu44/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+            </div>
+            <div class="swiper-slide" style="background-image: url('img/sahabat/Naylaaribbiell_.jpg');">
+                <a href="https://www.instagram.com/reel/DLEQauLJMK7/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+            </div>
+            <div class="swiper-slide" style="background-image: url('img/sahabat/Nuruladds.jpg');">
+                <a href="https://www.instagram.com/reel/DMJ_lM5pHkA/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+            </div>
+            <div class="swiper-slide" style="background-image: url('img/sahabat/Rahmazrh.jpg');">
+                <a href="https://www.instagram.com/reel/DL4Sq0opcqJ/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+            </div>
+            <div class="swiper-slide" style="background-image: url('img/sahabat/Tikaatikahh.jpg');">
+                <a href="https://www.instagram.com/reel/DL9l1hiSTkJ/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+            </div>
+            <div class="swiper-slide" style="background-image: url('img/sahabat/mnndd_.jpg');">
+                <a href="https://www.instagram.com/reel/DL4Sq0opcqJ/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+            </div>
+            <div class="swiper-slide" style="background-image: url('img/sahabat/Nanadmardiiii.jpg');">
+                <a href="https://www.instagram.com/reel/DKWH4tNJu44/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+            </div>
+            <div class="swiper-slide" style="background-image: url('img/sahabat/Naylaaribbiell_.jpg');">
+                <a href="https://www.instagram.com/reel/DLEQauLJMK7/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+            </div>
+            <div class="swiper-slide" style="background-image: url('img/sahabat/Nuruladds.jpg');">
+                <a href="https://www.instagram.com/reel/DMJ_lM5pHkA/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+            </div>
+            <div class="swiper-slide" style="background-image: url('img/sahabat/Rahmazrh.jpg');">
+                <a href="https://www.instagram.com/reel/DL4Sq0opcqJ/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+            </div>
+            <div class="swiper-slide" style="background-image: url('img/sahabat/Tikaatikahh.jpg');">
+                <a href="https://www.instagram.com/reel/DL9l1hiSTkJ/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+            </div>
+          </div>
         </div>
-    </div>
-    <!-- End Content -->
+      </div>
+    </section>
 
-    
+      
 
-    <!-- Start Footer -->
+      <style>
+  .text-purple {
+      color: #ff5f9d !important;
+    }
+
+    .ecosystem-section h1 {
+      font-size: 2.5rem;
+    }
+
+    img.rounded-4 {
+      border-radius: 1rem;
+    }
+
+    .ceo-section {
+      background-color: #f8f3fc;
+    }
+
+    .text-purple {
+      color: #ff5f9d !important;
+    }
+
+    .rounded-4 {
+      border-radius: 1rem;
+    }
+
+    .quote-section {
+      background-color: #ffffff;
+    }
+
+    .quote-text {
+      font-size: 1.5rem;
+      line-height: 1.8;
+      max-width: 900px;
+      margin: 0 auto;
+      color: #8224e3; /* ungu Animate */
+    }
+
+    .journey-section {
+      background-color: #ffffff;
+    }
+
+    .text-purple {
+      color: #8224e3;
+    }
+
+    .journey-section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 16px;
+      object-fit: cover;
+    }
+
+
+  </style>
+
+    <!-- <section class="quote-section py-5 text-center">
+      <div class="container">
+        <blockquote class="quote-text fw-semibold fst-italic text-purple">
+          “Animate adalah brand kecantikan yang berfokus pada inovasi, kualitas, dan keberlanjutan. Kami menawarkan produk skincare premium, layanan klinik kecantikan profesional, serta manufaktur kosmetik. Kami meyakini bahwa setiap ide inovatif dan pendekatan berbasis solusi dapat menginspirasi serta membuka peluang menuju masa depan yang lebih baik. Bergabunglah sebagai afiliator dan jadilah bagian dari perjalanan mewujudkan impian wanita Indonesia melalui kecantikan yang bertanggung jawab.”
+        </blockquote>
+      </div>
+    </section> -->
+
+
+
+<script>
+const swiperSahabat = new Swiper('.mySwiperSahabat', {
+  loop: true,
+  slidesPerView: 'auto',
+  spaceBetween: 20,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+  speed: 4000,
+  allowTouchMove: false,
+  grabCursor: true
+});
+</script>
+
+    <!-- END Section Sahabat -->
+
+<!-- Start Footer -->
     <footer class="bg-white" id="tempaltemo_footer">
         <div class="container">
             <div class="row">
@@ -629,6 +612,7 @@
                         </li> -->
                     </ul>
                 </div>
+
                 <div class="col-md-4 pt-5">
                     <h4 class="h5 text-dark  pb-3 " style="font-weight: bold">Products</h4>
                     <ul class="list-unstyled text-dark footer-link-list">
@@ -651,7 +635,7 @@
                         <li><a class="text-decoration-none" href="#">About Us</a></li>
                         <li><a class="text-decoration-none" href="#">Affiliate</a></li>
                     </ul>
-                </div>
+                </div>  
 
             </div>
 
@@ -706,21 +690,7 @@
     <script src="assets/js/custom.js"></script>
     <!-- End Script -->
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const toggles = document.querySelectorAll('.custom-dropdown-toggle');
-
-        toggles.forEach(toggle => {
-          toggle.addEventListener('click', function (e) {
-            e.preventDefault();
-            const parent = this.closest('.custom-dropdown-vertical');
-            parent.classList.toggle('open');
-          });
-        });
-      });
-    </script>
-
-
+    
 </body>
 
 </html>

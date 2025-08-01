@@ -206,10 +206,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="aboutus.html">ABOUT US</a>
                     </li>
-                    <!-- <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link" href="affiliate.html">AFFILIATE</a>
-                    </li> -->
-
+                    </li>
                 </ul>
             </div>
             <div class="navbar align-self-center d-flex">
@@ -382,98 +381,121 @@
       transition-timing-function: linear !important;
     }
 
+    .Bundling{
+        padding: 3.8rem 8.2rem 0rem 8.2rem;
+    }
+
+    @media (max-width: 768px) {
+          .Bundling{
+            padding: 3rem 12px 0rem 2.2rem;
+        }
+    }
+
   </style>
 
     <!-- Section Impact -->
-    <section style="padding-top: 3rem;">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="swiper mySwiperKegiatan" style="height: 300px;">
-                    <div class="swiper-wrapper">
-                          <div class="swiper-slide swiperslider2" style="background-image: url('img/bestseller/bs-1.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; min-width: 100px;"></div>
-                          <div class="swiper-slide swiperslider2" style="background-image: url('img/bestseller/bs-2.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; min-width: 100px;"></div>
-                          <div class="swiper-slide swiperslider2" style="background-image: url('img/bestseller/bs-3.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; min-width: 100px;"></div>
-                          <div class="swiper-slide swiperslider2" style="background-image: url('img/bestseller/bs-4.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; min-width: 100px;"></div>
-                          <div class="swiper-slide swiperslider2" style="background-image: url('img/bestseller/bs-5.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; min-width: 100px;"></div>
-                          <div class="swiper-slide swiperslider2" style="background-image: url('img/bestseller/bs-6.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; min-width: 100px;"></div>
-                          <div class="swiper-slide swiperslider2" style="background-image: url('img/bestseller/bs-7.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; min-width: 100px;"></div>
+<section class="Bundling">
+    <!-- Baris Pertama: Judul dan Deskripsi -->
+        <div class="row align-items-center mb-4">
+            <div class="row">
+                <div class="col-sm-12 col-md-10">
+                    <div class="swiper mySwiperKegiatan" style="height: 300px;">
+                        <div class="swiper-wrapper">
+                              <div class="swiper-slide swiperslider2" style="background-image: url('img/bestseller/bs-1.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; min-width: 100px;"></div>
+                              <div class="swiper-slide swiperslider2" style="background-image: url('img/bestseller/bs-2.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; min-width: 100px;"></div>
+                              <div class="swiper-slide swiperslider2" style="background-image: url('img/bestseller/bs-3.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; min-width: 100px;"></div>
+                              <div class="swiper-slide swiperslider2" style="background-image: url('img/bestseller/bs-4.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; min-width: 100px;"></div>
+                              <div class="swiper-slide swiperslider2" style="background-image: url('img/bestseller/bs-5.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; min-width: 100px;"></div>
+                              <div class="swiper-slide swiperslider2" style="background-image: url('img/bestseller/bs-6.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; min-width: 100px;"></div>
+                              <div class="swiper-slide swiperslider2" style="background-image: url('img/bestseller/bs-7.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; min-width: 100px;"></div>
 
+                            </div>
                         </div>
                     </div>
+
+
+                    <script>
+                      var swiper2 = new Swiper(".mySwiperKegiatan", {
+                        loop: true, 
+                        slidesPerView: 1,
+                        spaceBetween: 10,
+                        autoplay: {
+                          delay: 5, 
+                          disableOnInteraction: false, 
+                        },
+                        speed: 6000, 
+                        grabCursor: true,
+                        allowTouchMove: false, 
+                        breakpoints: {
+                          640: {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                          },
+                          768: {
+                            slidesPerView: 4,
+                            spaceBetween: 40,
+                          },
+                          1024: {
+                            slidesPerView: 5,
+                            spaceBetween: 50,
+                          },
+                        },
+                      });
+                    </script>
+
+                    <style>
+                        .Animate-text 
+                        {
+                            font-size: 31px;
+                            font-weight: bold;
+                            line-height: 1.2;
+                            color: white;
+                            -webkit-text-stroke: 1px #fe2f9b;
+                            text-shadow: 2px 0 0 #f5b9d8, 0 0 0 #f989c4, 0 0 0 #fe2f9b, 0 1px 0 #fe2f9b, 0 0 0 rgba(136, 30, 157, .5);
+                            display: inline-block;
+                        }
+                        .cardbodyAnimate{
+                            background: #fe2e9cd4;
+                            border-radius: 15px;
+                        }
+                        .learnmoreAnimate{
+                            background: white; padding: 0.5rem 1.5rem 0.5rem 1.5rem; border: solid 1px black;
+                        }
+
+                        .cardBundling{
+                            width: 114%;
+                            height: 300px;
+                        }
+
+                        @media (max-width: 768px) {
+                              .cardBundling{
+                                width: 100%;
+                                height: 329px;
+                                margin-top: 4rem;
+                            }
+                        }
+
+                      </style>
+
+                        <div class="col-sm-12 col-md-2">
+                            <div class="card cardBundling">
+                              <div class="card-body cardbodyAnimate">
+                                <h5 class="Animate-text">Animate <br/>Bundling</h5>
+                                <h3 class="card-text" style="font-size: 14px !important; opacity: 0.8;     color: white;"> Jawaranya Skincare Paketan Hidupkan Cantikmu.</h3>
+                                 <div class="d-flex justify-content-center" style="margin-top: 77px;">
+                                    <button href="#" class="btn learnmoreAnimate" style="background: white; padding: 0.5rem 1.5rem 0.5rem 1.5rem; border: solid 1px black;">SHOW </button>
+                                </div> 
+                              </div>
+                            </div>
+                        </div>
+                
                 </div>
-
-
-                <script>
-                  var swiper2 = new Swiper(".mySwiperKegiatan", {
-                    loop: true, 
-                    slidesPerView: 1,
-                    spaceBetween: 10,
-                    autoplay: {
-                      delay: 5, 
-                      disableOnInteraction: false, 
-                    },
-                    speed: 6000, 
-                    grabCursor: true,
-                    allowTouchMove: false, 
-                    breakpoints: {
-                      640: {
-                        slidesPerView: 2,
-                        spaceBetween: 20,
-                      },
-                      768: {
-                        slidesPerView: 4,
-                        spaceBetween: 40,
-                      },
-                      1024: {
-                        slidesPerView: 5,
-                        spaceBetween: 50,
-                      },
-                    },
-                  });
-                </script>
-
-                <style>
-                    .Animate-text 
-                    {
-                        font-size: 31px;
-                        font-weight: bold;
-                        line-height: 1.2;
-                        color: white;
-                        -webkit-text-stroke: 1px #fe2f9b;
-                        text-shadow: 2px 0 0 #f5b9d8, 0 0 0 #f989c4, 0 0 0 #fe2f9b, 0 1px 0 #fe2f9b, 0 0 0 rgba(136, 30, 157, .5);
-                        display: inline-block;
-                    }
-                    .cardbodyAnimate{
-                        background: #fe2e9cd4;
-                        border-radius: 15px;
-                    }
-                    .learnmoreAnimate{
-                        background: white; padding: 0.5rem 1.5rem 0.5rem 1.5rem; border: solid 1px black;
-                    }
-
-                  </style>
-
-        <div class="col-md-4">
-            <div class="card" style="width: 300px; height: 300px;">
-              <div class="card-body cardbodyAnimate">
-                <h5 class="Animate-text">Animate <br/>Bundling</h5>
-                <!-- <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6> -->
-                <h3 class="card-text" style="font-size: 14px !important; opacity: 0.8;     color: white;"> Jawaranya Skincare Paketan Hidupkan Cantikmu.</h3>
-                 <!-- <div class="d-flex justify-content-center" style="margin-top: 77px;">
-                    <button href="#" class="btn learnmoreAnimate" style="background: white; padding: 0.5rem 1.5rem 0.5rem 1.5rem; border: solid 1px black;">LEARN MORE</button>
-                </div> -->
-              </div>
             </div>
-        </div>
-        <div class="col-md-2">
-        </div>
-    </div>
-
-    </section>
+</section>
     <!-- End Section Impact -->
 
     <!-- Section Best Seller -->
-    <section style="padding-left: 2.5rem; padding-right: 2.5rem; padding-bottom: 0rem; padding-top: 3rem;">
+    <section style="padding-left: 2.5rem; padding-right: 2.5rem; padding-bottom: 0rem; padding-top: 3rem; ">
 
 
         <style>
@@ -554,21 +576,9 @@
 
           .swiperSlider
          {
-            /*transform: translateZ(0);
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;*/
             display: grid;
             height: auto !important;
          }
-
-         /*.swiper-backface-hidden .swiper-slide 
-         {
-            transform: translateZ(0);
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-            display: grid;
-            width: 250px !important;
-         }*/
 
          .swiperBestSeller
          {
@@ -594,7 +604,7 @@
         </style>
 
         <h5>BEST SELLER</h5>
-                <!-- Tabs -->
+ 
         <div class="category-tabs">
           <span class="active" data-category="all">ALL</span>
           <span data-category="face">FACE</span>
@@ -603,14 +613,13 @@
           <span data-category="hair">BUNDLING</span>
         </div>
 
-        <!-- Swiper -->
+    
         <div class="swiper mySwiperProduct">
           <div class="swiper-wrapper" id="product-wrapper">
-            <!-- Slides akan dimuat via JavaScript -->
           </div>
         </div>
 
-        <!-- Shop All -->
+
         <div class="shop-all-container">
             <form action="shopall.html">
                 <button class="shop-all-btn">SHOP ALL</button>
@@ -680,10 +689,6 @@
     font-size: 0.85rem;
   }
 
-  /*.swiper {
-    height: 800px;
-  }*/
-
   .mySwiperNews{
     height: 600px;
   }
@@ -714,15 +719,6 @@
     border-radius: 10px;
   }
 
-  /*.swiper-pagination-bullet {
-    background-color: #d8b4fe;
-    opacity: 1;
-  }
-
-  .swiper-pagination-bullet-active {
-    background-color: #a855f7;
-  }*/
-
   .sectionNews{
     padding: 0rem 6.2rem 0rem 6.2rem;
   }
@@ -739,6 +735,31 @@
     .sectionNews{
         padding: 0rem 0rem 0rem 0rem;
     }
+
+    .news-slide .news-content h4 {
+        font-size: 0.9rem;
+        color: #777;
+        margin-bottom: 0.5rem;
+    }
+
+      .news-slide .news-content {
+        flex: 1;
+        color: #6e3fa0;
+        text-align: left;
+        padding: 10px 10px 10px 10px;
+     }
+
+     .news-slide .news-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        padding: 12px;
+    }
+    .news-slide .news-content p {
+        font-size: 0.95rem;
+        color: #555;
+        margin-bottom: 2rem;
+      }
   }
 
   @media (min-width: 1200px) {
@@ -788,7 +809,6 @@
   <div class="swiper mySwiperNews">
     <div class="swiper-wrapper">
 
-      <!-- Slide 1 -->
     <div class="swiper-slide swiperslideEdu">
         <div class="news-slide">
             <div class="row">
@@ -1186,7 +1206,7 @@ document.addEventListener("DOMContentLoaded", function () {
   .sectionSahabat{
     padding-top: 2rem;
     padding-bottom: 3rem;
-    padding-left: 150px;
+    padding-left: 0px;
     padding-right: 200px;
    }
 
@@ -1201,67 +1221,54 @@ document.addEventListener("DOMContentLoaded", function () {
 </style>
 
 <section class="sectionSahabat">
-    <div class="row">
-        <div class="row">
-            <div class="col-sm-4">
-              <div class="sahabat-title"> Cantikmu  <span>Animate</span></div>
-              </div>
-              <div class="col-sm-6">
-              </div>
-              <div class="col-sm-2">
-              <div class="sahabat-desc">
-                Cantikan Wajahmu sesuai Impianmu dengan Animate.
-              </div>
-          </div>
-            
+  <div class="container">
+    <!-- Baris Pertama: Judul dan Deskripsi -->
+    <div class="row align-items-center mb-4">
+      <div class="col-sm-12 col-md-4">
+        <div class="sahabat-title">
+          Cantikmu <span>Animate</span>
         </div>
-      <div class="col-md-6 d-flex align-items-center">
-        
       </div>
-      <div class="col-md-10 col-sm-12">
+      <div class="col-sm-12 col-md-6">
+        <!-- Kosong, bisa diisi konten tambahan -->
+      </div>
+      <div class="col-sm-12 col-md-2">
+        <div class="sahabat-desc">
+          Cantikan Wajahmu sesuai Impianmu dengan Animate.
+        </div>
+      </div>
+    </div>
+
+    <!-- Baris Kedua: Swiper -->
+    <div class="row">
+      <div class="col-sm-12 col-md-10">
         <div class="swiper swiperSahabatWrapper mySwiperSahabat">
           <div class="swiper-wrapper">
             <!-- SLIDES -->
             <div class="swiper-slide" style="background-image: url('img/sahabat/mnndd_.jpg');">
-                <a href="https://www.instagram.com/reel/DL4Sq0opcqJ/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+              <a href="https://www.instagram.com/reel/DL4Sq0opcqJ/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
             </div>
             <div class="swiper-slide" style="background-image: url('img/sahabat/Nanadmardiiii.jpg');">
-                <a href="https://www.instagram.com/reel/DKWH4tNJu44/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+              <a href="https://www.instagram.com/reel/DKWH4tNJu44/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
             </div>
             <div class="swiper-slide" style="background-image: url('img/sahabat/Naylaaribbiell_.jpg');">
-                <a href="https://www.instagram.com/reel/DLEQauLJMK7/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+              <a href="https://www.instagram.com/reel/DLEQauLJMK7/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
             </div>
             <div class="swiper-slide" style="background-image: url('img/sahabat/Nuruladds.jpg');">
-                <a href="https://www.instagram.com/reel/DMJ_lM5pHkA/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+              <a href="https://www.instagram.com/reel/DMJ_lM5pHkA/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
             </div>
             <div class="swiper-slide" style="background-image: url('img/sahabat/Rahmazrh.jpg');">
-                <a href="https://www.instagram.com/reel/DL4Sq0opcqJ/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+              <a href="https://www.instagram.com/reel/DL4Sq0opcqJ/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
             </div>
             <div class="swiper-slide" style="background-image: url('img/sahabat/Tikaatikahh.jpg');">
-                <a href="https://www.instagram.com/reel/DL9l1hiSTkJ/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+              <a href="https://www.instagram.com/reel/DL9l1hiSTkJ/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
             </div>
-            <div class="swiper-slide" style="background-image: url('img/sahabat/mnndd_.jpg');">
-                <a href="https://www.instagram.com/reel/DL4Sq0opcqJ/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
-            </div>
-            <div class="swiper-slide" style="background-image: url('img/sahabat/Nanadmardiiii.jpg');">
-                <a href="https://www.instagram.com/reel/DKWH4tNJu44/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
-            </div>
-            <div class="swiper-slide" style="background-image: url('img/sahabat/Naylaaribbiell_.jpg');">
-                <a href="https://www.instagram.com/reel/DLEQauLJMK7/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
-            </div>
-            <div class="swiper-slide" style="background-image: url('img/sahabat/Nuruladds.jpg');">
-                <a href="https://www.instagram.com/reel/DMJ_lM5pHkA/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
-            </div>
-            <div class="swiper-slide" style="background-image: url('img/sahabat/Rahmazrh.jpg');">
-                <a href="https://www.instagram.com/reel/DL4Sq0opcqJ/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
-            </div>
-            <div class="swiper-slide" style="background-image: url('img/sahabat/Tikaatikahh.jpg');">
-                <a href="https://www.instagram.com/reel/DL9l1hiSTkJ/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
-            </div>
+            <!-- Ulangi jika perlu -->
           </div>
         </div>
       </div>
     </div>
+  </div>
 </section>
 
 <script>
@@ -1304,15 +1311,16 @@ const swiperSahabat = new Swiper('.mySwiperSahabat', {
         }
     </style>
 
-    <section style="padding-top: 0px; padding-bottom: 3rem; padding-left: 0px; padding-right: 0px;">
+    <section style="padding-top: 0px; padding-bottom: 3rem; padding-left: 0px; padding-right: 0px; ">
+        <div class="container">
         <div class="row">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-md-12">
                   <div class="follow-title">FOLLOW US ON INSTAGRAM</div>
                 </div>
             </div>
-          <div class="col-md-6 d-flex align-items-center">
-          </div>
+         
+          
           <div class="col-md-12">
             <div class="swiper swiperFollowWrapper mySwiperFollow">
               <div class="swiper-wrapper">
@@ -1357,6 +1365,7 @@ const swiperSahabat = new Swiper('.mySwiperSahabat', {
             </div>
           </div>
         </div>
+    </div>
     </section>
 
 <script>
@@ -1407,7 +1416,7 @@ const swiperSahabat = new Swiper('.mySwiperSahabat', {
   }
 
   .marquee-item img {
-    width: clamp(80px, 10vw, 150px);
+    width: clamp(160px, 5vw, 150px);
     height: auto;
     display: block;
   }
@@ -1510,6 +1519,7 @@ const swiperSahabat = new Swiper('.mySwiperSahabat', {
                         <li><a class="text-decoration-none" href="#">Education</a></li>
                         <li><a class="text-decoration-none" href="#">Awards</a></li>
                         <li><a class="text-decoration-none" href="#">About Us</a></li>
+                        <li><a class="text-decoration-none" href="#">Affiliate</a></li>
                     </ul>
                 </div>  
 
@@ -1517,10 +1527,10 @@ const swiperSahabat = new Swiper('.mySwiperSahabat', {
                     <h4 class="h5 text-dark  pb-3 " style="font-weight: bold">Address</h4>
                     <ul class="list-unstyled text-dark footer-link-list">
                         <li><a class="text-decoration-none" href="#">Rukan Theme Park<br/>
-Jl. Pantai Indah Kapuk No. 77, Blok E<br/>
-Pantai Indah Kapuk, Penjaringan<br/>
-Jakarta Utara, DKI Jakarta 14460<br/>
-Indonesia</a></li>
+                        Jl. Pantai Indah Kapuk No. 77, Blok E<br/>
+                        Pantai Indah Kapuk, Penjaringan<br/>
+                        Jakarta Utara, DKI Jakarta 14460<br/>
+                        Indonesia</a></li>
                     </ul>
                 </div>  
 
