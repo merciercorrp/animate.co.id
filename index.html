@@ -312,6 +312,17 @@
       object-fit: cover;
     }
 
+    .bannerAnimate{
+        height: 720px;
+    }
+
+     @media (max-width: 768px) {
+        .bannerAnimate{
+            height: 228px;
+            padding-top: 73px;
+        }
+     }
+
 
   </style>
 
@@ -319,7 +330,7 @@
 
     <!-- Start Banner Hero -->
     <section class="banner">
-    <div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel" style="height: 720px;">
+    <div id="template-mo-zay-hero-carousel" class="carousel slide bannerAnimate" data-bs-ride="carousel" >
         <div class="swiper mySwiperSlider">
             <div class="swiper-wrapper">
               <div class="swiper-slide swiperSlider" style="background-image: url('img/back/BANNER-cushion.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center"></div>
