@@ -1432,13 +1432,13 @@ const swiperSahabat = new Swiper('.mySwiperSahabat', {
   }
 
   @keyframes marquee {
-    0% {
-      transform: translateX(0%);
+      0% {
+        transform: translateX(-50%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
     }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
 
   .marquee-wrapper:hover .marquee-track {
     animation-play-state: paused;
