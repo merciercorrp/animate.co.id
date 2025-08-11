@@ -197,9 +197,47 @@
                             </div>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="education.html">EDUCATION</a>
+                    <li class="nav-item dropdown position-static" data-bs-auto-close="outside">
+                         <div class="d-flex align-items-center">
+                            <a href="shopall.html" class="nav-link pe-1" style="padding-right: 0px !important;">
+                                EDUCATION
+                            </a>
+                            <a class="nav-link dropdown-toggle ps-1" href="#" id="eduDropdownToggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            </a>
+
+                            <div class="dropdown-menu w-100 mt-0 border-0 shadow" aria-labelledby="eduDropdown" style="left: 0; right: 0; background-color: #fef7ff;">
+                                <div class="container py-1">
+                                    <div class="row">
+                                       
+
+                                        <div class="col-md-4">
+                                            <h6 class="fw-bold"></h6>
+                                            <ul class="list-unstyled">
+                                                <li><a class="dropdown-item" href="#"></a></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="col-md-2" style="margin-left: 80px;">
+                                            <ul class="list-unstyled">
+                                                <li><a class="dropdown-item" href="#">ARTICLE</a></li>
+                                                <li><a class="dropdown-item" href="#">CONTENT EDUCATION</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Body -->
+                                        <div class="col-md-4">
+                                            <h6 class="fw-bold"></h6>
+                                            <ul class="list-unstyled">
+                                                <li><a class="dropdown-item" href="#"></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="awards.html">AWARDS</a>
                     </li>
@@ -489,8 +527,93 @@ const swiper3 = new Swiper('.mySwiperKegiatan', {
 </section>
     <!-- End Section Impact -->
 
+    <!-- Section BPOM HALAL -->
+<section class="pt-5">
+
+<style>
+  .marquee-wrapper {
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 30s linear infinite;
+  }
+
+  .marquee-content {
+    display: flex;
+  }
+
+  .marquee-item {
+    flex-shrink: 0;
+    margin-right: 5vw; /* responsive gap */
+  }
+
+  .marquee-item img {
+    width: clamp(160px, 5vw, 150px);
+    height: auto;
+    display: block;
+  }
+
+  @keyframes marquee {
+      0% {
+        transform: translateX(-50%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
+    }
+
+  .marquee-wrapper:hover .marquee-track {
+    animation-play-state: paused;
+  }
+
+  @media only screen and (max-width: 600px) {
+
+      .marquee-item img {
+        width: clamp(172px, 10vw, 150px);
+        height: auto;
+        display: block;
+      }
+}
+</style>
+
+<div class="marquee-wrapper">
+  <div class="marquee-track">
+    <!-- content duplicated twice for seamless infinite scroll -->
+    <div class="marquee-content">
+      <span class="marquee-item"><img src="img/setifikat/sign-01.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item"><img src="img/setifikat/sign-04.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item"><img src="img/setifikat/sign-02.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item"><img src="img/setifikat/sign-03.png" alt="Sertfikat Animate"></span>    
+      <span class="marquee-item"><img src="img/setifikat/sign-01.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item"><img src="img/setifikat/sign-04.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item"><img src="img/setifikat/sign-02.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item"><img src="img/setifikat/sign-03.png" alt="Sertfikat Animate"></span>
+    </div>
+    <div class="marquee-content">
+      <!-- identical copy for looping effect -->
+      <span class="marquee-item"><img src="img/setifikat/sign-01.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item"><img src="img/setifikat/sign-04.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item"><img src="img/setifikat/sign-02.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item"><img src="img/setifikat/sign-03.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item"><img src="img/setifikat/sign-02.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item"><img src="img/setifikat/sign-03.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item"><img src="img/setifikat/sign-01.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item"><img src="img/setifikat/sign-04.png" alt="Sertfikat Animate"></span>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- END Section BPOM HALAL -->
+
     <!-- Section Best Seller -->
-    <section style="padding-left: 2.5rem; padding-right: 2.5rem; padding-bottom: 0rem; padding-top: 3rem; ">
+    <section style="padding-left: 2.5rem; padding-right: 2.5rem; padding-bottom: 0rem; padding-top: 2rem; ">
 
 
         <style>
@@ -624,6 +747,120 @@ const swiper3 = new Swiper('.mySwiperKegiatan', {
         
     </section>
     <!-- End Section Best Seller -->
+
+    <!-- Section SKIN CONCERN -->
+<section style="padding-left: 2.5rem; padding-right: 2.5rem; padding-bottom: 0rem; padding-top: 3rem;">
+
+<style>
+  .category-tabs-skin {
+    display: flex;
+    gap: 5rem;
+    font-weight: bold !important;
+    font-size: 69px !important;
+    padding: 10px 0 20px 0;
+    justify-content: space-between;
+  }
+  @media (max-width: 768px) {
+    .category-tabs-skin {
+      font-size: 12px !important;
+      gap: 1.2rem;
+      justify-content: flex-start;
+    }
+  }
+  .category-tabs-skin span {
+    cursor: pointer;
+    color: #cfd2d9;
+  }
+  .category-tabs-skin .active {
+    color: #ff5293;
+  }
+  .swiper-slide {
+    background: #fff;
+    border-radius: 16px;
+    text-align: center;
+    padding: 15px;
+    height: auto;
+  }
+  .skin-title {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  .skin-price {
+    font-weight: bold;
+    color: #ff5293;
+  }
+  .skin-old-price {
+    text-decoration: line-through;
+    font-size: 13px;
+    color: gray;
+    margin-left: 5px;
+  }
+  .btn-cart {
+    background: #ff5293;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  .shop-all-container-skin {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+  .shop-all-btn-skin {
+    border: 2px solid black;
+    background: white;
+    padding: 0.6rem 2rem;
+    font-weight: bold !important;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  .swiperSliderSkin {
+    display: grid;
+    height: auto !important;
+  }
+  .swiperBestSellerSkin {
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: grid;
+    width: 250px !important;
+  }
+  .discount-badge-skin {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #ff5293;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 5px;
+    z-index: 10;
+  }
+</style>
+
+<h2><b>SKIN CONCERN</b></h2>
+
+<div class="category-tabs-skin">
+  <span class="active" data-category="all">ALL</span>
+  <span data-category="acne">ACNE</span>
+  <span data-category="whitening">WHITENING</span>
+  <span data-category="darkspot">DARKSPOT</span>
+</div>
+
+<div class="swiper mySwiperSkin">
+  <div class="swiper-wrapper" id="skin-wrapper"></div>
+</div>
+
+<div class="shop-all-container-skin">
+  <form action="shopall.html">
+    <button class="shop-all-btn-skin">SHOP ALL</button>
+  </form>
+</div>
+
+</section>
 
     <style>
 
@@ -1376,7 +1613,7 @@ const swiperSahabat = new Swiper('.mySwiperSahabat', {
 
 <!-- END Section Sahabat -->
 
-    <!-- Section Level Up -->
+<!-- Section BPOM HALAL -->
 <section class="pt-3">
 
 <style>
@@ -1397,13 +1634,13 @@ const swiperSahabat = new Swiper('.mySwiperSahabat', {
     display: flex;
   }
 
-  .marquee-item {
+  .marquee-item-skin {
     flex-shrink: 0;
-    margin-right: 5vw; /* responsive gap */
+    margin-right: 2vw; /* responsive gap */
   }
 
-  .marquee-item img {
-    width: clamp(160px, 5vw, 150px);
+  .marquee-item-skin img {
+    width: clamp(265px, 5vw, 25px);
     height: auto;
     display: block;
   }
@@ -1423,8 +1660,8 @@ const swiperSahabat = new Swiper('.mySwiperSahabat', {
 
   @media only screen and (max-width: 600px) {
 
-      .marquee-item img {
-        width: clamp(172px, 10vw, 150px);
+      .marquee-item-skin img {
+        width: clamp(172px, 10vw, 172px);
         height: auto;
         display: block;
       }
@@ -1435,31 +1672,32 @@ const swiperSahabat = new Swiper('.mySwiperSahabat', {
   <div class="marquee-track">
     <!-- content duplicated twice for seamless infinite scroll -->
     <div class="marquee-content">
-      <span class="marquee-item"><img src="img/setifikat/sign-01.png" alt="Sertfikat Animate"></span>
-      <span class="marquee-item"><img src="img/setifikat/sign-04.png" alt="Sertfikat Animate"></span>
-      <span class="marquee-item"><img src="img/setifikat/sign-02.png" alt="Sertfikat Animate"></span>
-      <span class="marquee-item"><img src="img/setifikat/sign-03.png" alt="Sertfikat Animate"></span>    
-      <span class="marquee-item"><img src="img/setifikat/sign-01.png" alt="Sertfikat Animate"></span>
-      <span class="marquee-item"><img src="img/setifikat/sign-04.png" alt="Sertfikat Animate"></span>
-      <span class="marquee-item"><img src="img/setifikat/sign-02.png" alt="Sertfikat Animate"></span>
-      <span class="marquee-item"><img src="img/setifikat/sign-03.png" alt="Sertfikat Animate"></span>
+        <span class="marquee-item-skin"><img src="img/awards/awards-5.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item-skin"><img src="img/awards/awards-7.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item-skin"><img src="img/awards/awards-8.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item-skin"><img src="img/awards/awards-9.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item-skin"><img src="img/awards/awards-1.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item-skin"><img src="img/awards/awards-2.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item-skin"><img src="img/awards/awards-3.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item-skin"><img src="img/awards/awards-4.png" alt="Sertfikat Animate"></span>    
     </div>
+
     <div class="marquee-content">
-      <!-- identical copy for looping effect -->
-      <span class="marquee-item"><img src="img/setifikat/sign-01.png" alt="Sertfikat Animate"></span>
-      <span class="marquee-item"><img src="img/setifikat/sign-04.png" alt="Sertfikat Animate"></span>
-      <span class="marquee-item"><img src="img/setifikat/sign-02.png" alt="Sertfikat Animate"></span>
-      <span class="marquee-item"><img src="img/setifikat/sign-03.png" alt="Sertfikat Animate"></span>
-      <span class="marquee-item"><img src="img/setifikat/sign-02.png" alt="Sertfikat Animate"></span>
-      <span class="marquee-item"><img src="img/setifikat/sign-03.png" alt="Sertfikat Animate"></span>
-      <span class="marquee-item"><img src="img/setifikat/sign-01.png" alt="Sertfikat Animate"></span>
-      <span class="marquee-item"><img src="img/setifikat/sign-04.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item-skin"><img src="img/awards/awards-5.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item-skin"><img src="img/awards/awards-7.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item-skin"><img src="img/awards/awards-8.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item-skin"><img src="img/awards/awards-9.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item-skin"><img src="img/awards/awards-1.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item-skin"><img src="img/awards/awards-2.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item-skin"><img src="img/awards/awards-3.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item-skin"><img src="img/awards/awards-4.png" alt="Sertfikat Animate"></span>    
     </div>
+    
   </div>
 </div>
 </section>
 
-    <!-- END Section Level Up -->
+<!-- END Section BPOM HALAL -->
 
 
 
@@ -1554,10 +1792,17 @@ const swiperSahabat = new Swiper('.mySwiperSahabat', {
         <div class="w-100 bg-white py-3">
             <div class="container">
                 <div class="row pt-2">
-                    <div class="col-12">
+                    <div class="col-md-6 col-sm-12">
                         <p class="text-left text-dark">
                             Copyright &copy; 2025 Animate By Yunna Mercier
                         </p>
+                    </div>
+                    <div class="col-md-6 col-sm-12 text-end">
+                        <a href="#" style="text-decoration: none;">
+                            <p class="text-left text-dark">
+                                Privacy Policy
+                            </p>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1706,19 +1951,22 @@ const swiperSahabat = new Swiper('.mySwiperSahabat', {
                 const slide = document.createElement('div');
                 slide.className = 'swiper-slide swiperBestSeller';
                 slide.innerHTML = `
+                <a href="shopdetail.html" style="text-decoration: none; color: black;">
                   <div class="discount-badge">${p.diskon}</div>
                   <img src="${p.img}" alt="animate by yunna mercier" style="width:100%; border-radius:12px;">
                   <div class="product-title">${p.title}</div>
                   <div><span class="price">${p.price}</span><span class="old-price">${p.old}</span></div>
-                  <div class="circle-button-group">
+                </a>
+                `
+                /*<div class="circle-button-group">
                       <button class="circle-btn love-btn" style="background: #ea501f">
                       <img class="imgShopee" src="img/market/shopee.png" alt="shopee animate">
                     </button>
                     <button class="circle-btn cart-btn" style="background: black">
                       <img class="imgTiktok" src="img/market/tiktok.png" alt="tokopedia animate">
                     </button>
-                   </div>
-                `;
+                   </div>*/
+                ;
                 wrapper.appendChild(slide);
               });
 
@@ -1756,6 +2004,72 @@ const swiperSahabat = new Swiper('.mySwiperSahabat', {
             });
           });
         </script>
+
+        <script>
+  const skins = {
+    all: [
+      { img: 'img/bestseller/bs-4.webp', diskon: '20%', title: 'Parfum ', price: 'Rp64.500', old: 'Rp75.000' },
+      { img: 'img/bestseller/bs-4.webp', diskon: '9%', title: 'Face Wash', price: 'Rp60.000', old: 'Rp75.000' },
+      { img: 'img/bestseller/bs-4.webp', diskon: '15%', title: 'Body Lotion', price: 'Rp65.000', old: 'Rp80.000' },
+      { img: 'img/bestseller/bs-4.webp', diskon: '50%', title: 'Perfume Red', price: 'Rp45.000', old: 'Rp98.000' },
+      { img: 'img/bestseller/bs-4.webp', diskon: '40%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' }
+    ],
+    acne: [
+      { img: 'img/bestseller/bs-4.webp', diskon: '40%', title: 'Acne Face Wash', price: 'Rp60.000', old: 'Rp75.000' },
+    ],
+    whitening: [
+      { img: 'img/bestseller/bs-4.webp', diskon: '10%', title: 'Acne Body Lotion', price: 'Rp65.000', old: 'Rp80.000' },
+    ],
+    darkspot: [
+      { img: 'img/bestseller/bs-4.webp', diskon: '65%', title: 'Darkspot Skin', price: 'Rp64.500', old: 'Rp75.000' },
+      { img: 'img/bestseller/bs-4.webp', diskon: '20%', title: 'Darkspot Skine Red', price: 'Rp45.000', old: 'Rp98.000' }
+    ],
+  };
+
+  function renderSkins(category) {
+    const wrapper = document.getElementById('skin-wrapper');
+    wrapper.innerHTML = '';
+
+    skins[category].forEach(p => {
+      const slide = document.createElement('div');
+      slide.className = 'swiper-slide swiperBestSellerSkin';
+      slide.innerHTML = `
+        <a href="shopdetail.html" style="text-decoration: none; color: black;">
+        <div class="discount-badge-skin">${p.diskon}</div>
+        <img src="${p.img}" alt="animate by yunna mercier" style="width:100%; border-radius:12px;">
+        <div class="skin-title">${p.title}</div>
+        <div><span class="skin-price">${p.price}</span><span class="skin-old-price">${p.old}</span></div>
+        </a>
+      `;
+      wrapper.appendChild(slide);
+    });
+
+    swiperSkin.update();
+  }
+
+  // Swiper init
+  const swiperSkin = new Swiper('.mySwiperSkin', {
+    slidesPerView: 2,
+    spaceBetween: 20,
+    breakpoints: {
+      768: { slidesPerView: 4 },
+      1024: { slidesPerView: 5 }
+    }
+  });
+
+  // Load default
+  renderSkins('all');
+
+  // Handle category click
+  document.querySelectorAll('.category-tabs-skin span').forEach(tab => {
+    tab.addEventListener('click', function () {
+      document.querySelectorAll('.category-tabs-skin span').forEach(t => t.classList.remove('active'));
+      this.classList.add('active');
+      const cat = this.dataset.category;
+      renderSkins(cat);
+    });
+  });
+</script>
 </body>
 
 </html>
