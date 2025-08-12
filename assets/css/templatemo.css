@@ -64,6 +64,10 @@ body, ul, li, p, a, label, input, div {
 }
 /* General */
 .logo { font-weight: 500 !important;}
+.bg-pinkglow{background-color: #ff65b7;}
+.bg-pink{background-color: #fe51ad;}
+
+.text-white{color: white;}
 .text-warning {  color: #ede861 !important;}
 .text-muted { color: #bcbcbc !important;}
 .text-success { color: #59ab6e !important;}
@@ -95,7 +99,7 @@ body, ul, li, p, a, label, input, div {
 .templatemo-accordion a { color: #000;}
 .templatemo-accordion a:hover { color: #333d4a;}
 /* Shop */
-.shop-top-menu a:hover { color: #69bb7e !important;}
+.shop-top-menu a:hover { color: black !important;}
 /* Product */
 .product-wap { box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.10);}
 .product-wap .product-color-dot.color-dot-red { background:#f71515;}
@@ -152,8 +156,8 @@ body, ul, li, p, a, label, input, div {
 .leaflet-control a, .leaflet-control { font-size: 10px !important;}
 .form-control { border: 1px solid #e8e8e8;}
 /* Footer */
-#tempaltemo_footer a { color: #000000;}
-#tempaltemo_footer a:hover { color: #000000;}
+#tempaltemo_footer a { color: white;}
+#tempaltemo_footer a:hover { color: white;}
 #tempaltemo_footer ul.footer-link-list li { padding-top: 10px;}
 #tempaltemo_footer ul.footer-icons li {
   width: 2.6em;
@@ -161,7 +165,7 @@ body, ul, li, p, a, label, input, div {
   line-height: 2.6em;
 }
 #tempaltemo_footer ul.footer-icons li:hover {
-  background-color: #cfd6e1;
+  background-color: white;
   transition: .5s;
 }
 #tempaltemo_footer ul.footer-icons li:hover i {
