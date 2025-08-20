@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="img/animate_logo.png">
-    <link rel="shortcut icon" type="image/x-icon" href="img/logo/logo-bulet.png">
+    <link rel="apple-touch-icon" href="img/b_animate.png">
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo/logo-bulet.jpg">
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/templatemo.css">
@@ -21,7 +21,6 @@
 </head>
 
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <style>
         .swiper-pagination-bullet-active {
@@ -35,16 +34,6 @@
             opacity: var(--swiper-pagination-bullet-opacity, 1);
             background: #ff5f9d;
         }
-
-        /*.swiper-pagination-bullet {
-            width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 8px));
-            height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 8px));
-            display: inline-block;
-            border-radius: 0px;
-            background: #fd7fae;
-            opacity: var(--swiper-pagination-bullet-inactive-opacity, .2);
-        }*/
-
         .swiper-pagination-bullet {
             border-radius: 0px;
             width: 50px;
@@ -100,7 +89,7 @@
                 padding-bottom: 10px;
                 padding-top: 10px;
                 padding-left: 31px;
-            
+     
             }
         }
 
@@ -117,22 +106,22 @@
     <nav class="navbar navbar-expand-lg navbar-light shadow" style="position: fixed; width: 100%; z-index: 999; background: white;">
         
         <div class="container d-flex justify-content-between align-items-center navAnimate">
-        <div class=" d-flex align-items-left">
-            <a class="navbar-brand text-success logo h1 align-self-center logobyAnimate"  href="index.html">
-                <img class="imgWidth" style="width: 128px;" src="img/b_animate.png">
-            </a>
-        </div>
+            <div class=" d-flex align-items-left">
+                <a class="navbar-brand text-success logo h1 align-self-center logobyAnimate"  href="index.html">
+                    <img class="imgWidth" style="width: 128px;" src="img/b_animate.png">
+                </a>
+            </div>
 
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="align-self-center collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
-            <div class="flex-fill">
-                <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+            <div class="align-self-center collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
 
-                    <!-- SHOP ALL MEGA MENU -->
-                    <li class="nav-item dropdown position-static" data-bs-auto-close="outside">
+                        <!-- SHOP ALL MEGA MENU -->
+                        <li class="nav-item dropdown position-static" data-bs-auto-close="outside">
                          <div class="d-flex align-items-center">
                             <a href="shopall.html" class="nav-link pe-1" style="padding-right: 0px !important;">
                                 SHOP
@@ -202,8 +191,8 @@
                                 </div>
                             </div>
                         </div>
-                    </li>
-                    <li class="nav-item dropdown position-static" data-bs-auto-close="outside">
+                        </li>
+                        <li class="nav-item dropdown position-static" data-bs-auto-close="outside">
                          <div class="d-flex align-items-center">
                             <a href="education.html" class="nav-link pe-1" style="padding-right: 0px !important;">
                                 EDUCATION
@@ -243,39 +232,31 @@
                             </div>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="awards.html">AWARDS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="aboutus.html">ABOUT US</a>
-                    </li>
-                    <li class="nav-item">
+                        <li class="nav-item">
+                            <a class="nav-link" href="awards.html">AWARDS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutus.html">ABOUT US</a>
+                        </li>
+                        <li class="nav-item">
                         <a class="nav-link" href="affiliate.html">AFFILIATE</a>
                     </li>
-                </ul>
-            </div>
-            <div class="navbar align-self-center d-flex">
-                <div class="d-lg-none flex-sm-fill mt-3 mb-3 col-11 col-sm-auto pr-3">
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
-                        <div class="input-group-text">
-                            <i class="fa fa-fw fa-search"></i>
+                    </ul>
+                </div>
+                <div class="navbar align-self-center d-flex">
+                    <div class="d-lg-none flex-sm-fill mt-3 mb-3 col-11 col-sm-auto pr-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
+                            <div class="input-group-text">
+                                <i class="fa fa-fw fa-search"></i>
+                            </div>
                         </div>
                     </div>
+                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+                        <i class="fa fa-fw fa-search text-dark mr-2"></i>
+                    </a>
                 </div>
-                <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
-                    <i class="fa fa-fw fa-search text-dark mr-2"></i>
-                </a>
-                <!-- <a class="nav-icon position-relative text-decoration-none" href="#">
-                    <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                    <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
-                </a>
-                <a class="nav-icon position-relative text-decoration-none" href="#">
-                    <i class="fa fa-fw fa-user text-dark mr-3"></i>
-                    <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
-                </a> -->
             </div>
-        </div>
 
     </div>
 </nav>
@@ -297,15 +278,98 @@
         </div>
     </div>
 
-<section style="padding-top: 90px; padding-bottom: 20px;">
+<section style="padding-top: 9rem;">
+  <div class="row">
+    <div class="col-md-12 col-sm-12">
+      <div class="container-fluid px-5">
+
+        <div style="max-width: 800px; margin: 0 auto;">
+            <p class="text-uppercase fw-bold text-secondary mb-2">ARTICLE</p>
+            <h1 class="fw-bold mb-4" style="max-width: 800px;">
+              Perbaiki Skin Barriermu dalam 5 Langkah!
+            </h1>
+
+
+            <p class="fw-medium text-dark mb-5">
+              Animate <br>
+              <span class="text-muted">September 20, 2025</span>
+            </p>
+
+        </div>
+
+       
+        <div class="text-center mb-5">
+          <img src="img/article/barier.jpg" class="img-fluid rounded" alt="cover" width="568" height="378">
+        </div>
+
+ <style>
+  ol.steps { counter-reset: step; margin: 0; padding-left: 0; }
+  ol.steps > li { list-style: none; margin: 0 0 1rem 0; }
+  ol.steps > li h4 { margin: 0 0 0.25rem 0; }
+  /* Sisipkan nomor sebelum teks <b> agar angka ikut bold */
+  ol.steps > li h4 b::before {
+    counter-increment: step;
+    content: counter(step) ". ";
+    font-weight: inherit; /* ikut bold dari <b> */
+  }
+</style>
+
+        
+   <div class="text-article" style="max-width: 900px; margin: 0 auto;">
+	<ol class="steps">
+  <li>
+    <h4><b>Gunakan Pembersih Wajah yang Lembut</b></h4>
+    <p>
+      Salah satu kesalahan yang sering dilakukan adalah menggunakan sabun pembersih wajah dengan kandungan deterjen keras seperti SLS atau alkohol tinggi. Kandungan ini dapat mengikis minyak alami kulit yang berfungsi melindungi skin barrier. Jika skin barrier rusak, kulit akan mudah kering, iritasi, dan rentan muncul masalah seperti jerawat atau kemerahan. Pilih cleanser berformula lembut, pH seimbang, serta mengandung bahan pelembap seperti glycerin atau hyaluronic acid.
+    </p>
+  </li>
+
+  <li>
+    <h4><b>Jangan Lewatkan Pelembap</b></h4>
+    <p>
+      Pelembap dibutuhkan semua jenis kulit, termasuk berminyak. Skin barrier yang sehat memerlukan hidrasi cukup agar proses perbaikan alami berjalan optimal. Cari pelembap dengan ceramide untuk memperkuat pertahanan kulit, hyaluronic acid untuk mengikat air, dan panthenol untuk menenangkan. Pemakaian rutin membantu mengurangi tanda barrier rusak seperti kulit kasar, perih, atau bersisik.
+    </p>
+  </li>
+
+  <li>
+    <h4><b>Lindungi dengan Sunscreen</b></h4>
+    <p>
+      Sinar UVA/UVB dapat merusak struktur sel kulit, memicu inflamasi dan penuaan dini. Gunakan sunscreen minimal SPF 30 dengan perlindungan broad spectrum setiap hari—termasuk saat mendung atau di dalam ruangan karena UV dapat menembus kaca dan memantul dari permukaan. Konsistensi adalah kunci untuk menjaga skin barrier tetap kuat.
+    </p>
+  </li>
+
+  <li>
+    <h4><b>Hindari Over-Exfoliasi</b></h4>
+    <p>
+      Eksfoliasi membantu mengangkat sel kulit mati, tapi terlalu sering justru merusak barrier. Tanda over-exfoliasi: perih, kemerahan, bruntusan, dan makin sensitif. Batasi 1–2 kali/minggu dengan AHA/BHA/PHA berkonsentrasi rendah, dan selalu lanjutkan dengan pelembap untuk memulihkan kelembapan.
+    </p>
+  </li>
+
+  <li>
+    <h4><b>Gunakan Bahan yang Menenangkan & Memperbaiki</b></h4>
+    <p>
+      Saat barrier terganggu, prioritaskan bahan yang lembut: <i>centella asiatica</i> untuk meredakan kemerahan, panthenol untuk memperkuat kelembapan, serta niacinamide untuk mendukung perbaikan barrier dan meratakan warna kulit. Penggunaan teratur mempercepat pemulihan dan menjaga kulit lebih resilien ke depannya.
+    </p>
+  </li>
+</ol>
+   </div>
+  </div>
+</div>
+</div>
+</section>
+
+
+<section>
   <div class="container">
     <div class="row">
       <div class="col-md-12 col-sm-12">
-        
+
 
         <div class="row g-4 mt-5">
+        	<h2> Related Education</h2>
+
           <div class="col-12 col-sm-6 col-lg-3">
-            <a href="education_sunscreen.html" style="text-decoration: none; color: black;">
+            <a href="education_detail.html" style="text-decoration: none; color: black;">
                 <div class="card h-100 border-0">
                     <div class="position-relative">
                         <img src="img/article/sunscreen-1.webp" class="card-img-top" alt="Jerawat 1" style="height:300px; object-fit:cover;">
@@ -324,7 +388,7 @@
         </div>
 
         <div class="col-12 col-sm-6 col-lg-3">
-            <a href="education_pemutih.html" style="text-decoration: none; color: black;">
+            <a href="education_detail.html" style="text-decoration: none; color: black;">
                 <div class="card h-100 border-0">
                     <div class="position-relative">
                         <img src="img/article/whitening-1.png" class="card-img-top" alt="Jerawat 1" style="height:300px; object-fit:cover;">
@@ -343,12 +407,12 @@
         </div>
 
         <div class="col-12 col-sm-6 col-lg-3">
-            <a href="education_jerawat.html" style="text-decoration: none; color: black;">
+            <a href="education_detail.html" style="text-decoration: none; color: black;">
                 <div class="card h-100 border-0">
                     <div class="position-relative">
                         <img src="img/article/jerawat-1.jpg" class="card-img-top" alt="Jerawat 1" style="height:300px; object-fit:cover;">
                         <span style="position: absolute; top: 10px; right: 10px; background: white; padding: 3px 6px; font-size: 12px; color: gray; border-radius: 4px; letter-spacing: 1px;">
-                            Artikel
+                            Article
                         </span>
                     </div>
                     <div class="card-body px-0">
@@ -362,7 +426,7 @@
         </div>
 
         <div class="col-12 col-sm-6 col-lg-3">
-            <a href="education_barrier.html" style="text-decoration: none; color: black;">
+            <a href="education_detail.html" style="text-decoration: none; color: black;">
                 <div class="card h-100 border-0">
                     <div class="position-relative">
                         <img src="img/article/barier.jpg" class="card-img-top" alt="Jerawat 1" style="height:300px; object-fit:cover;">
@@ -373,72 +437,75 @@
                     <div class="card-body px-0">
                         <small class="text-muted">2025/06/04</small>
                         <h6 class="card-title mt-1" style="font-size: 16px; font-weight: bold;">
-                            Perbaiki Skin Barriermu dalam 5 Langkah!
+                            Bye Jerawat! Panduan Perawatan Kulit Berjerawat dan Rekomendasi Produknya
                         </h6>
                     </div>
                 </div>
             </a>
         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        
 
-          <style>
+<style>
+    /* Pagination style */
+    .pagination-container {
+      text-align: center;
+      margin: 30px 0;
+    }
 
-          /* Pagination style */
-.pagination-container {
-  text-align: center;
-  margin: 30px 0;
-}
+    .pagination {
+      display: inline-flex;
+      list-style: none;
+      gap: 10px;
+      padding: 0;
+    }
 
-.pagination {
-  display: inline-flex;
-  list-style: none;
-  gap: 10px;
-  padding: 0;
-}
+    .page-item {
+      border-radius: 8px;
+    }
 
-.page-item {
-  border-radius: 8px;
-}
+    .page-link {
+      display: block;
+      padding: 8px 12px;
+      border-radius: 0px;
+      border: 1px solid #e0e0e0;
+      background-color: white;
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
 
-.page-link {
-  display: block;
-  padding: 8px 12px;
-  border-radius: 0px;
-  border: 1px solid #e0e0e0;
-  background-color: white;
-  color: #333;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s ease;
-}
+    .page-item.active .page-link {
+        background-color: #ff5f9d;
+        color: #ffffff;
+        font-weight: bold;
+        border-color: #fca1cf;
+    }
 
-.page-item.active .page-link {
-    background-color: #ff5f9d;
-    color: #ffffff;
-    font-weight: bold;
-    border-color: #fca1cf;
-}
+    .page-item:hover .page-link:not(.active) {
+      background-color: #f0f0f0;
+    }
 
-.page-item:hover .page-link:not(.active) {
-  background-color: #f0f0f0;
-}
-
-.page-item.disabled .page-link {
-  color: #ccc;
-  pointer-events: none;
-  border-color: #f0f0f0;
-}
-
+    .page-item.disabled .page-link {
+      color: #ccc;
+      pointer-events: none;
+      border-color: #f0f0f0;
+    }
 </style>
 
-    <div class="pagination-container">
+<!-- Pagination -->
+<div class="pagination-container">
       <ul class="pagination">
-        <li class="page-item disabled">
+        <!-- <li class="page-item disabled">
           <a href="#" class="page-link">←</a>
-        </li>
+        </li> -->
         <li class="page-item active">
-          <a href="#" class="page-link">1</a>
+          <a href="education.html" class="page-link">Show More</a>
         </li>
         <!-- <li class="page-item">
           <a href="#" class="page-link">2</a>
@@ -446,118 +513,121 @@
         <li class="page-item">
           <a href="#" class="page-link">3</a>
         </li> -->
-        <li class="page-item disabled">
+        <!-- <li class="page-item disabled">
           <a href="#" class="page-link">→</a>
-        </li>
+        </li> -->
       </ul>
     </div>
-
-          <!-- Tambah lebih banyak card di sini jika ingin total jadi 8, 12, atau 16 -->
-
-        </div> <!-- end row -->
-      </div>
-    </div>
-  </div>
 </section>
 
+<style>
+  .position-relative img {
+    transition: transform 0.3s ease;
+  }
+  .position-relative:hover img {
+    transform: scale(1.05);
+  }
+</style>
 
-<!-- Start Footer -->
-<footer class="bg-pink" id="tempaltemo_footer">
-    <div class="container">
-        <div class="row">
 
-            <div class="col-md-3 pt-5">
-                <h2 class="h2 text-success  pb-3  logo"><img width="200" src="img/b_animate_white.png" alt="logo animate by yunna mercier"> </h2>
-                <ul class="list-unstyled text-dark footer-link-list">
-                </ul>
-            </div>
 
-            <div class="col-md-3 pt-5">
-                <h4 class="h5 text-white  pb-3 " style="font-weight: bold">Products</h4>
-                <ul class="list-unstyled text-white footer-link-list">
-                    <li><a class="text-decoration-none" href="shopall.html">Serum Series</a></li>
-                    <li><a class="text-decoration-none" href="shopall.html">Whitening Series</a></li>
-                    <li><a class="text-decoration-none" href="shopall.html">Barier Series</a></li>
-                    <li><a class="text-decoration-none" href="shopall.html">Acne Series</a></li>
-                    <li><a class="text-decoration-none" href="shopall.html">Anti Aging Series</a></li>
-                    <li><a class="text-decoration-none" href="shopall.html">Dark Spot Series</a></li>
-                    <li><a class="text-decoration-none" href="shopall.html">Microbiosme Series</a></li>
-                </ul>
-            </div>
-
-             <div class="col-md-3 pt-5">
-                <h4 class="h5 text-white  pb-3 " style="font-weight: bold">Further Info</h4>
-                <ul class="list-unstyled text-white footer-link-list">
-                    <li><a class="text-decoration-none" href="#">Home</a></li>
-                    <li><a class="text-decoration-none" href="#">Education</a></li>
-                    <li><a class="text-decoration-none" href="#">Awards</a></li>
-                    <li><a class="text-decoration-none" href="#">About Us</a></li>
-                    <li><a class="text-decoration-none" href="#">Affiliate</a></li>
-                </ul>
-            </div>  
-
-            <div class="col-md-3 pt-5">
-                <h4 class="h5 text-white  pb-3 " style="font-weight: bold">Address</h4>
-                <ul class="list-unstyled text-white footer-link-list">
-                    <li><a class="text-decoration-none" href="https://maps.app.goo.gl/3CB4U9prvMjGkL5cA" target="_blank">Rukan Theme Park<br/>
-                    Jl. Pantai Indah Kapuk No. 77, Blok E<br/>
-                    Pantai Indah Kapuk, Penjaringan<br/>
-                    Jakarta Utara, DKI Jakarta 14460<br/>
-                    Indonesia</a></li>
-                </ul>
-            </div>  
-
-        </div>
-
-        <div class="row text-white mb-4">
-            <div class="col-12 mb-3">
-                <div class="w-100 my-3 border-top "></div>
-            </div>
-            <div class="col-auto me-auto">
-            </div>
-            <div class="col-auto">
-                <ul class="list-inline text-left footer-icons">
-                    <li class="list-inline-item border  rounded-circle text-center">
-                        <a class="text-white text-decoration-none" target="_blank" href="http://tiktok.com/@animateofficiall.id"><i class="fab fa-tiktok"></i></a>
-                    </li>
-                    <li class="list-inline-item border  rounded-circle text-center">
-                        <a class="text-white text-decoration-none" target="_blank" href="https://www.instagram.com/animateofficial.id/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
-                    </li>
-                    <li class="list-inline-item border  rounded-circle text-center">
-                        <a class="text-white text-decoration-none" target="_blank" href="https://shopee.co.id/animateofficial.id"><i><img width="30" style="position: relative; bottom: 3px; opacity: 0.8; filter: invert(1);" src="img/icon/shopee.png" alt="shopee animateofficial"></i></a>
-                    </li>
-                    <li class="list-inline-item border  rounded-circle text-center">
-                        <a class="text-white text-decoration-none" target="_blank" href="http://tokopedia.com/animateofficial/"><i><img width="18" style="position: relative; bottom: 3px; filter: invert(1);" src="img/icon/tokopedia.png" alt="tokopedia animate" ></i></a>
-                    </li>
-                    <li class="list-inline-item border  rounded-circle text-center">
-                        <a class="text-white text-decoration-none" target="_blank" href="https://api.whatsapp.com/message/RXKG4ID3HL3YH1?autoload=1&app_absent=0"><i class="fab fa-whatsapp fa-lg fa-fw"></i></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="w-100 bg-pinkglow py-3">
+    <!-- Start Footer -->
+    <footer class="bg-pink" id="tempaltemo_footer">
         <div class="container">
-            <div class="row pt-2">
-                <div class="col-md-6 col-sm-12">
-                    <p class="text-left text-white">
-                        Copyright &copy; 2025 Animate By Yunna Mercier
-                    </p>
+            <div class="row">
+
+                <div class="col-md-3 pt-5">
+                    <h2 class="h2 text-success  pb-3  logo"><img width="200" src="img/b_animate_white.png" alt="logo animate by yunna mercier"> </h2>
+                    <ul class="list-unstyled text-dark footer-link-list">
+                    </ul>
                 </div>
-                <div class="col-md-6 col-sm-12 text-end">
-                    <a href="privacy.html" style="text-decoration: none;">
-                        <p class="text-left text-white">
-                            Privacy Policy
-                        </p>
-                    </a>
+
+                <div class="col-md-3 pt-5">
+                    <h4 class="h5 text-white  pb-3 " style="font-weight: bold">Products</h4>
+                    <ul class="list-unstyled text-white footer-link-list">
+                        <li><a class="text-decoration-none" href="shopall.html">Serum Series</a></li>
+                        <li><a class="text-decoration-none" href="shopall.html">Whitening Series</a></li>
+                        <li><a class="text-decoration-none" href="shopall.html">Barier Series</a></li>
+                        <li><a class="text-decoration-none" href="shopall.html">Acne Series</a></li>
+                        <li><a class="text-decoration-none" href="shopall.html">Anti Aging Series</a></li>
+                        <li><a class="text-decoration-none" href="shopall.html">Dark Spot Series</a></li>
+                        <li><a class="text-decoration-none" href="shopall.html">Microbiosme Series</a></li>
+                    </ul>
+                </div>
+
+                 <div class="col-md-3 pt-5">
+                    <h4 class="h5 text-white  pb-3 " style="font-weight: bold">Further Info</h4>
+                    <ul class="list-unstyled text-white footer-link-list">
+                        <li><a class="text-decoration-none" href="#">Home</a></li>
+                        <li><a class="text-decoration-none" href="#">Education</a></li>
+                        <li><a class="text-decoration-none" href="#">Awards</a></li>
+                        <li><a class="text-decoration-none" href="#">About Us</a></li>
+                        <li><a class="text-decoration-none" href="#">Affiliate</a></li>
+                    </ul>
+                </div>  
+
+                <div class="col-md-3 pt-5">
+                    <h4 class="h5 text-white  pb-3 " style="font-weight: bold">Address</h4>
+                    <ul class="list-unstyled text-white footer-link-list">
+                        <li><a class="text-decoration-none" href="https://maps.app.goo.gl/3CB4U9prvMjGkL5cA" target="_blank">Rukan Theme Park<br/>
+                        Jl. Pantai Indah Kapuk No. 77, Blok E<br/>
+                        Pantai Indah Kapuk, Penjaringan<br/>
+                        Jakarta Utara, DKI Jakarta 14460<br/>
+                        Indonesia</a></li>
+                    </ul>
+                </div>  
+
+            </div>
+
+            <div class="row text-white mb-4">
+                <div class="col-12 mb-3">
+                    <div class="w-100 my-3 border-top "></div>
+                </div>
+                <div class="col-auto me-auto">
+                </div>
+                <div class="col-auto">
+                    <ul class="list-inline text-left footer-icons">
+                        <li class="list-inline-item border  rounded-circle text-center">
+                            <a class="text-white text-decoration-none" target="_blank" href="http://tiktok.com/@animateofficiall.id"><i class="fab fa-tiktok"></i></a>
+                        </li>
+                        <li class="list-inline-item border  rounded-circle text-center">
+                            <a class="text-white text-decoration-none" target="_blank" href="https://www.instagram.com/animateofficial.id/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border  rounded-circle text-center">
+                            <a class="text-white text-decoration-none" target="_blank" href="https://shopee.co.id/animateofficial.id"><i><img width="30" style="position: relative; bottom: 3px; opacity: 0.8; filter: invert(1);" src="img/icon/shopee.png" alt="shopee animateofficial"></i></a>
+                        </li>
+                        <li class="list-inline-item border  rounded-circle text-center">
+                            <a class="text-white text-decoration-none" target="_blank" href="http://tokopedia.com/animateofficial/"><i><img width="18" style="position: relative; bottom: 3px; filter: invert(1);" src="img/icon/tokopedia.png" alt="tokopedia animate" ></i></a>
+                        </li>
+                        <li class="list-inline-item border  rounded-circle text-center">
+                            <a class="text-white text-decoration-none" target="_blank" href="https://api.whatsapp.com/message/RXKG4ID3HL3YH1?autoload=1&app_absent=0"><i class="fab fa-whatsapp fa-lg fa-fw"></i></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </div>
 
-</footer>
-<!-- End Footer -->
+        <div class="w-100 bg-pinkglow py-3">
+            <div class="container">
+                <div class="row pt-2">
+                    <div class="col-md-6 col-sm-12">
+                        <p class="text-left text-white">
+                            Copyright &copy; 2025 Animate By Yunna Mercier
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-sm-12 text-end">
+                        <a href="privacy.html" style="text-decoration: none;">
+                            <p class="text-left text-white">
+                                Privacy Policy
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- End Footer -->
 
     <!-- Start Script -->
     <script src="assets/js/jquery-1.11.0.min.js"></script>
@@ -581,85 +651,7 @@
       });
     </script>
 
-    <script>
-          const products = {
-            all: [
-              { img: 'img/product/acne.jpg', diskon: '20%', title: 'Parfum 1', price: 'Rp64.500', old: 'Rp75.000' },
-              { img: 'img/product/acne.jpg', diskon: '9%', title: 'Face Wash', price: 'Rp60.000', old: 'Rp75.000' },
-              { img: 'img/product/acne.jpg', diskon: '15%', title: 'Body Lotion', price: 'Rp65.000', old: 'Rp80.000' },
-              { img: 'img/product/acne.jpg', diskon: '50%', title: 'Perfume Red', price: 'Rp45.000', old: 'Rp98.000' },
-              { img: 'img/product/acne.jpg', diskon: '40%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' },
-              { img: 'img/product/acne.jpg', diskon: '60%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' },
-              { img: 'img/product/acne.jpg', diskon: '5%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' },
-              { img: 'img/product/acne.jpg', diskon: '40%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' },
-              { img: 'img/product/acne.jpg', diskon: '50%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' }
-            ],
-            face: [
-              { img: 'img/product/acne.jpg', diskon: '40%', title: 'Face Wash', price: 'Rp60.000', old: 'Rp75.000' },
-            ],
-            body: [
-              { img: 'img/product/acne.jpg', diskon: '10%', title: 'Body Lotion', price: 'Rp65.000', old: 'Rp80.000' },
-            ],
-            perfume: [
-              { img: 'img/product/acne.jpg', diskon: '65%', title: 'Parfum 1', price: 'Rp64.500', old: 'Rp75.000' },
-              { img: 'img/product/acne.jpg', diskon: '20%', title: 'Perfume Red', price: 'Rp45.000', old: 'Rp98.000' }
-            ],
-            hair: [
-              { img: 'img/product/acne.jpg', diskon: '10%', title: 'Hair Tonic', price: 'Rp55.000', old: 'Rp70.000' }
-            ]
-          };
 
-          function renderProducts(category) {
-              const wrapper = document.getElementById('product-wrapper');
-              wrapper.innerHTML = '';
-
-              products[category].forEach(p => {
-                const slide = document.createElement('div');
-                slide.className = 'swiper-slide swiperBestSeller';
-                slide.innerHTML = `
-                  <div class="discount-badge">${p.diskon}</div>
-                  <img src="${p.img}" style="width:100%; border-radius:12px;">
-                  <div class="product-title">${p.title}</div>
-                  <div><span class="price">${p.price}</span><span class="old-price">${p.old}</span></div>
-                  <button class="btn-cart">+ Keranjang</button>
-                `;
-                wrapper.appendChild(slide);
-              });
-
-              swiperProduct.update();
-            }
-
-          // Swiper init
-          const swiperProduct = new Swiper('.mySwiperProduct', {
-            slidesPerView: 2,
-            spaceBetween: 20,
-            pagination: {
-              el: ".mySwiperKegiatan .swiper-pagination",
-              clickable: true
-            },
-            breakpoints: {
-              768: {
-                slidesPerView: 4
-              },
-              1024: {
-                slidesPerView: 5
-              }
-            }
-          });
-
-          // Load default
-          renderProducts('all');
-
-          // Handle category click
-          document.querySelectorAll('.category-tabs span').forEach(tab => {
-            tab.addEventListener('click', function () {
-              document.querySelectorAll('.category-tabs span').forEach(t => t.classList.remove('active'));
-              this.classList.add('active');
-              const cat = this.dataset.category;
-              renderProducts(cat);
-            });
-          });
-        </script>
 </body>
 
 </html>
