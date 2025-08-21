@@ -75,9 +75,9 @@ body, ul, li, p, a, label, input, div {
 .bg-dark { background-color: #212934 !important;}
 .bg-light { background-color: #e9eef5 !important;}
 .bg-black { background-color: #1d242d !important;}
-.bg-success { background-color: #59ab6e !important;}
+.bg-success { background-color: #fe51ad !important;}
 .btn-success {
-  background-color: #59ab6e !important;
+  background-color: #fe51ad !important;
   border-color: #56ae6c !important;
 }
 .pagination .page-link:hover {color: #000;}
