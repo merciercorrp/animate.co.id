@@ -587,20 +587,16 @@ const swiper3 = new Swiper('.mySwiperKegiatan', {
     <div class="marquee-content">
       <span class="marquee-item"><img src="img/setifikat/sign-01.png" alt="Sertfikat Animate"></span>
       <span class="marquee-item"><img src="img/setifikat/sign-04.png" alt="Sertfikat Animate"></span>
-      <span class="marquee-item"><img src="img/setifikat/sign-02.png" alt="Sertfikat Animate"></span>
       <span class="marquee-item"><img src="img/setifikat/sign-03.png" alt="Sertfikat Animate"></span>    
       <span class="marquee-item"><img src="img/setifikat/sign-01.png" alt="Sertfikat Animate"></span>
       <span class="marquee-item"><img src="img/setifikat/sign-04.png" alt="Sertfikat Animate"></span>
-      <span class="marquee-item"><img src="img/setifikat/sign-02.png" alt="Sertfikat Animate"></span>
       <span class="marquee-item"><img src="img/setifikat/sign-03.png" alt="Sertfikat Animate"></span>
     </div>
     <div class="marquee-content">
       <!-- identical copy for looping effect -->
       <span class="marquee-item"><img src="img/setifikat/sign-01.png" alt="Sertfikat Animate"></span>
       <span class="marquee-item"><img src="img/setifikat/sign-04.png" alt="Sertfikat Animate"></span>
-      <span class="marquee-item"><img src="img/setifikat/sign-02.png" alt="Sertfikat Animate"></span>
       <span class="marquee-item"><img src="img/setifikat/sign-03.png" alt="Sertfikat Animate"></span>
-      <span class="marquee-item"><img src="img/setifikat/sign-02.png" alt="Sertfikat Animate"></span>
       <span class="marquee-item"><img src="img/setifikat/sign-03.png" alt="Sertfikat Animate"></span>
       <span class="marquee-item"><img src="img/setifikat/sign-01.png" alt="Sertfikat Animate"></span>
       <span class="marquee-item"><img src="img/setifikat/sign-04.png" alt="Sertfikat Animate"></span>
@@ -612,7 +608,7 @@ const swiper3 = new Swiper('.mySwiperKegiatan', {
 <!-- END Section BPOM HALAL -->
 
     <!-- Section Best Seller -->
-    <section style="padding-left: 2.5rem; padding-right: 2.5rem; padding-bottom: 0rem; padding-top: 2rem; ">
+    <section style="padding-left: 2.5rem; padding-right: 2.5rem; padding-bottom: 0rem; padding-top: 3rem; ">
 
 
         <style>
@@ -861,6 +857,84 @@ const swiper3 = new Swiper('.mySwiperKegiatan', {
 
 </section>
 
+ <style>
+    .skinthetic{
+        padding: 3rem 8.2rem 0rem 8.2rem;
+    }
+    /* Wrapper utama swiper skinthetic */
+    .skinthetic-swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Slide khusus skinthetic */
+    .skinthetic-swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Atur tinggi skinthetic */
+    .skintheticAnimate {
+      height: 720px;
+    }
+
+    @media (max-width: 768px) {
+      .skintheticAnimate {
+        height: 228px;
+        padding-top: 20px;
+        padding-bottom: 50px;
+        background: white !important;
+      }
+
+      .skinthetic{
+        padding: 3rem 0rem 0rem 0rem;
+        }
+
+        #template-mo-zay-hero-carousel{
+            background: white !important;
+        }
+    }
+  </style>
+
+   <!-- Start Skinthetic Hero -->
+  <section class="skinthetic">
+    <div id="template-mo-zay-hero-carousel" class="carousel slide skintheticAnimate" data-bs-ride="carousel">
+      <div class="swiper skinthetic-swiper mySkintheticSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide skinthetic-swiper-slide" style="background-image: url('img/skinthetic/banner-2.png');"></div>
+          <div class="swiper-slide skinthetic-swiper-slide" style="background-image: url('img/skinthetic/banner-2.png');"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+  <!-- End Skinthetic Hero -->
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    var skintheticSwiper = new Swiper(".mySkintheticSwiper", {
+      speed: 2500,
+      loop: true,
+      autoplay: {
+        delay: 2300,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".mySkintheticSwiper .swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+
     <style>
 
   .news-slide {
@@ -882,7 +956,7 @@ const swiper3 = new Swiper('.mySwiperKegiatan', {
     width: 100%;
     height: auto;
     border-radius: 12px;
-    padding: 25px;
+    padding: 115px;
   }
 
   .news-slide .news-content {
@@ -1045,15 +1119,15 @@ const swiper3 = new Swiper('.mySwiperKegiatan', {
             <div class="row">
                 <div class="col-sm-6">
                   <div class="news-image">
-                    <img src="img/product/dummy-1.webp" alt="product animate">
+                    <img src="img/article/COVER-1.png" alt="Sunscreen Animate">
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="news-content">
-                    <h4>EDUCATION UPDATE</h4>
-                    <h2><b>Manfaat Animate Body Lotion untuk Mencerahkan Kulit</b></h2>
-                    <p>Letak geografis Indonesiaini dikenal sebagai negara tropis dengan cuaca yang panas.dengan cuaca yang panas mempengaruhi kondisi kulit</p>
-                    <a href="education_detail.html" target="_blank" class="read-more">READ MORE</a>
+                    <h4>ARTICLE</h4>
+                    <h2><b>Sunscreen Tetap Wajib Meski Musim Hujan, Ini Alasannya!</b></h2>
+                    <p>Hindari pembersih dengan kandungan ...</p>
+                    <a href="education_sunscreen.html" target="_blank" class="read-more">READ MORE</a>
                   </div>
                 </div>
             </div>
@@ -1065,15 +1139,15 @@ const swiper3 = new Swiper('.mySwiperKegiatan', {
             <div class="row">
                 <div class="col-sm-6">
                   <div class="news-image">
-                    <img src="img/product/dummy-1.webp" alt="product animate">
+                    <img src="img/article/COVER-2.png" alt="product animate">
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="news-content">
-                    <h4>EDUCATION UPDATE</h4>
-                    <h2><b>Manfaat Animate Body Lotion untuk Mencerahkan Kulit</b></h2>
-                    <p>Letak geografis Indonesiaini dikenal sebagai negara tropis dengan cuaca yang panas.dengan cuaca yang panas mempengaruhi kondisi kulit</p>
-                    <a href="education_detail.html" target="_blank" class="read-more">READ MORE</a>
+                    <h4>ARTICLE</h4>
+                    <h2><b>PEMUTIH VS PENCERAH! Mana Yang Lebih Berisiko?</b></h2>
+                    <p>Setiap perempuan pasti memiliki ...</p>
+                    <a href="education_pemutih.html" target="_blank" class="read-more">READ MORE</a>
                   </div>
                 </div>
             </div>
@@ -1085,15 +1159,15 @@ const swiper3 = new Swiper('.mySwiperKegiatan', {
             <div class="row">
                 <div class="col-sm-6">
                   <div class="news-image">
-                    <img src="img/product/dummy-1.webp" alt="product animate">
+                    <img src="img/article/COVER-3.png" alt="product animate">
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="news-content">
-                    <h4>EDUCATION UPDATE</h4>
-                    <h2><b>Manfaat Animate Body Lotion untuk Mencerahkan Kulit</b></h2>
-                    <p>Letak geografis Indonesiaini dikenal sebagai negara tropis dengan cuaca yang panas.dengan cuaca yang panas mempengaruhi kondisi kulit</p>
-                    <a href="education_detail.html" target="_blank" class="read-more">READ MORE</a>
+                    <h4>ARTICLE</h4>
+                    <h2><b>Penyebab Jerawat dan Cara Mengatasinya, Ini Solusinya!</b></h2>
+                    <p>Jerawat, siapa yang tidak pernah ...</p>
+                    <a href="education_jerawat.html" target="_blank" class="read-more">READ MORE</a>
                   </div>
                 </div>
             </div>
@@ -1105,55 +1179,15 @@ const swiper3 = new Swiper('.mySwiperKegiatan', {
             <div class="row">
                 <div class="col-sm-6">
                   <div class="news-image">
-                    <img src="img/product/dummy-1.webp" alt="product animate">
+                    <img src="img/article/barier.jpg" alt="product animate">
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="news-content">
-                    <h4>EDUCATION UPDATE</h4>
-                    <h2><b>Manfaat Animate Body Lotion untuk Mencerahkan Kulit</b></h2>
-                    <p>Letak geografis Indonesiaini dikenal sebagai negara tropis dengan cuaca yang panas.dengan cuaca yang panas mempengaruhi kondisi kulit</p>
-                    <a href="education_detail.html" target="_blank" class="read-more">READ MORE</a>
-                  </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="swiper-slide">
-        <div class="news-slide">
-            <div class="row">
-                <div class="col-sm-6">
-                  <div class="news-image">
-                    <img src="img/product/dummy-1.webp" alt="product animate">
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="news-content">
-                    <h4>EDUCATION UPDATE</h4>
-                    <h2><b>Manfaat Animate Body Lotion untuk Mencerahkan Kulit</b></h2>
-                    <p>Letak geografis Indonesiaini dikenal sebagai negara tropis dengan cuaca yang panas.dengan cuaca yang panas mempengaruhi kondisi kulit</p>
-                    <a href="education_detail.html" target="_blank" class="read-more">READ MORE</a>
-                  </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="swiper-slide">
-        <div class="news-slide">
-            <div class="row">
-                <div class="col-sm-6">
-                  <div class="news-image">
-                    <img src="img/product/dummy-1.webp" alt="product animate">
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="news-content">
-                    <h4>EDUCATION UPDATE</h4>
-                    <h2><b>Manfaat Animate Body Lotion untuk Mencerahkan Kulit</b></h2>
-                    <p>Letak geografis Indonesiaini dikenal sebagai negara tropis dengan cuaca yang panas.dengan cuaca yang panas mempengaruhi kondisi kulit</p>
-                    <a href="education_detail.html" target="_blank" class="read-more">READ MORE</a>
+                    <h4>ARTICLE</h4>
+                    <h2><b>Perbaiki Skin Barriermu dalam 5 Langkah!</b></h2>
+                    <p>Salah satu kesalahan yang sering ...</p>
+                    <a href="education_barrier.html" target="_blank" class="read-more">READ MORE</a>
                   </div>
                 </div>
             </div>
@@ -1230,7 +1264,7 @@ document.addEventListener("DOMContentLoaded", function () {
 .mySwiper-testimoni .quote {
   font-style: italic;
   color: #ec4899;
-  font-size: 0.95rem !important;
+  font-size: 0.95rem;
 }
 
 /* Custom Swiper Arrows */
@@ -1275,7 +1309,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="swiper-wrapper">
         <!-- Slide 1 -->
         <div class="swiper-slide testimonial-card">
-          <img src="img/back/model.webp" class="testimonial-avatar" alt="testimoni animate" />
+          <img src="img/testimoni/FOTO-10.png" class="testimonial-avatar" alt="testimoni animate" />
           <h4>Jihan Fitria</h4>
           <p class="position">Pelajar</p>
           <p class="quote">“Setelah gonta-ganti skincare, aku cuma paling cocok pakai Animate! Sejak pakai ini udah gak ada lagi beruntusan, wajah lebih cerah dan glowing.”</p>
@@ -1283,7 +1317,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         <!-- Slide 2 -->
         <div class="swiper-slide testimonial-card">
-          <img src="img/back/model.webp" class="testimonial-avatar" alt="testimoni animate" />
+          <img src="img/testimoni/FOTO-3.png" class="testimonial-avatar" alt="testimoni animate" />
           <h4>Nurhayati</h4>
           <p class="position">Mahasiswi</p>
           <p class="quote">“Bagusss bangettt!!! Animate produk yang sangat cocok untuk semua jenis kulit yang mau perbaiki skin barrier. Harganya cocok untuk semua kalangan!”</p>
@@ -1291,7 +1325,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         <!-- Slide 2 -->
         <div class="swiper-slide testimonial-card">
-          <img src="img/back/model.webp" class="testimonial-avatar" alt="testimoni animate" />
+          <img src="img/testimoni/FOTO-4.png" class="testimonial-avatar" alt="testimoni animate" />
           <h4>Ferry Arief Sunandar</h4>
           <p class="position">Chief, Financial Officer</p>
           <p class="quote">“Alhamdulilah semenjak pakai Animate aku jadi percaya diri. Cinta banget pokoknya! Sudah habis 15 paket, sangat direkomendasikan untuk para pelajar!”</p>
@@ -1299,7 +1333,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         <!-- Slide 2 -->
         <div class="swiper-slide testimonial-card">
-          <img src="img/back/model.webp" class="testimonial-avatar" alt="testimoni animate" />
+          <img src="img/testimoni/FOTO-5.png" class="testimonial-avatar" alt="testimoni animate" />
           <h4>Erita</h4>
           <p class="position">Ibu Rumah Tangga</p>
           <p class="quote">“Jujur tipe kulit aku susah cerah, kering, dan kusam. Cuma Animate yang berhasil bikin perubahan di kulit aku. Hasilnya bagus dan nyata banget bikin kulit jadi cerah dan lembap. Terima kasih Animate!”</p>
@@ -1307,7 +1341,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         <!-- Slide 2 -->
         <div class="swiper-slide testimonial-card">
-          <img src="img/back/model.webp" class="testimonial-avatar" alt="testimoni animate" />
+          <img src="img/testimoni/FOTO-6.png" class="testimonial-avatar" alt="testimoni animate" />
           <h4>Widiethan</h4>
           <p class="position">Karyawan Swasta</p>
           <p class="quote">“Day Cream Animate gak perlu diragukan lagi! Wajah aku lebih sehat, kinclong, glowing, lembut, dan yang paling penting gak bikin iritasi.”</p>
@@ -1315,7 +1349,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         <!-- Slide 2 -->
         <div class="swiper-slide testimonial-card">
-          <img src="img/back/model.webp" class="testimonial-avatar" alt="testimoni animate" />
+          <img src="img/testimoni/FOTO-7.png" class="testimonial-avatar" alt="testimoni animate" />
           <h4>Nana Lina</h4>
           <p class="position">Wiraswasta</p>
           <p class="quote">“Aku udah pakai Animate dari 2 tahun lalu, recommended banget paketan skincarenya. Gak takut bikin muka breakout karena udah terjamin halal dan BPOM. Gak ada kandungan yang aneh-aneh karena memang sebagus itu.”</p>
@@ -1323,7 +1357,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         <!-- Slide 2 -->
         <div class="swiper-slide testimonial-card">
-          <img src="img/back/model.webp" class="testimonial-avatar" alt="testimoni animate" />
+          <img src="img/testimoni/FOTO-8.png" class="testimonial-avatar" alt="testimoni animate" />
           <h4>Risnawati</h4>
           <p class="position">Ibu Rumah Tangga</p>
           <p class="quote">“Jujur kaget banget sama skincare Animate. Kok bisa harganya murah tapi kualitasnya gak main-main? Bukan skincare abal-abal, udah BPOM”</p>
@@ -1431,7 +1465,7 @@ document.addEventListener("DOMContentLoaded", function () {
     padding-top: 2rem;
     padding-bottom: 3rem;
     padding-left: 0px;
-    padding-right: 200px;
+    padding-right: 0px;
    }
 
         @media only screen and (max-width: 600px) {
@@ -1457,10 +1491,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <!-- Baris Kedua: Swiper -->
     <div class="row">
-      <div class="col-sm-12 col-md-10">
+      <div class="col-sm-12 col-md-12">
         <div class="swiper swiperSahabatWrapper mySwiperSahabat">
           <div class="swiper-wrapper">
             <!-- SLIDES -->
+            <div class="swiper-slide" style="background-image: url('img/sahabat/mnndd_.jpg');">
+              <a href="https://www.instagram.com/reel/DL4Sq0opcqJ/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+            </div>
+            <div class="swiper-slide" style="background-image: url('img/sahabat/Nanadmardiiii.jpg');">
+              <a href="https://www.instagram.com/reel/DKWH4tNJu44/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+            </div>
+            <div class="swiper-slide" style="background-image: url('img/sahabat/Naylaaribbiell_.jpg');">
+              <a href="https://www.instagram.com/reel/DLEQauLJMK7/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+            </div>
+            <div class="swiper-slide" style="background-image: url('img/sahabat/Nuruladds.jpg');">
+              <a href="https://www.instagram.com/reel/DMJ_lM5pHkA/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+            </div>
+            <div class="swiper-slide" style="background-image: url('img/sahabat/Rahmazrh.jpg');">
+              <a href="https://www.instagram.com/reel/DL4Sq0opcqJ/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+            </div>
+            <div class="swiper-slide" style="background-image: url('img/sahabat/Tikaatikahh.jpg');">
+              <a href="https://www.instagram.com/reel/DL9l1hiSTkJ/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
+            </div>
             <div class="swiper-slide" style="background-image: url('img/sahabat/mnndd_.jpg');">
               <a href="https://www.instagram.com/reel/DL4Sq0opcqJ/" target="_blank" style="display: block; width: 100%; height: 100%;"></a>
             </div>
@@ -1632,7 +1684,7 @@ const swiperSahabat = new Swiper('.mySwiperSahabat', {
   }
 
   .marquee-item-skin img {
-    width: clamp(265px, 5vw, 25px);
+    width: clamp(205px, 5vw, 155px);
     height: auto;
     display: block;
   }
@@ -1653,7 +1705,7 @@ const swiperSahabat = new Swiper('.mySwiperSahabat', {
   @media only screen and (max-width: 600px) {
 
       .marquee-item-skin img {
-        width: clamp(172px, 10vw, 172px);
+        width: clamp(172px, 10vw, 150px);
         height: auto;
         display: block;
       }
@@ -1664,25 +1716,25 @@ const swiperSahabat = new Swiper('.mySwiperSahabat', {
   <div class="marquee-track">
     <!-- content duplicated twice for seamless infinite scroll -->
     <div class="marquee-content">
-        <span class="marquee-item-skin"><img src="img/awards/awards-5.png" alt="Sertfikat Animate"></span>
-      <span class="marquee-item-skin"><img src="img/awards/awards-7.png" alt="Sertfikat Animate"></span>
-      <span class="marquee-item-skin"><img src="img/awards/awards-8.png" alt="Sertfikat Animate"></span>
-      <span class="marquee-item-skin"><img src="img/awards/awards-9.png" alt="Sertfikat Animate"></span>
-      <span class="marquee-item-skin"><img src="img/awards/awards-1.png" alt="Sertfikat Animate"></span>
-      <span class="marquee-item-skin"><img src="img/awards/awards-2.png" alt="Sertfikat Animate"></span>
-      <span class="marquee-item-skin"><img src="img/awards/awards-3.png" alt="Sertfikat Animate"></span>
-      <span class="marquee-item-skin"><img src="img/awards/awards-4.png" alt="Sertfikat Animate"></span>    
+      <span class="marquee-item-skin"><img src="img/awards/sign-05.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item-skin"><img src="img/awards/sign-06.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item-skin"><img src="img/awards/sign-07.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item-skin"><img src="img/awards/sign-08.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item-skin"><img src="img/awards/sign-09.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item-skin"><img src="img/awards/sign-10.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item-skin"><img src="img/awards/sign-11.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item-skin"><img src="img/awards/sign-12.png" alt="Sertfikat Animate"></span>    
     </div>
 
     <div class="marquee-content">
-      <span class="marquee-item-skin"><img src="img/awards/awards-5.png" alt="Sertfikat Animate"></span>
-      <span class="marquee-item-skin"><img src="img/awards/awards-7.png" alt="Sertfikat Animate"></span>
-      <span class="marquee-item-skin"><img src="img/awards/awards-8.png" alt="Sertfikat Animate"></span>
-      <span class="marquee-item-skin"><img src="img/awards/awards-9.png" alt="Sertfikat Animate"></span>
-      <span class="marquee-item-skin"><img src="img/awards/awards-1.png" alt="Sertfikat Animate"></span>
-      <span class="marquee-item-skin"><img src="img/awards/awards-2.png" alt="Sertfikat Animate"></span>
-      <span class="marquee-item-skin"><img src="img/awards/awards-3.png" alt="Sertfikat Animate"></span>
-      <span class="marquee-item-skin"><img src="img/awards/awards-4.png" alt="Sertfikat Animate"></span>    
+      <span class="marquee-item-skin"><img src="img/awards/sign-05.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item-skin"><img src="img/awards/sign-06.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item-skin"><img src="img/awards/sign-07.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item-skin"><img src="img/awards/sign-08.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item-skin"><img src="img/awards/sign-09.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item-skin"><img src="img/awards/sign-10.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item-skin"><img src="img/awards/sign-11.png" alt="Sertfikat Animate"></span>
+      <span class="marquee-item-skin"><img src="img/awards/sign-12.png" alt="Sertfikat Animate"></span>    
     </div>
     
   </div>
