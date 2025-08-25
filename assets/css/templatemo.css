@@ -63,6 +63,7 @@ body, ul, li, p, a, label, input, div {
   font-size: 22px !important;
 }
 /* General */
+.navbar {padding-top: 0rem !important; padding-bottom: 0rem !important;}
 .logo { font-weight: 500 !important;}
 .bg-pinkglow{background-color: #ff65b7;}
 .bg-pink{background-color: #fe51ad;}
